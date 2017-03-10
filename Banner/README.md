@@ -9,6 +9,6 @@ Provides a top-level banner.
 ## Fields
 
 * Banner text
-* Link
+* CTA link
 * Banner background color
 

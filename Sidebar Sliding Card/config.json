@@ -1,0 +1,104 @@
+{
+  "plugin_id": "Sliding_Div",
+  "plugin_type": "widget",
+  "name": "Plain Sliding Card",
+  "edit_page_url": "www.optimizely.com",
+  "form_schema": [
+    {
+      "default_value": "For more of what you want, when you want it.",
+      "field_type": "text",
+      "name": "heading",
+      "label": "Header",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "multi_text",
+      "name": "text",
+      "label": "Main Copy",
+      "options": null
+    },
+    {
+      "default_value": "Register  now",
+      "field_type": "text",
+      "name": "cta",
+      "label": "Primary CTA",
+      "options": null
+    },
+    {
+      "default_value": "#",
+      "field_type": "text",
+      "name": "url",
+      "label": "Call to Action link",
+      "options": null
+    },
+    {
+      "default_value": "rgba(204, 0, 51, 1)",
+      "field_type": "color",
+      "name": "bgcolor",
+      "label": "CTA Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "fontcolor",
+      "label": "Font Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "right",
+      "field_type": "dropdown",
+      "name": "direction",
+      "label": "Slide Direction",
+      "options": {
+        "choices": [
+          {
+            "value": "right",
+            "label": "Appear Right"
+          },
+          {
+            "value": "left",
+            "label": "Appear Left"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "top",
+      "field_type": "dropdown",
+      "name": "tb",
+      "label": "Distance from Top or Bottom of page",
+      "options": {
+        "choices": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": 30,
+      "field_type": "number",
+      "name": "percent",
+      "label": "Percentage from Top or Bottom",
+      "options": null
+    }
+  ],
+  "description": "Sliding Card Reminder",
+  "options": {
+    "html": "<div id=\"optimizely-widget-{{ widget.$instance }}\" class=\"sliding_div_{{extension.direction}}\" style=\"{{extension.tb}}:{{extension.percent}}%\">\n  <span class=\"optly-close\"><a href='#'>x</a></span>\n  <div class=\"optly-content typo--canary\">\n        <h1>{{widget.heading}}</h1>\n        <p>{{widget.text}}</p>\n        <a href=\"{{widget.url}}\" class=\"optly-cta\" style=\"background-color:{{extension.bgcolor}};color:{{extension.fontcolor}}\">{{widget.cta}}</a>\n  </div>\n</div>",
+    "css": ".sliding_div_right{\n    position: fixed;\n  \tright:-15%;\n    width: 15%;\n  \tmin-width: 300px;\n    background: white;\n  \tborder: 1px solid lightgrey;\n    -webkit-animation: slide 0.5s forwards;\n    -moz-animation: slide 0.5s forwards;\n    animation: slide 0.5s forwards;\n  \tz-index:99999999999;\n}\n\n.sliding_div_left{\n    position: fixed;\n  \tleft:-15%;\n    width: 15%;\n  \tmin-width: 300px;\n    background: white;\n  \tborder: 1px solid lightgrey;\n    -webkit-animation: slideLeft 0.5s forwards;\n    -moz-animation: slideLeft 0.5s forwards;\n    animation: slideLeft 0.5s forwards;\n  \tz-index:99999999999;\n}\n\n.optly-content {\n  margin: auto;\n  padding: 5%;\n}\n\n.optly-content > h1 {\n\ttext-align: center;\n  margin-bottom: 3.5%;\n  font-size: 16px;\n  font-weight: bold;\n}\n\n.optly-content p {\n  font-size: 14px;\n  margin-bottom: 10%;\n}\n\n.optly-cta {\n  font-size: 14px;\n  border: none;\n  cursor: pointer;\n  display: block;\n  font-weight: 600;\n  line-height: 17px;\n  padding: 20px 5px;\n  text-align: center;\n  text-transform: uppercase;\n  text-decoration: none;\n  letter-spacing: 2px;\n  border-radius: 3px;\n  transition: background-color .2s;\n}\n\n.optly-close {\n  color: #aaa;\n  float: right;\n  font-family: Helvetica,Arial,sans-serif;\n  font-size: 14px;\n  font-weight: bold;\n  margin-top: 3%;\n  margin-right: 3%;\n  text-decoration: none;\n}\n\n@-webkit-keyframes slide {\n    100% { right: 0; }\n}\n\n@keyframes slide {\n    100% { right: 0; }\n}\n\n@-webkit-keyframes slideLeft {\n    100% { left: 0; }\n}\n\n@keyframes slideLeft {\n    100% { left: 0; }\n}\n",
+    "apply_js": "$(function() {\n $('body').prepend(widget.$html);\n  if (document.cookie.indexOf(\"slidingBag\") > -1 === false) {\n    $(\".sliding_div_\"+extension.direction+\"\").css({\"display\":\"block\"});\n    \n    $(\".optly-close a\").click(function(){\n      $(\".sliding_div_right\").remove();\n      $('#optimizely-widget-' + widget.$instance).remove();\n      window['optimizely'] = window['optimizely'] || [];\n      window['optimizely'].push({\n        type: \"event\",\n        eventName: \"close_card\"\n      });\n    });\n  }\n});",
+    "undo_js": "$('#optimizely-widget-' + widget.$instance).remove();"
+  }
+}

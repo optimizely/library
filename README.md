@@ -11,7 +11,11 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 ## Sample Extensions
 
 * [Banner](https://github.com/optimizely/extension-library/tree/master/Banner)
-* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up)
+* [Bottom Banner]()
+* [Countdown Timer]
 * [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Email%20Capture%20Pop-up)
-
+* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up)
+* [Exit Intent Pop-up 2]
+* [Sidebar Sliding Card]
+* [Timed Modal]
 
