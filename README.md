@@ -10,7 +10,9 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 
 ## Contents
 
-* Image Carousel
+* Banner
+* Exit Intent Pop-up
+* Email Capture Pop-up
 
 
 Extension Library
