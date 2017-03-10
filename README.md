@@ -8,11 +8,10 @@ The provided JSON config file will create all components necessary for the exten
 
 Please email us at developers@optimizely.com or open a GitHub Issue with any problems or questions about the provided samples. We encourge contributions from the community and will reguarlly review Pull Requests. You can also email us to add your extension to the library.
 
-## Contents
+## Sample Extensions
 
-* Banner
-* Exit Intent Pop-up
-* Email Capture Pop-up
+* [Banner](https://github.com/optimizely/extension-library/tree/master/Banner)
+* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up)
+* [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Email%20Capture%20Pop-up)
 
 
-Extension Library
