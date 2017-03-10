@@ -1,5 +1,0 @@
-# Image Carousel
-
-![Screenshot]()
-
-## Overview
