@@ -1,14 +1,15 @@
-# Banner
+# Exit Intent Pop-up
 
-![Screenshot]()
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Exit%20Intent%20Pop-up/screenshot.png)
 
 ## Description
 
-Provides a top-level banner. 
+When a user moves the mouse off screen a pop-up will appear. 
 
 ## Fields
 
-* Banner text
+* Pop-up headline text
+* Secondary text
 * Link
-* Banner background color
+* Link text
 
