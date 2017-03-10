@@ -1,0 +1,43 @@
+{
+  "plugin_id": "exit_intent",
+  "plugin_type": "widget",
+  "name": "Exit Intent Popup",
+  "edit_page_url": "http://www.atticandbutton.us",
+  "form_schema": [
+    {
+      "default_value": "Don't go!",
+      "field_type": "text",
+      "name": "headline",
+      "label": "Headline",
+      "options": null
+    },
+    {
+      "default_value": "Stick around and buy some stuff",
+      "field_type": "text",
+      "name": "secondary",
+      "label": "Secondary Text",
+      "options": null
+    },
+    {
+      "default_value": "http://www.google.com",
+      "field_type": "text",
+      "name": "link",
+      "label": "Link URL",
+      "options": null
+    },
+    {
+      "default_value": "Please stay!",
+      "field_type": "text",
+      "name": "link_text",
+      "label": "Link Text",
+      "options": null
+    }
+  ],
+  "description": "If the user tries to leave the window, a popup will show begging them not to leave. ",
+  "options": {
+    "html": "<div id=\"exit-popup-overlay\">\n</div>\n<div id=\"exit-popup-wrapper\">\n  \n  <div id=\"exit-popup\">\n    <div id=\"exit-popup-close\">x</div>\n    <h2>{{widget.headline}}</h2>\n    <p>{{widget.secondary}}</p>\n    <a href=\"{{widget.link}}\" class=\"btn\">{{widget.link_text}}</a>\n  </div>\n</div>",
+    "css": "body {\n  height: 100%;\n  float: left;\n  position: relative;\n}\n#exit-popup-overlay {\n  display: none; \n  background: #000;\n  height: 100%;\n  z-index: 3000;\n  position: fixed;\n  width: 100%;\n  background: #000;\n  opacity: 0.5;\n}\n#exit-popup-wrapper {\n  display: none;\n  margin: 50px 0;\n  position: fixed;\n  z-index: 3001;\n  width: 100%;\n  text-align: center;\n}\n\n#exit-popup {\n  width: 500px;\n  display: inline-block;\n  background: #fff;\n  padding: 50px 20px;\n  position: relative;\n}\n\n#exit-popup h2 {\n  margin-top: 20px;\n}\n\n#exit-popup p {\n  \n}\n#exit-popup-close {\n  top: 10px;\n  right: 20px;\n  font-size: 20px;\n  position: absolute;\n  font-weight: bold;\n  cursor: pointer;\n  font-family: \"helvetica\", \"arial\", \"sans-serif\";\n}\n#exit-popup-close:hover {\n  color: #999;\n}",
+    "apply_js": "$('body').prepend(widget.$html);\n\njQuery(document).ready(function() {\n\tvar _settings = {\n    shownOnce: false \n  };\n  \n  jQuery('body').mouseleave(function() {\n    if (!_settings.shownOnce) {\n      _settings.shownOnce = true;\n      showPopup();\n    }\n   \n    jQuery('#exit-popup-close').on('click', function() {\n      hidePopup();\n    })\n  })\n  \n  function showPopup() {\n    jQuery('#exit-popup-overlay').fadeIn(\"slow\");\n    jQuery('#exit-popup-wrapper').fadeIn(\"slow\");\n  }\n\n  function hidePopup() {\n    jQuery('#exit-popup-overlay').fadeOut(\"slow\");\n    jQuery('#exit-popup-wrapper').fadeOut(\"slow\");\n  }\n\n})\n\n\n",
+    "undo_js": "$('#exit-popup-overlay').remove()\n$('#exit-popup-wrapper').remove()"
+  }
+}
