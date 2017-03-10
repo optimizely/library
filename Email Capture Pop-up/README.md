@@ -1,6 +1,6 @@
 # Email Capture Pop-up
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Email%20Capturet%20Pop-up/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Email%20Capture%20Pop-up/screenshot.png)
 
 ## Description
 
