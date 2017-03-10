@@ -1,6 +1,6 @@
 # Timed Modal
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Timed%20modal/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Timed%20Modal/screenshot.png)
 
 ## Description
 
