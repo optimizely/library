@@ -17,5 +17,5 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up)
 * [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up%202)
 * [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Sidebar%20Sliding%20Card)
-* [Timed Modal]
+* [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Timed%20Modal)
 
