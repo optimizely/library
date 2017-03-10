@@ -1,6 +1,6 @@
 # Optimizely Extension Library
 
-This repo contains a collection of sample extensions built by Optimizely and community developers. Extensions are reusable templates for making changes in the visual editor. To learn more, view our documentation.
+This repo contains a collection of sample extensions built by Optimizely and community developers. Extensions are reusable templates for making changes in the visual editor. To learn more, view our [documentation](https://developers.optimizely.com/x/extensions/).
 
 ## Using Extention Templates
 
