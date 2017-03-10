@@ -6,6 +6,8 @@
 
 On page visit, a pop-up appears with a field for an email address. 
 
+_Please note:_ pick a background image or fill with a background color.
+
 ## Fields
 
 * Background image

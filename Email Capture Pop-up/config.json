@@ -5,7 +5,7 @@
   "edit_page_url": "www.atticandbutton.us",
   "form_schema": [
     {
-      "default_value": "//cdn.optimizely.com/img/555650815/846f2d5228224ccf92974b4d9dd8fe9a.jpg",
+      "default_value": "//cdn.optimizely.com/img/555650815/fab9d633145945f5bf3b39e25474b448.jpg",
       "field_type": "image",
       "name": "image",
       "label": "Background Image",
@@ -16,6 +16,15 @@
       "field_type": "color",
       "name": "fgcolor",
       "label": "Text Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "#f41212",
+      "field_type": "color",
+      "name": "bcolor",
+      "label": "Background Color",
       "options": {
         "mode": "hex"
       }
@@ -37,7 +46,7 @@
   ],
   "description": "Sign up visitors for your newsletter",
   "options": {
-    "html": "<div class=\"optimizely-modal-widget overlay\" style=\"display: block;\">\n\t<div id=\"popup-wrapper\" class=\"\" style=\"background-image: url('{{ widget.image }}');\">\n\t\t<div id=\"popup\" style=\"color: {{ widget.fgcolor }};\">\n      <h1>{{ widget.header }}</h1>\n      <p>{{{ widget.text }}}</p>\n      <form method=\"POST\" action=\"#\" class=\"input-group\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" target=\"_blank\">\n        <input type=\"email\" id=\"newsletter-email\" name=\"newsletter-email\" placeholder=\"Enter email\">\n        <span class=\"input-group-btn\">\n          <input type=\"button\" value=\"Submit\" id=\"newsletter-submit\" class=\"btn\">\n        </span>\n      </form>\n\t\t</div>\n\t</div>\n</div>",
+    "html": "<div class=\"optimizely-modal-widget overlay\" style=\"display: block;\">\n\t<div id=\"popup-wrapper\" class=\"\" style=\"background-image: url('{{ widget.image }}');background-color:{{ widget.bcolor }};\">\n\t\t<div id=\"popup\" style=\"color: {{ widget.fgcolor }};\">\n      <h1>{{ widget.header }}</h1>\n      <p>{{{ widget.text }}}</p>\n      <form method=\"POST\" action=\"#\" class=\"input-group\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" target=\"_blank\">\n        <input type=\"email\" id=\"newsletter-email\" name=\"newsletter-email\" placeholder=\"Enter email\">\n        <span class=\"input-group-btn\">\n          <input type=\"button\" value=\"Submit\" id=\"newsletter-submit\" class=\"btn\">\n        </span>\n      </form>\n\t\t</div>\n\t</div>\n</div>",
     "css": ".optimizely-modal-widget.overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  width: 100%;\n  height: 100%;\n  background: rgba(253, 253, 253, 0.46);\n}\n\n.optimizely-modal-widget #popup-wrapper {\n  position: fixed;\n  top: 175px;\n  left: 50%;\n  z-index: 10000;\n  display: block;\n  overflow: hidden;\n  margin-left: -275px;\n  width: 550px;\n  height: 340px;\n  border: 4px solid #fff;\n  background-size: 100%!important;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n\n.optimizely-modal-widget #popup {\n  overflow: hidden;\n  margin-top: 25px;\n  padding: 15px;\n  color: #fff;\n  text-align: center;\n  letter-spacing: 2px;\n  font-size: 14px;\n  font-family: gibsonregular;\n}\n\n.optimizely-modal-widget form {\n  position: absolute;\n  bottom: 25px;\n  width: 250px;\n  left: 50%;\n  margin-left: -125px;\n}",
     "apply_js": "$('body').prepend(widget.$html);",
     "undo_js": "$('.optimizely-modal-widget').remove();"
