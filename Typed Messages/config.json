@@ -1,0 +1,61 @@
+{
+  "plugin_id": "typed_js",
+  "plugin_type": "widget",
+  "name": "Typed Messages",
+  "edit_page_url": "https://www.optimizely.com/products/experimentation/",
+  "form_schema": [
+    {
+      "default_value": "#ffffff",
+      "field_type": "color",
+      "name": "bg_color",
+      "label": "Background Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "rgba(5, 252, 225, 1)",
+      "field_type": "color",
+      "name": "bg_color2",
+      "label": "Background Color 2",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "Optimizely Extensions!",
+      "field_type": "text",
+      "name": "message",
+      "label": "Message",
+      "options": null
+    },
+    {
+      "default_value": "Built by Optimizely!",
+      "field_type": "text",
+      "name": "message2",
+      "label": "2nd Message",
+      "options": null
+    },
+    {
+      "default_value": ".mkt-hero__header",
+      "field_type": "selector",
+      "name": "location",
+      "label": "Location",
+      "options": null
+    },
+    {
+      "default_value": "h2",
+      "field_type": "text",
+      "name": "element_type",
+      "label": "Element Type",
+      "options": null
+    }
+  ],
+  "description": "Enter in any string, and watch it type at the speed you've set!",
+  "options": {
+    "apply_js": "/** Typed JS Documentation: http://www.mattboldt.com/demos/typed-js/ **/\n\n\n$(function() {\n  \n  \"use strict\";\n\n\tvar Typed = function(el, options){\n\n\t\t// chosen element to manipulate text\n\t\tthis.el = $(el);\n\t\t// options\n\t\tthis.options = $.extend({}, $.fn.typed.defaults, options);\n\n\t\t// text content of element\n\t\tthis.text = this.el.text();\n\n\t\t// typing speed\n\t\tthis.typeSpeed = this.options.typeSpeed;\n\n\t\t// amount of time to wait before backspacing\n\t\tthis.backDelay = this.options.backDelay;\n\n\t\t// input strings of text\n\t\tthis.strings = this.options.strings;\n\n\t\t// character number position of current string\n\t\tthis.strPos = 0;\n\n\t\t// current array position\n\t\tthis.arrayPos = 0;\n\n\t\t// current string based on current values[] array position\n\t\tthis.string = this.strings[this.arrayPos];\n\n\t\t// number to stop backspacing on.\n\t\t// default 0, can change depending on how many chars\n\t\t// you want to remove at the time\n\t\tthis.stopNum = 0;\n\n\t\t// Looping logic\n\t\tthis.loop = this.options.loop;\n\t\tthis.loopCount = this.options.loopCount;\n\t\tthis.curLoop = 1;\n\t\tif (this.loop === false){\n\t\t\t// number in which to stop going through array\n\t\t\t// set to strings[] array (length - 1) to stop deleting after last string is typed\n\t\t\tthis.stopArray = this.strings.length-1;\n\t\t}\n\t\telse{\n\t\t\tthis.stopArray = this.strings.length;\n\t\t}\n\n\t\t// All systems go!\n\t\tthis.init();\n\t\tthis.build();\n\t}\n\n\t\tTyped.prototype =  {\n\n\t\t\tconstructor: Typed\n\n\t\t\t, init: function(){\n\t\t\t\t// begin the loop w/ first current string (global self.string)\n\t\t\t\t// current string will be passed as an argument each time after this\n\t\t\t\tthis.typewrite(this.string, this.strPos);\n\t\t\t}\n\n\t\t\t, build: function(){\n\t\t\t\t//this.el.after(\"<span id=\\\"typed-cursor\\\">|</span>\");\n\t\t\t}\n\n\t\t\t// pass current string state to each function\n\t\t\t, typewrite: function(curString, curStrPos){\n\n\t\t\t\t// varying values for setTimeout during typing\n\t\t\t\t// can't be global since number changes each time loop is executed\n\t\t\t\tvar humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;\n\t\t\t\tvar self = this;\n\n\t\t\t\t// ------------- optional ------------- //\n\t\t\t\t// backpaces a certain string faster\n\t\t\t\t// ------------------------------------ //\n\t\t\t\t// if (self.arrayPos == 1){\n\t\t\t\t// \tself.backDelay = 50;\n\t\t\t\t// }\n\t\t\t\t// else{ self.backDelay = 500; }\n\n\t\t\t\t// containg entire typing function in a timeout\n\t\t\t\tsetTimeout(function() {\n\n\t\t\t\t\t// make sure array position is less than array length\n\t\t\t\t\tif (self.arrayPos < self.strings.length){\n\n\t\t\t\t\t\t// start typing each new char into existing string\n\t\t\t\t\t\t// curString is function arg\n\t\t\t\t\t\tself.el.text(self.text + curString.substr(0, curStrPos));\n\n\t\t\t\t\t\t// check if current character number is the string's length\n\t\t\t\t\t\t// and if the current array position is less than the stopping point\n\t\t\t\t\t\t// if so, backspace after backDelay setting\n\t\t\t\t\t\tif (curStrPos > curString.length && self.arrayPos < self.stopArray){\n\t\t\t\t\t\t\tclearTimeout(clear);\n\t\t\t\t\t\t\tvar clear = setTimeout(function(){\n\t\t\t\t\t\t\t\tself.backspace(curString, curStrPos);\n\t\t\t\t\t\t\t}, self.backDelay);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\t// else, keep typing\n\t\t\t\t\t\telse{\n\t\t\t\t\t\t\t// add characters one by one\n\t\t\t\t\t\t\tcurStrPos++;\n\t\t\t\t\t\t\t// loop the function\n\t\t\t\t\t\t\tself.typewrite(curString, curStrPos);\n\t\t\t\t\t\t\t// if the array position is at the stopping position\n\t\t\t\t\t\t\t// finish code, on to next task\n\t\t\t\t\t\t\tif (self.loop === false){\n\t\t\t\t\t\t\t\tif (self.arrayPos === self.stopArray && curStrPos === curString.length){\n\t\t\t\t\t\t\t\t\t// animation that occurs on the last typed string\n\t\t\t\t\t\t\t\t\t// fires callback function\n\t\t\t\t\t\t\t\t\tvar clear = self.options.callback();\n\t\t\t\t\t\t\t\t\tclearTimeout(clear);\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t// if the array position is greater than array length\n\t\t\t\t\t// and looping is active, reset array pos and start over.\n\t\t\t\t\telse if (self.loop === true && self.loopCount === false){\n\t\t\t\t\t\tself.arrayPos = 0;\n\t\t\t\t\t\tself.init();\n\t\t\t\t\t}\n\t\t\t\t\t\telse if(self.loopCount !== false && self.curLoop < self.loopCount){\n\t\t\t\t\t\t\tself.arrayPos = 0;\n\t\t\t\t\t\t\tself.curLoop = self.curLoop+1;\n\t\t\t\t\t\t\tself.init();\n\t\t\t\t\t\t}\n\n\t\t\t\t// humanized value for typing\n\t\t\t\t}, humanize);\n\n\t\t\t}\n\n\t\t\t, backspace: function(curString, curStrPos){\n\n\t\t\t\t// varying values for setTimeout during typing\n\t\t\t\t// can't be global since number changes each time loop is executed\n\t\t\t\tvar humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;\n\t\t\t\tvar self = this;\n\n\t\t\t\tsetTimeout(function() {\n\n\t\t\t\t\t// ----- this part is optional ----- //\n\t\t\t\t\t// check string array position\n\t\t\t\t\t// on the first string, only delete one word\n\t\t\t\t\t// the stopNum actually represents the amount of chars to\n\t\t\t\t\t// keep in the current string. In my case it's 14.\n\t\t\t\t\t// if (self.arrayPos == 1){\n\t\t\t\t\t//\tself.stopNum = 14;\n\t\t\t\t\t// }\n\t\t\t\t\t//every other time, delete the whole typed string\n\t\t\t\t\t// else{\n\t\t\t\t\t//\tself.stopNum = 0;\n\t\t\t\t\t// }\n\n\t\t\t\t\t// ----- continue important stuff ----- //\n\t\t\t\t\t// replace text with current text + typed characters\n\t\t\t\t\tself.el.text(self.text + curString.substr(0, curStrPos));\n\n\t\t\t\t\t// if the number (id of character in current string) is\n\t\t\t\t\t// less than the stop number, keep going\n\t\t\t\t\tif (curStrPos > self.stopNum){\n\t\t\t\t\t\t// subtract characters one by one\n\t\t\t\t\t\tcurStrPos--;\n\t\t\t\t\t\t// loop the function\n\t\t\t\t\t\tself.backspace(curString, curStrPos);\n\t\t\t\t\t}\n\t\t\t\t\t// if the stop number has been reached, increase\n\t\t\t\t\t// array position to next string\n\t\t\t\t\telse if (curStrPos <= self.stopNum){\n\t\t\t\t\t\tclearTimeout(clear);\n\t\t\t\t\t\tvar clear = self.arrayPos = self.arrayPos+1;\n\t\t\t\t\t\t// must pass new array position in this instance\n\t\t\t\t\t\t// instead of using global arrayPos\n\t\t\t\t\t\tself.typewrite(self.strings[self.arrayPos], curStrPos);\n\t\t\t\t\t}\n\n\t\t\t\t// humanized value for typing\n\t\t\t\t}, humanize);\n\n\t\t\t}\n\n\t\t}\n\n\t$.fn.typed = function (option) {\n\t    return this.each(function () {\n\t      var $this = $(this)\n\t        , data = $this.data('typed')\n\t        , options = typeof option == 'object' && option\n\t      if (!data) $this.data('typed', (data = new Typed(this, options)))\n\t      if (typeof option == 'string') data[option]()\n\t    });\n\t}\n\n\t$.fn.typed.defaults = {\n\t\tstrings: [\"These are the default values...\", \"You know what you should do?\", \"Use your own!\", \"Have a great day!\"],\n\t\t// typing and backspacing speed\n\t\ttypeSpeed: 0,\n\t\t// time before backspacing\n\t\tbackDelay: 500,\n\t\t// loop\n\t\tloop: false,\n\t\t// false = infinite\n\t\tloopCount: false,\n\t\t// ending callback function\n\t\tcallback: function(){ null }\n\t};\n\n\n  $(extension.location).prepend(extension.$html);\n  \n  var message_array = [];\n  message_array.push(extension.message);\n  if(extension.message2 !== \"\"){\n    message_array.push(extension.message2);\n  }\n  \n  $(\"#optly_typed\").typed({\n      strings: message_array,\n      typeSpeed: 10,\n      backDelay: 1000,\n      cursorChar: \"|\",\n      loop: true\n      });\n  \n});",
+    "html": "\n<{{extension.element_type}} style=\"background: -webkit-linear-gradient(left, {{ extension.bg_color }}, {{ extension.bg_color2 }});-webkit-background-clip: text;-webkit-text-fill-color: transparent;\" id=\"optly_typed\">&nbsp;</{{extension.element_type}}>\n",
+    "css": "#optly_typed{\n  line-height: 1.3;\n}",
+    "undo_js": "$('#optly_typed').remove();"
+  }
+}
