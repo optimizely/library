@@ -1,0 +1,90 @@
+{
+  "plugin_id": "butter_bar_ext",
+  "plugin_type": "widget",
+  "name": "Banner Bar",
+  "edit_page_url": "https://www.optimizely.com/products/experimentation/",
+  "form_schema": [
+    {
+      "default_value": "",
+      "field_type": "toggle",
+      "name": "location",
+      "label": "Location",
+      "options": {
+        "choices": [
+          {
+            "value": "position: fixed;bottom: 0;left: 0;",
+            "label": "Bottom"
+          },
+          {
+            "value": "",
+            "label": "Top"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "#77c96f",
+      "field_type": "color",
+      "name": "bg_color",
+      "label": "Background Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "rgba(0, 129, 186, 1)",
+      "field_type": "color",
+      "name": "bg_color2",
+      "label": "Background Color 2",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "#ffffff",
+      "field_type": "color",
+      "name": "color",
+      "label": "Text Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "https://www.optimizely.com/plans/",
+      "field_type": "text",
+      "name": "link",
+      "label": "Destination Link",
+      "options": null
+    },
+    {
+      "default_value": "View Plans",
+      "field_type": "text",
+      "name": "link_text",
+      "label": "Link Text",
+      "options": null
+    },
+    {
+      "default_value": "#ffffff",
+      "field_type": "color",
+      "name": "link_color",
+      "label": "Link Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "Welcome | ",
+      "field_type": "text",
+      "name": "text",
+      "label": "Main Text",
+      "options": null
+    }
+  ],
+  "description": "Displays a banner bar at the top of the page.",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"optly_butter_bar\" style=\"background:-webkit-linear-gradient(left, {{ extension.bg_color }}, {{ extension.bg_color2 }}); color:{{extension.color}};{{extension.location}}\">\n  {{ extension.text }}<a href=\"{{ extension.link }}\" style=\"color:{{extension.link_color}};\">{{ extension.link_text }}</a>\n</div>",
+    "css": ".optly_butter_bar {\n  vertical-align: middle !important;\n  line-height: 1.4 !important;\n  text-decoration: none !important;\n  text-align: center !important;\n  display: block !important;\n  font-size: 20px !important;\n  font-weight: 600 !important;\n  padding: 10px 0px !important;\n  z-index: 999999999999 !important; \n  width: 100% !important;\n}\n\n.optly_butter_bar a {\n  font-size: 20px !important;\n  font-weight: 600 !important;\n}",
+    "apply_js": "$(function() {\n  var location = extension.location == \"\" ? \"body\" : \"body\";\n  // if there is a header element present you may need to use:\n  // var location = extension.location == \"\" ? \"header\" : \"body\";\n\n  $(location).prepend(extension.$html);\n});",
+    "undo_js": "$('#optimizely-extension-' + extension.$instance).remove();"
+  }
+}

@@ -20,4 +20,5 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Sliding%20Card%20Advanced)
 * [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Timed%20Modal)
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Typed%20Messages)
+* [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Dynamic%20Banner)
 
