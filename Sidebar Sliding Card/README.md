@@ -1,6 +1,6 @@
 # Sidebar Sliding Card
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Slidebar%20Sliding%20Card/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Sidebar%20Sliding%20Card/screenshot.png)
 
 ## Description
 
