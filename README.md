@@ -8,7 +8,9 @@ The provided JSON config file will create all components necessary for the Exten
 
 Please email us at developers@optimizely.com or open a GitHub Issue with any problems or questions about the provided samples. We encourge contributions from the community and will reguarlly review Pull Requests. You can also email us to add your Extension to the library.
 
-## Sample Extensions
+## Editor Extensions
+
+### General
 
 * [Banner](https://github.com/optimizely/extension-library/tree/master/Banner)
 * [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Bottom%20Banner)
@@ -22,3 +24,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Typed%20Messages)
 * [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Dynamic%20Banner)
 
+### Non-profit focused
+* [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
+* [Pop-up](https://optimizely.github.io/jess/extensions/popup.html)
+* [Butter Bar](https://optimizely.github.io/jess/extensions/butterbar.html)
