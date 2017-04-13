@@ -24,7 +24,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Typed%20Messages)
 * [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Dynamic%20Banner)
 
-### Non-profit focused
+### Nonprofit focused
 * [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
 * [Pop-up](https://optimizely.github.io/jess/extensions/popup.html)
 * [Butter Bar](https://optimizely.github.io/jess/extensions/butterbar.html)
