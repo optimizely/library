@@ -1,6 +1,6 @@
 # Optimizely Extension Library
 
-This repo contains a collection of sample Extensions built by Optimizely and community developers. Extensions are reusable templates for making changes in the visual editor. To learn more, view our [documentation](https://developers.optimizely.com/x/extensions/).
+This repo contains a collection of sample Extensions built by Optimizely and community developers. We have Editor and Anayltic Extension types. To learn more, view our [documentation](https://developers.optimizely.com/x/extensions/).
 
 ## Using Extention Templates
 
@@ -28,3 +28,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
 * [Pop-up](https://optimizely.github.io/jess/extensions/popup.html)
 * [Butter Bar](https://optimizely.github.io/jess/extensions/butterbar.html)
+
+## Analytic Extensions
+
+Coming soon!
