@@ -12,17 +12,17 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 
 ### General
 
-* [Banner](https://github.com/optimizely/extension-library/tree/master/Banner)
-* [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Bottom%20Banner)
-* [Countdown Timer](https://github.com/optimizely/extension-library/tree/master/Countdown%20Timer)
-* [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Email%20Capture%20Pop-up)
-* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up)
-* [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Exit%20Intent%20Pop-up%202)
-* [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Sidebar%20Sliding%20Card)
-* [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Sliding%20Card%20Advanced)
+* [Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Banner)
+* [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Bottom%20Banner)
+* [Countdown Timer](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Countdown%20Timer)
+* [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Email%20Capture%20Pop-up)
+* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Exit%20Intent%20Pop-up)
+* [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Exit%20Intent%20Pop-up%202)
+* [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Sidebar%20Sliding%20Card)
+* [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Sliding%20Card%20Advanced)
 * [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Timed%20Modal)
-* [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Typed%20Messages)
-* [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Dynamic%20Banner)
+* [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Typed%20Messages)
+* [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Dynamic%20Banner)
 
 ### Nonprofit focused
 * [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
