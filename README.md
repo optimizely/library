@@ -1,34 +1,11 @@
-# Optimizely Extension Library
+# Optimizely Add Ons Library 
 
-This repo contains a collection of sample Extensions built by Optimizely and community developers. We have Editor and Anayltic Extension types. To learn more, view our [documentation](https://developers.optimizely.com/x/extensions/).
+This library houses all of Optimizely’s Add On components. Add Ons allow you to build on-top and extend Optimizely. Currently, we support Extensions and Custom Integrations.
 
-## Using Extention Templates
+## Extensions
 
-The provided JSON config file will create all components necessary for the Extension. To add to your own Optimizely account, copy the JSON contents, navigate to to Implemenation > Extensions within your Optimizely account and Create a new Extension using JSON.
+Extensions are reusable templates for making changes in the visual editor. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](). 
 
-Please email us at developers@optimizely.com or open a GitHub Issue with any problems or questions about the provided samples. We encourge contributions from the community and will reguarlly review Pull Requests. You can also email us to add your Extension to the library.
+## Custom Integrations
 
-## Editor Extensions
-
-### General
-
-* [Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Banner)
-* [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Bottom%20Banner)
-* [Countdown Timer](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Countdown%20Timer)
-* [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Email%20Capture%20Pop-up)
-* [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Exit%20Intent%20Pop-up)
-* [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Exit%20Intent%20Pop-up%202)
-* [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Sidebar%20Sliding%20Card)
-* [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Sliding%20Card%20Advanced)
-* [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Timed%20Modal)
-* [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Typed%20Messages)
-* [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Editor%20Extensions/Dynamic%20Banner)
-
-### Nonprofit focused
-* [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
-* [Pop-up](https://optimizely.github.io/jess/extensions/popup.html)
-* [Butter Bar](https://optimizely.github.io/jess/extensions/butterbar.html)
-
-## Analytic Extensions
-
-Coming soon!
+Custom integrations allow customers to create project level integrations that can be enabled/disabled for individual campaigns. Today, we support analytic integrations to extend Optimizely to your third party analytic tools. View our supported integrations in the [Integration Library](). 
