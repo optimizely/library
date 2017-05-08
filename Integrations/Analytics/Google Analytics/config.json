@@ -1,0 +1,29 @@
+{
+  "plugin_id": "ga_universal_analytics_demo",
+  "plugin_type": "analytics_integration",
+  "name": "GA Universal Custom Integration Demo",
+  "form_schema": [
+    {
+      "default_value": "16",
+      "field_type": "dropdown",
+      "name": "customDimensionSlot",
+      "label": "Custom Dimension",
+      "options": {
+        "choices": [
+          {
+            "value": "16",
+            "label": "16"
+          },
+          {
+            "value": "17",
+            "label": "17"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "Google Analytics Integration",
+  "options": {
+    "on_layer_decision": "//Define function for GA Tracking\nfunction fireOptlyGATracking() {\n\n  //Capture Decision info using getDecisionString API.\n  //getDecisionString Returns a string when bucketed or null when not bucketed.\n\tvar dimensionValue = window.optimizely.get(\"state\").getDecisionString({campaignId: campaignId});\n\t\n  //Set GA Fields Object\n  var fieldsObject = { nonInteraction: true };\n\tfieldsObject['dimension' + extension.customDimensionSlot] = dimensionValue;\n\t\n  //If bucketed into anything, set dimension value to slot and send to GA\n  \n  if (dimensionValue) {\n    ga('set', 'dimension' + extension.customDimensionSlot, dimensionValue);\n    ga('send', 'event', 'optimizely-custom', \"Assigned to Campaign\", fieldsObject);\n  }\n}\n\n// Initiate polling for GA object.\nvar count = 0;\nvar poll = setInterval(function(){ \n    count++;\n\n    if (count >= 10)\n    {\n        clearInterval(poll);\n    }\n    if (typeof ga !== 'undefined')\n        {\n            fireOptlyGATracking();\n            clearInterval(poll);\n        }\n}, 25);\n"
+  }
+}
