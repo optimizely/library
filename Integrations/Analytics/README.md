@@ -1,3 +1,5 @@
+## Analytic Integrations
+
 Analytics integrations allow customers to track Optimizely experiments in an external analytics tool. With the flip of a switch, Optimizely can append experiment data to  tracking code, so customers can see the impact of their experiments in their analytics tool.
 
 ## Adding an Integration
@@ -8,4 +10,4 @@ View our [documentation]().
 
 ## Library (More coming soon)
 
-[Google Analytics]()
+* [Google Analytics]()
