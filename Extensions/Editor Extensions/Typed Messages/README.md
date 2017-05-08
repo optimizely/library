@@ -1,6 +1,6 @@
 # Typed Messages
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Editor%20Extensions/Typed%20Messages/animation.gif)
+![Screenshot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Typed%20Messages/animation.gif)
 
 ## Description
 

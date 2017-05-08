@@ -4,7 +4,7 @@ This library houses all of Optimizely’s Add On components. Add Ons allow you t
 
 ## Extensions
 
-Extensions are reusable templates for making changes in the visual editor. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](). 
+Extensions are reusable templates for making changes in the visual editor. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](https://github.com/optimizely/extension-library/tree/master/Extensions). 
 
 ## Custom Integrations
 

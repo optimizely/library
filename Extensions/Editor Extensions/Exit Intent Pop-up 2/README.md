@@ -1,6 +1,6 @@
 # Exit Intent Pop-up 2
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Editor%20Extensions/Timed%20Modal/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Timed%20Modal/screenshot.png)
 
 ## Description
 
