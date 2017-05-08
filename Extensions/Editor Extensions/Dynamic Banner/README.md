@@ -1,6 +1,6 @@
 # Dynamic Banner
 
-![Screenshot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Dynamic%20Banner/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Dynamic%20Banner/screenshot.png)
 
 ## Description
 
