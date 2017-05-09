@@ -1,6 +1,6 @@
 # Sliding Card Advanced
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Sliding%20Card%20Advanced/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Sliding%20Card%20Advanced/screenshot.png)
 
 ## Description
 

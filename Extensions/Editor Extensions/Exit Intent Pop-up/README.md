@@ -1,6 +1,6 @@
 # Exit Intent Pop-up
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Exit%20Intent%20Pop-up/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up/screenshot.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Countdown Timer
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Countdown%20Timer/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Countdown%20Timer/screenshot.png)
 
 ## Description
 
