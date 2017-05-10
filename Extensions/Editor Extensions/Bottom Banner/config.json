@@ -19,13 +19,6 @@
       "options": null
     },
     {
-      "default_value": "http://www.google.co.uk",
-      "field_type": "text",
-      "name": "url",
-      "label": "Destination",
-      "options": null
-    },
-    {
       "default_value": "rgba(217, 217, 213, 1)",
       "field_type": "color",
       "name": "background_color",
@@ -46,9 +39,9 @@
   ],
   "description": "Plain Sticky Notification Bar + Close Button",
   "options": {
-    "html": "<div id=\"optimizely-extension-{{ widget.$instance }}\" class=\"notice\" style=\"color: {{extension.font_color}};\">\n<div id=\"notice\" style=\"background-color: {{extension.background_color}}\">\n    <div class=\"container\" style=\"width: 80%;margin-left: auto;margin-right: auto; display: block; text-align: center;\">\n      <div style=\"width: 60%;float: left;\">\n        <p>{{extension.message}}</p>\n      </div>\n      <div style=\"width: 40%;float: left;\">\n        <button class=\"btn btn-primary-outline btn-block close\" href=\"{{extension.url}}\">{{extension.cta}}</button>\n      </div>\n    </div>\n  </div>\n</div>",
+    "html": "<div id=\"optimizely-extension-{{ widget.$instance }}\" class=\"notice\" style=\"color: {{extension.font_color}};\">\n<div id=\"notice\" style=\"background-color: {{extension.background_color}}\">\n    <div class=\"container\" style=\"width: 80%;margin-left: auto;margin-right: auto; display: block; text-align: center;\">\n      <div style=\"width: 60%;float: left;\">\n        <p>{{extension.message}}</p>\n      </div>\n      <div style=\"width: 40%;float: left;\">\n        <button class=\"btn btn-primary-outline btn-block close\">{{extension.cta}}</button>\n      </div>\n    </div>\n  </div>\n</div>",
     "css": "#notice {\n    position: fixed;\n    z-index: 9999999999999999;\n    bottom: 0;\n    width: 100%;\n    font-size: 25px;\n    min-height: 80px;\n    padding-top: 20px;\n    padding-left: 100px;\n}\n\n#notice p {\n    margin-top: 10px\n}\n\n#notice button {\n    background-color: #FFF;\n    margin-bottom: 10px\n}\n\n#notice button:focus,#notice button:hover {\n    background-color: #1878bd\n}\n\n.btn {\n    font-weight: 700;\n    padding: 6px 30px;\n    font-size: 18px;\n    line-height: 1.42857143;\n    border-radius: 24px\n}\n\n.btn-primary-outline {\n    color: #1878bd;\n    background-color: rgba(255,255,255,0);\n    border-width: 1px;\n    border-style: solid;\n    border-color: #d9d9d9\n}\n\n.btn-primary-outline.active,.btn-primary-outline.focus,.btn-primary-outline:active,.btn-primary-outline:focus,.btn-primary-outline:hover {\n    color: #fff;\n    background-color: #1878bd;\n    border-color: #d9d9d9\n}",
-    "apply_js": "var $ = window.jQuery;\n$(function() {\n  $('body').prepend(extension.$html);\n  $('button.close').bind(\"click\", function(){\n  \t$(\".notice\").remove();\n    window['optimizely'] = window['optimizely'] || [];\n\t\twindow.optimizely.push({\n      type: \"event\",\n      eventName: \"close_notice\"\n    });\n  });\n});\n\n",
-    "undo_js": "$('#optimizely-extension-' + extension.$instance).remove();"
+    "apply_js": "//Setup utility functions from Optimizely\nvar utils = window.optimizely.get('utils');\n\n//Use waitForElement promise to wait until we want to render the extension\nutils.waitForElement('body').then(function(element){\n  var html = extension.$html;\n\n  //Insert the extension\n  element.insertAdjacentHTML('afterbegin', html);\n  \n  var closeBtn = document.querySelector('button.close');\n\n  //Bind event listener on close cta  \n  closeBtn.addEventListener('click', function(e) {\n    e.preventDefault();\n  \tdocument.querySelector('.notice').remove();\n\n    //Send Custom Event to Optimizely to track click\n    window['optimizely'] = window['optimizely'] || [];\n\t\twindow.optimizely.push({\n      type: \"event\",\n      eventName: \"close_notice\"\n    });\n  });\n});\n",
+    "undo_js": "var extensionHTML = document.querySelector('#optimizely-extension-' + extension.$instance);\n\nif (extensionHTML) extensionHTML.remove();"
   }
 }
