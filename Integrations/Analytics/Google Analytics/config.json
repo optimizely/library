@@ -1,5 +1,4 @@
 {
-  "plugin_id": "ga_universal_analytics_demo",
   "plugin_type": "analytics_integration",
   "name": "GA Universal Custom Integration Demo",
   "form_schema": [

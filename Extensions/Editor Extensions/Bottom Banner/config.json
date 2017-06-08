@@ -1,5 +1,4 @@
 {
-  "plugin_id": "notice",
   "plugin_type": "widget",
   "name": "Notification Bar",
   "edit_page_url": "www.optimizely.com",
