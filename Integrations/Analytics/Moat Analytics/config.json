@@ -1,10 +1,9 @@
 {
-  "plugin_id": "moat_integration",
   "plugin_type": "analytics_integration",
   "name": "Moat",
   "form_schema": [],
   "description": "Moat Integration ",
   "options": {
-    "on_layer_decision": "//Fetch Optimizely State\nvar state = optimizely.get('state');\n//Get the current Decision String from the state\nvar string = state.getDecisionString({\"campaignId\":campaignId});\n//Check for a truthy value for the string indicating a visitor has been successfully bucketed\nif (string) {\n  //create or update the window-level optimizelyMoat array with the Decision String if \n\twindow.optimizelyMoat = window.optimizelyMoat || [];\n\twindow.optimizelyMoat.push(string);\n}"
+    "track_layer_decision": "var state = optimizely.get('state');\nvar string = state.getDecisionString({\"campaignId\":campaignId,\"shouldCleanString\":true});\nif (string) {\n\twindow.optimizelyMoat = window.optimizelyMoat || [];\n\twindow.optimizelyMoat.push(string);\n}"
   }
 }
