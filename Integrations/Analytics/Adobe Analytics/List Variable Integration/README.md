@@ -19,8 +19,8 @@ Optimizely's [out of the box integration](https://help.optimizely.com/Integrate_
 Add this JavaScript code to your Adobe Analytics `s_code.js` file in the plug-ins section (or directly on your page after the `s_code.js` loads, but *before* the Adobe Analytics `s.t();` call is made):
 
 ```
-if (window.optimizely.get("custom/adobeIntegrator")) {
-	window.optimizely.get("custom/adobeIntegrator").assignCampaigns(s);
+if (window.optimizely && typeof window.optimizely.get === 'function' && window.optimizely.get("custom/adobeIntegrator")) {
+    window.optimizely.get("custom/adobeIntegrator").assignCampaigns(s);
 }
 ```
 
