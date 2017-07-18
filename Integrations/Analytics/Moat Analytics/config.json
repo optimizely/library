@@ -1,0 +1,9 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "Moat",
+  "form_schema": [],
+  "description": "Moat Integration ",
+  "options": {
+    "track_layer_decision": "var state = optimizely.get('state');\nvar string = state.getDecisionString({\"campaignId\":campaignId,\"shouldCleanString\":true});\nif (string) {\n\twindow.optimizelyMoat = window.optimizelyMoat || [];\n\twindow.optimizelyMoat.push(string);\n}"
+  }
+}
