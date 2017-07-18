@@ -13,4 +13,6 @@ The below integrations are supported by Optimizely and can easily be added to ou
 
 ## Library (More coming soon)
 
-* [Google Analytics](https://github.com/optimizely/extension-library/tree/master/Integrations/Analytics/Google%20Analytics)
+* [Google Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Google%20Analytics)
+* [Adobe Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Adobe%20Analytics)
+* [Moat Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Moat%20Analytics)
