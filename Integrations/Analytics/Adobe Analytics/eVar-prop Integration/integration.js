@@ -1,4 +1,5 @@
 var decisionString = window.optimizely.get('state').getDecisionString({campaignId: campaignId, shouldCleanString: true});
+var redirectInfo = window.optimizely.get('state').getRedirectInfo();
 var eVar = extension.eVar;
 var prop = extension.prop;
 var campaignObject = {};
@@ -11,6 +12,7 @@ var adobeIntegrator = {
 	campaignArray: [],
 	// Accepts "s" variable as a param and assigns eVars to object.
 	assignCampaigns: function(sVariable) {
+    if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;
 		for (var i = this.campaignArray.length-1; i >= 0; i--) {
 			Object.assign(sVariable, this.campaignArray[i]);
 			this.campaignArray.splice(i, 1);
