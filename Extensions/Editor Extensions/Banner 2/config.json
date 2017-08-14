@@ -1,0 +1,86 @@
+{
+  "plugin_type": "widget",
+  "name": "Design Approved Banner",
+  "edit_page_url": "https://www.atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": "Join Us for Opticon",
+      "field_type": "text",
+      "name": "text",
+      "label": "Banner Text",
+      "options": null
+    },
+    {
+      "default_value": "bold",
+      "field_type": "toggle",
+      "name": "font_wt",
+      "label": "Banner Font Weight",
+      "options": {
+        "choices": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "bold",
+            "label": "Bold"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "whiteTextdarkBlue",
+      "field_type": "dropdown",
+      "name": "color_combo_selector",
+      "label": "Banner Color Combination",
+      "options": {
+        "choices": [
+          {
+            "value": "whiteTextdarkBlue",
+            "label": "White Text on Dark Blue Background"
+          },
+          {
+            "value": "whiteTextmedBlue",
+            "label": "White Text on Medium Blue Background"
+          },
+          {
+            "value": "whiteTextCool",
+            "label": "White Text on Cool Background"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "left",
+      "field_type": "toggle",
+      "name": "cta_location",
+      "label": "CTA Location",
+      "options": {
+        "choices": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "https://www.optimizely.com/opticon",
+      "field_type": "text",
+      "name": "cta_link",
+      "label": "CTA Link",
+      "options": null
+    }
+  ],
+  "description": "",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"banner {{extension.color_combo_selector}}\">\n      <a href=\"{{extension.cta_link}}\" class=\"butterbar_cta {{extension.color_combo_selector}}\" style=\"float:{{{extension.cta_location}}}\" >Register for Opticon</a>\n\n  <div style=\"font-weight:{{extension.font_wt}}\"> {{ extension.text }} </div>\n\n</div>",
+    "css": ".banner {\n  font-size: 14px;\n  font-weight: bold;\n  font-family:Proxima,Helvetica,sans-serif;\n  text-align:center;\n  padding:14px;\n  z-index: 1000; position:relative;\n}\n\n\n\n.butterbar_cta {\n  border:none;\n\tfont-weight: bold;\n  text-align: center;\n  padding:6px;\n  font-size: 12px;\n  font-family:Proxima,Helvetica,sans-serif;\n  margin-top:-5px;\n  \n  \n  \n}\n\n\n\na.whiteTextdarkBlue {\n color:#262e45;\n background-color:white; \n}\n\n\ndiv.whiteTextdarkBlue {\n color:white;\n background-color:#262e45;\n}\n\na.whiteTextmedBlue {\n color:#007ae6;\n background-color:white;\n  \n}\n\ndiv.whiteTextmedBlue {\n color:white;\n background-color:#007ae6;\n  \n}\n\ndiv.whiteTextCool {\n color:white;\n background-color:#00d4ce;\n}\n\na.whiteTextCool {\n color:#00d4ce;\n background-color:white;\n}\n\n",
+    "apply_js": "var utils = optimizely.get('utils');\n\nutils.waitForElement('body')\n  .then(function(elem) {\n    // Prepend the extension html to the body\n    elem.insertAdjacentHTML('afterbegin', extension.$html);\n  });\n",
+    "undo_js": "var extensionHtml = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionHtml) extensionHtml.remove();\n"
+  }
+}

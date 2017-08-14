@@ -11,7 +11,9 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 ## Editor Extensions
 
 ### General
+* [Unsplash Photo Finder](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Unsplash%20Photo%20Finder)
 * [Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner)
+* [Banner 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner%202)
 * [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Bottom%20Banner)
 * [Countdown Timer](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Countdown%20Timer)
 * [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Email%20Capture%20Pop-up)
@@ -22,6 +24,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Timed%20Modal)
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Typed%20Messages)
 * [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Dynamic%20Banner)
+
 
 ### Nonprofit focused
 * [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)

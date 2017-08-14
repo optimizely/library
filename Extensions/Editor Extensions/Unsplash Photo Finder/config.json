@@ -1,0 +1,35 @@
+{
+  "plugin_type": "widget",
+  "name": "Unsplash Photo Finder",
+  "edit_page_url": "https://atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": "Pizza",
+      "field_type": "text",
+      "name": "query",
+      "label": "Keyword",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "client_id",
+      "label": "Unsplash API Key",
+      "options": null
+    },
+    {
+      "default_value": ".hero__text-content.hero__image",
+      "field_type": "selector",
+      "name": "selector",
+      "label": "Element to Change",
+      "options": null
+    }
+  ],
+  "description": "Searches unsplash for photos related to a keyword.",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"\">\n  {{ extension.text }}\n</div>",
+    "css": ". {\n  background-color: #fff575;\n  border-bottom: 1px solid #e0d769;\n  color: #555;\n  padding: 10px;\n\tfont-weight: bold;\n  text-align: center;\n  font-size: 20px;\n}",
+    "apply_js": "var utils = optimizely.get('utils');\n\nfunction unsplash(query) {\n    $.ajax({\n        url: 'https://api.unsplash.com/search/photos',\n        type: 'GET',\n        dataType: 'json',\n        data: {\n            query : query,\n            client_id: extension.client_id,\n            per_page: 1\n        },\n        success: function(data) {\n            var url = data.results[0].urls.regular;\n\t\t\t\t\t\t$(extension.selector).css('background-image','url('+url+')');\n        }, \n        error: function(error){\n            console.warn(error);\n        }\n    });\n}\n\nutils.waitForElement('body')\n  .then(function(elem) {\n\t\tunsplash(extension.query);\n});",
+    "undo_js": "var extensionHtml = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionHtml) extensionHtml.remove();\n"
+  }
+}
