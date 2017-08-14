@@ -1,6 +1,6 @@
-# Banner
+# Banner 2
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Banner%202/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Banner%202/screenshot_.png)
 
 ## Description
 
