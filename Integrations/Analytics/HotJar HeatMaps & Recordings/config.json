@@ -1,0 +1,53 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "HotJar HeatMaps & Recordings",
+  "form_schema": [
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "javascript_trigger",
+      "label": "Prefix Javascript Trigger (HeatMaps)",
+      "options": null
+    },
+    {
+      "default_value": "true",
+      "field_type": "dropdown",
+      "name": "heatmaps",
+      "label": "HeatMaps",
+      "options": {
+        "choices": [
+          {
+            "value": "true",
+            "label": "On"
+          },
+          {
+            "value": "false",
+            "label": "Off"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "true",
+      "field_type": "dropdown",
+      "name": "recordings",
+      "label": "Recordings",
+      "options": {
+        "choices": [
+          {
+            "value": "true",
+            "label": "On"
+          },
+          {
+            "value": "false",
+            "label": "Off"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "This integration allows you to see tag heatmaps and recordings with Optimizely data. For more information on how to use this integration, please take a look at this Knowledge Base article: https://help.optimizely.com/Integrate_Optimizely_with_Hotjar",
+  "options": {
+    "track_layer_decision": "// We define the HotJar object if this has not been done already\nwindow.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};\n\n// We get the decision in a string\nvar decisionString = window.optimizely.get(\"state\").getDecisionString({\n  campaignId: campaignId,\n  shouldCleanString:true,\n  maxLength:50\n });\n\nif(extension.heatmaps === \"true\") {\n  // If the visitor is in the holdback\n  if(isHoldback === true) {\n    // We trigger the heatmap\n    hj('trigger', extension.javascript_trigger+'_holdback');\n  } else {\n  \t// We trigger the heatmap\n  \thj('trigger', extension.javascript_trigger+'_'+variationId);\n  }\n}\n\nif(extension.recordings === \"true\") {\n  // We tag recordings with experiment info\n  hj('tagRecording', [decisionString]);\n}\n\n\n"
+  }
+}
