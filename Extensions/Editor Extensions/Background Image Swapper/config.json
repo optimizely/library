@@ -1,0 +1,28 @@
+{
+  "plugin_type": "widget",
+  "name": "Background Image Swapper",
+  "edit_page_url": "https://www.optimizely.com/homepage/",
+  "form_schema": [
+    {
+      "default_value": ".js-hero",
+      "field_type": "selector",
+      "name": "imageSelector",
+      "label": "Image Selector",
+      "options": null
+    },
+    {
+      "default_value": "https://res.cloudinary.com/dy8i0qezub/image/upload/f_auto,q_65/p13n-homepage/Optimizely-Home.jpg",
+      "field_type": "image",
+      "name": "src",
+      "label": "Image SRC",
+      "options": null
+    }
+  ],
+  "description": "Swaps a background image on the page when Optimizely initially loads to prevent flicker.",
+  "options": {
+    "html": "",
+    "css": "",
+    "apply_js": "function imageSwap() {\n  var selector = extension.imageSelector;\n\tvar rawCSS = \"{background-image: url(\" + extension.src + \" ) !important}\";\n  applyCSS(selector, rawCSS, \"optimizely-extension-\");\n}\n\nfunction applyCSS(selector, rawCSS) {\n  var css = selector + \" \" + rawCSS;\n  var style = document.createElement('style');\n  style.type = 'text/css';\n  style.className = \"optimizely-extension-\" + extension.$instance;\n  if (style.styleSheet){\n    style.styleSheet.cssText = css; \n  } else {\n    style.appendChild(document.createTextNode(css));\n  }\n  document.head.appendChild(style);\n}\n\nimageSwap();",
+    "undo_js": "// document.querySelector('.optimizely-extension-' + extension.$instance).remove();"
+  }
+}
