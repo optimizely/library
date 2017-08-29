@@ -1,0 +1,28 @@
+{
+  "plugin_type": "widget",
+  "name": "Text Swapper",
+  "edit_page_url": "https://www.optimizely.com/",
+  "form_schema": [
+    {
+      "default_value": ".optly-header-one",
+      "field_type": "selector",
+      "name": "cssPath",
+      "label": "CSS Path",
+      "options": null
+    },
+    {
+      "default_value": "Hello World",
+      "field_type": "text",
+      "name": "text",
+      "label": "Text",
+      "options": null
+    }
+  ],
+  "description": "Hides and swaps text while mitigating any risk of page flashing",
+  "options": {
+    "html": "",
+    "css": "",
+    "apply_js": "function init() {\n  tempHide();\n  swapText(extension.cssPath, extension.text);\n  showContent();\n}\n\nfunction swapText(cssPath, text) {\n  var selector = document.querySelector(cssPath);\n  if (selector && text) {\n  \tselector.innerHTML = text;\n  }\n}\n\nfunction tempHide(item) {\n\tvar selector = item || \"body\";\n\tvar css = selector + \" {visibility:hidden !important}\";\n\tvar style = document.createElement('style');\n\tstyle.type = 'text/css';\n\tstyle.className = \"optly-hide-\" + extension.$instance;\n\tif (style.styleSheet) {\n\t\tstyle.styleSheet.cssText = css;\n\t} else {\n\t\tstyle.appendChild(document.createTextNode(css));\n\t}\n\tdocument.head.appendChild(style);\n}\n\nfunction showContent() {\n\tvar styleSheet = document.querySelector(\"style.optly-hide-\" + extension.$instance);\n  if (styleSheet) {\n\t\tstyleSheet.remove();\n  }\n}\n\ninit();",
+    "undo_js": "//document.querySelector('#optimizely-extension-' + extension.$instance).remove();"
+  }
+}
