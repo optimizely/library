@@ -27,11 +27,11 @@ This analytics integration allows you to enable troubleshooting custom events in
 
 When enough visitors have been included in the experiment the results page will contain the following information.
 
-# step1_ga_wait_success: Number of visitors for which the troubleshooting script ran.
+- step1_ga_wait_success: Number of visitors for which the troubleshooting script ran.
 
-# step2_ga_ready: Number of visitors for which the GA object was defined
+- step2_ga_ready: Number of visitors for which the GA object was defined
 
-# step3_ga_tracking_success: Number of visitors for which the event got sent successfully.
+- step3_ga_tracking_success: Number of visitors for which the event got sent successfully.
 
-# step4_ga_timeout: Number of visitors for which the GA object was not loaded in time.
+- step4_ga_timeout: Number of visitors for which the GA object was not loaded in time.
 
