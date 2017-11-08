@@ -1,42 +1,43 @@
-var decisionString = window.optimizely.get('state').getDecisionString({campaignId: campaignId, shouldCleanString: true});
+var decisionString = window.optimizely.get('state').getDecisionString({
+  campaignId: campaignId,
+  shouldCleanString: true
+});
 var redirectInfo = window.optimizely.get('state').getRedirectInfo();
 var eVar = extension.eVar;
 var prop = extension.prop;
-var campaignObject = {};
-if (!!eVar) campaignObject[eVar] = decisionString;
-if (!!prop) campaignObject[prop] = decisionString;
 
 // Public Methods
 var adobeIntegrator = {
-	// Array of active campaigns/experiments
-	campaignArray: [],
-	// Accepts "s" variable as a param and assigns eVars to object.
-	assignCampaigns: function(sVariable) {
+  campaignDecisions: {},
+  // Accepts "s" variable as a param and assigns eVars to object.
+  populateTrackerClearDecisions: function(sVariable) {
+    for (var allocation in this.campaignDecisions) {
+      sVariable[allocation] = this.campaignDecisions[allocation];
+    }
+    this.campaignDecisions = {};
+  },
+  assignCampaigns: function(sVariable) {
     if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;
-		for (var i = this.campaignArray.length-1; i >= 0; i--) {
-			Object.assign(sVariable, this.campaignArray[i]);
-			this.campaignArray.splice(i, 1);
-		}
-	},
-	// Accepts "s" variable as a param and assigns eVars to object, then dispatches custom link tracking.
-	trackDelayedCampaigns: function(sVariable) {
-		for (var i = this.campaignArray.length-1; i >= 0; i--) {
-      sVariable.linkTrackVars += "," + Object.keys(this.campaignArray[i])[0];
-			Object.assign(sVariable, this.campaignArray[i]);
-			this.campaignArray.splice(i, 1);
-		}
-		sVariable.tl(true, "o", "OptimizelyLayerDecision");
-	}
+    this.populateTrackerClearDecisions(sVariable);
+  },
+  // Accepts "s" variable as a param and assigns eVars to object, then dispatches custom link tracking.
+  trackDelayedCampaigns: function(sVariable) {
+    this.populateTrackerClearDecisions(sVariable);
+    sVariable.tl(true, "o", "OptimizelyLayerDecision");
+  }
 };
 
 // Scopes `campaignArray` to Optimizely object.
 if (!window.optimizely.get("custom/adobeIntegrator")) {
-	window.optimizely.push({
-		type: "registerModule",
-		moduleName: "adobeIntegrator",
-		module: adobeIntegrator
-	});
+  window.optimizely.push({
+    type: "registerModule",
+    moduleName: "adobeIntegrator",
+    module: adobeIntegrator
+  });
 }
 
 // Failing Audiences returns `null`, failing Traffic Allocation returns `undefined` for decisionString.
-if (!!decisionString) window.optimizely.get("custom/adobeIntegrator").campaignArray.push(campaignObject);
+if (!!decisionString) {
+  if (eVar) window.optimizely.get("custom/adobeIntegrator").campaignDecisions[eVar] = decisionString;
+  if (prop) window.optimizely.get("custom/adobeIntegrator").campaignDecisions[prop] = decisionString;
+}
