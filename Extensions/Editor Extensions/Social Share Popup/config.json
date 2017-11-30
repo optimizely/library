@@ -1,0 +1,78 @@
+{
+  "plugin_type": "widget",
+  "name": "Social Share Popup",
+  "edit_page_url": "https://help.optimizely.com/Build_Campaigns_and_Experiments/Extensions%3A_Template_custom_features_in_Optimizely_X",
+  "form_schema": [
+    {
+      "default_value": "Share this!",
+      "field_type": "text",
+      "name": "headline",
+      "label": "Headline",
+      "options": null
+    },
+    {
+      "default_value": 10,
+      "field_type": "number",
+      "name": "minimumlength",
+      "label": "Minimum Highlighted Characters",
+      "options": null
+    },
+    {
+      "default_value": "rgba(226, 226, 226, 1)",
+      "field_type": "color",
+      "name": "colour",
+      "label": "Background Colour",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "textColour",
+      "label": "Text Colour",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": 0,
+      "field_type": "number",
+      "name": "xoffset",
+      "label": "X Offset",
+      "options": null
+    },
+    {
+      "default_value": 0,
+      "field_type": "number",
+      "name": "yoffset",
+      "label": "Y Offset",
+      "options": null
+    },
+    {
+      "default_value": "dynamic",
+      "field_type": "dropdown",
+      "name": "type",
+      "label": "Location",
+      "options": {
+        "choices": [
+          {
+            "value": "fixed",
+            "label": "Page Bottom"
+          },
+          {
+            "value": "dynamic",
+            "label": "At Selection"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "This extension adds a popup to the page when the user selects text. The popup includes links to share the selected text and current on Twitter or LinkedIn. Editable fields include background colour, placement (at click or at window bottom), and location offsets. ",
+  "options": {
+    "apply_js": "var onMouseUp = function highlightHandler(event){\n    removePopup();\n  \tif(Math.abs(window.getSelection().anchorOffset - window.getSelection().focusOffset) > extension.minimumlength) {\n        renderPopup(event.clientX, event.clientY);\n    }\n};\n\ndocument.addEventListener(\"mouseup\", onMouseUp);\n\ndocument.addEventListener(\"scroll\", function clearExtension(){\n    \tremovePopup();\n});\n\nfunction renderPopup(x, y) {\n  \tvar html = widget.$html;\n  \tdocument.removeEventListener(\"mouseup\", onMouseUp);\n    document.querySelector('body').insertAdjacentHTML('afterbegin', html);\n  \tdocument.getElementById('optimizely-extension').style.background = extension.colour;\n  \t\n  \tif (extension.type == 'dynamic'){\n  \t\tdocument.getElementById('optimizely-extension').style.left = x + extension.xoffset + \"px\";\n    \tdocument.getElementById('optimizely-extension').style.top = y + extension.yoffset + \"px\";\n    }else{\n      document.getElementById('optimizely-extension').style.left = window.innerWidth / 2 + \"px\";\n    \tdocument.getElementById('optimizely-extension').style.top = (window.innerHeight - document.querySelector('#optimizely-extension').clientHeight)+ \"px\";\n    }\n  \tdocument.getElementById('twitter').addEventListener(\"click\", twitterClick);\n\t  document.getElementById('linkedin').addEventListener(\"click\", linkedinClick);\n}\n\nfunction removePopup(){\n \t\tvar extensionHtml = document.getElementById('optimizely-extension');\n\t\tif (extensionHtml) extensionHtml.remove();  \n  \tdocument.addEventListener(\"mouseup\", onMouseUp);\n}\n\n\nfunction getSelectedText(){\n  allText = window.getSelection().focusNode.textContent;\n  if (window.getSelection().anchorOffset > window.getSelection().focusOffset){\n      start = window.getSelection().focusOffset;\n    \tend = window.getSelection().anchorOffset;\n  }\n  else{\n  \t\tend = window.getSelection().focusOffset;\n    \tstart = window.getSelection().anchorOffset;\n  } \n  return allText.substring(start, end);\n}\n\n\nfunction getLinkedInShareURL(){\n \t\tshareURL = \"https://www.linkedin.com/shareArticle?mini=true&url=\" + window.location.href + \"&summary=\" + getSelectedText().replace(/ /gi, \"%20\");\n \t\treturn shareURL;\n}\n\n\nfunction getTwitterShareURL(){\n \t\tshareURL = \"https://twitter.com/share?text=\" +  getSelectedText().replace(/ /gi, \"%20\") + \"&url=\" + window.location.href;\n  \treturn shareURL;\n}\n\n\ntwitterClick = function shareToTwitter(){\n \t\tremovePopup();\n    window.open(getTwitterShareURL(), '_blank', 'location=yes,top=150,left=300,height=570,width=520,scrollbars=yes,status=yes'); \n};\n\nlinkedinClick = function shareToLinkedIn(){\n \t\tremovePopup();\n    window.open(getLinkedInShareURL(), '_blank', 'location=yes,top=150,left=300,height=570,width=520,scrollbars=yes,status=yes'); \n};",
+    "html": "<div id=\"optimizely-extension\" class=\"socialPopup\" style=\"background:extension.colour\">\n\t<p class=\"optimizelyShareHeadline\" style=\"color: {{ extension.textColour }};\">{{extension.headline}}</p>\n  <div class=\"links\" >\n    \n    <a class=\"link\" id=\"twitter\">\n    \t\t<img  src=\"https://image.flaticon.com/icons/png/128/174/174876.png\" width= 32px>\n    </a>\n    \n  \t<a class=\"link\" id=\"linkedin\" >\n    \t\t<img src=\"https://image.flaticon.com/icons/png/128/174/174857.png\" width= 32px>\n    </a>\n  \n  </div>\n  \n</div>",
+    "css": ".socialPopup{\n    position: fixed;\n\t\tborder-radius: 5px;\n    width: 150px;\n  \tpadding-top: 2px;\n    text-align: center;\n    z-index:999;\n  \t/*box-shadow: 5px 5px 4px grey;*/\n}\n.optimizelyShareHeadline {\n\tword-wrap: break-word;\n  padding: 0 3px;\n}\n\n.links{\n\tpadding-bottom: 5px;\n}\n",
+    "undo_js": "var extensionHtml = document.getElementById('optimizely-extension');\nif (extensionHtml) extensionHtml.remove();\n"
+  }
+}

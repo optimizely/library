@@ -12,6 +12,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 
 ### General
 * [Unsplash Photo Finder](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Unsplash%20Photo%20Finder)
+* [Background Image Swapper](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Background%20Image%20Swapper)
 * [Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner)
 * [Banner 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner%202)
 * [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Bottom%20Banner)
@@ -21,6 +22,8 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up%202)
 * [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sidebar%20Sliding%20Card)
 * [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sliding%20Card%20Advanced)
+* [Social Share Popup](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Social%20Share%20Popup)
+* [Text Swapper](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Text%20Swapper)
 * [Timed Modal](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Timed%20Modal)
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Typed%20Messages)
 * [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Dynamic%20Banner)
