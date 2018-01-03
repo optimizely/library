@@ -1,0 +1,39 @@
+{
+  "plugin_type": "widget",
+  "name": "Price changer",
+  "edit_page_url": "http://playground.optimizely.how/",
+  "form_schema": [
+    {
+      "default_value": "discrete",
+      "field_type": "dropdown",
+      "name": "priceChangeType",
+      "label": "Price Change Type",
+      "options": {
+        "choices": [
+          {
+            "value": "discrete",
+            "label": "Discrete"
+          },
+          {
+            "value": "percentage",
+            "label": "Percentage"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": 0,
+      "field_type": "number",
+      "name": "priceChangeAmount",
+      "label": "Price Change Amount",
+      "options": null
+    }
+  ],
+  "description": "Ability to change the price of the products on the site",
+  "options": {
+    "apply_js": "var utils = optimizely.get('utils');\nvar $ = optimizely.get('jquery');console.log(extension);\n\nvar priceChange = extension.priceChangeAmount;\n\nfunction makePriceChange(originalPrice, quantity) {\n\tvar internalPriceChange = typeof quantity !== 'undefined' && extension.priceChangeType !== 'percentage' ? priceChange * quantity : priceChange;\n\t//console.log(parseFloat(originalPrice) + parseFloat(originalPrice * (internalPriceChange / 100)));\n\treturn extension.priceChangeType === \"discrete\" ? (originalPrice + internalPriceChange).toFixed(2) : (parseFloat(originalPrice) + parseFloat(originalPrice * (internalPriceChange / 100))).toFixed(2);\n}\n\nvar checkNormalPrices = setInterval(function() {\n\tvar prices = $('.product-price').length;\n\tif (prices > 0) {\n\t\tvar appliedPrices = $('.amended-price').length;\n\t\tif (prices !== appliedPrices) {\n\t\t\t$('.product-price:not(.amended-price)').each(function(index, el) {\n\t\t\t\tvar productPrice = parseFloat($(this).text().slice(1));\n\t\t\t\t$(this).text('$' + makePriceChange(productPrice)).addClass('amended-price');\n\t\t\t});\n\t\t}\n\t}\n}, 50);\n\nvar checkDiscountedPrices = setInterval(function() {\n\tvar prices = $('.product-price-discount').length;\n\tif (prices > 0) {\n\t\tvar appliedPrices = $('.amended-price').length;\n\t\tif (prices !== appliedPrices) {\n\t\t\t$('.product-price-discount:not(.amended-price)').each(function(index, el) {\n\t\t\t\tvar productPrices = $(this).text().match(/\\$([0-9]*\\.[0-9]*)\\$([0-9]*\\.[0-9]*)/);\n\n\t\t\t\tvar originalProductPrice = parseFloat(productPrices[1]);\n\t\t\t\tvar discountedProductPrice = parseFloat(productPrices[2]);\n\n\t\t\t\t$(this).html('$' + makePriceChange(originalProductPrice) + '<i>$' + makePriceChange(discountedProductPrice) + '</i>').addClass('amended-price');\n\t\t\t});\n\t\t}\n\t}\n}, 50);\n\nvar checkListPrices = setInterval(function() {\n\tvar prices = $('.product-list .product-list-desc i').length;\n\tif (prices > 0) {\n\t\tvar appliedPrices = $('.amended-price').length;\n\t\tif (prices !== appliedPrices) {\n\t\t\t$('.product-list .product-list-desc i:not(.amended-price)').each(function(index, el) {\n\t\t\t\tif ($(this).find('b').length > 0) { // Discounted prices\t\n\t\t\t\t\tvar productPrices = $(this).text().match(/\\$([0-9]*\\.[0-9]*)\\$([0-9]*\\.[0-9]*)/);\n\n\t\t\t\t\tvar originalProductPrice = parseFloat(productPrices[1]);\n\t\t\t\t\tvar discountedProductPrice = parseFloat(productPrices[2]);\n\n\t\t\t\t\t$(this).html('$' + makePriceChange(originalProductPrice) + '<b>$' + makePriceChange(discountedProductPrice) + '</b>').addClass('amended-price');\n\t\t\t\t} else {\n\t\t\t\t\tvar productPrice = parseFloat($(this).text().slice(1));\n\t\t\t\t\t$(this).text('$' + makePriceChange(productPrice)).addClass('amended-price');\n\t\t\t\t}\n\t\t\t});\n\t\t}\n\t}\n}, 50);\n\nvar checkCartPrices = setInterval(function() {\n\tvar prices = $('.cart-list li span').length;\n\tif (prices > 0) {\n\t\tvar appliedPrices = $('.amended-price').length;\n\t\tif (prices !== appliedPrices) {\n\t\t\t$('.cart-list li span:not(.amended-price)').each(function(index, el) {\n\t\t\t\tvar productPriceBreakdown = ($(this).text().match(/^([0-9]) x \\$(.*)/));\n\t\t\t\t\n\t\t\t\t$(this).text(productPriceBreakdown[1] + ' x $' + makePriceChange(parseFloat(productPriceBreakdown[2]))).addClass('amended-price');\n\t\t\t});\n\t\t}\n\n\t\tvar checkCart = setInterval(function() {\n\t\t\tvar price = $('#cart .cart-btn .button').length;\n\t\t\tif (price > 0) {\n\t\t\t\tvar appliedPrices = $('.amended-price').length;\n\t\t\t\tif (price !== appliedPrices) {\n\t\t\t\t\t$('#cart .cart-btn .button:not(.amended-price)').each(function(index, el) {\n\t\t\t\t\t\tvar productPrice = parseFloat($(this).text().slice(1));\n\t\t\t\t\t\t$(this).text('$' + makePriceChange(productPrice, $('.cart-list li span').length)).addClass('amended-price');\n\t\t\t\t\t});\n\t\t\t\t}\n\t\t\t}\n\t\t}, 50);\n\t}\n}, 50);",
+    "html": "",
+    "css": ".product-price,\n.product-price-discount,\n.product-list .product-list-desc i,\n#cart .cart-btn .button {\n\tdisplay: none;\n}\n\n.product-price.amended-price,\n.product-price-discount.amended-price,\n.product-list .product-list-desc i.amended-price,\n#cart .cart-btn .button.amended-price {\n\tdisplay: block;\n}",
+    "undo_js": ""
+  }
+}
