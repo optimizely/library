@@ -1,0 +1,9 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "econda Analytics Integration",
+  "form_schema": [],
+  "description": "",
+  "options": {
+    "track_layer_decision": "// Pre conditions :\n//   1: Econda-Tracking-Script is loaded before\n(function(){\n  var decObject = window.optimizely.get(\"state\").getDecisionObject({campaignId: campaignId});\n                if( typeof window.emos3 !== 'undefined'){\n                               window.emos3.send({ type: 'event', abtest:  [ [decObject.experiment , decObject.variation] ] }); \n  } else if (typeof(window.emosPropertiesEvent)== \"function\"){\n                               window.emosPropertiesEvent({ type: 'event', abtest:  [ [decObject.experiment , decObject.variation] ] }); \n  } else {\n               console.log(\"Problem: econda A/B Test Tracking is activated but tracking library is not yet loaded. Could not send data to econda.\");\n  }\n})();"
+  }
+}
