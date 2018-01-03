@@ -1,0 +1,78 @@
+{
+  "plugin_type": "widget",
+  "name": "Multibuy Offer Reminder",
+  "edit_page_url": "https://playground.optimizely.how/",
+  "form_schema": [
+    {
+      "default_value": "Take me to the shop",
+      "field_type": "text",
+      "name": "text_cta",
+      "label": "CTA copy",
+      "options": null
+    },
+    {
+      "default_value": "Thanks, but no thanks",
+      "field_type": "text",
+      "name": "text_dismiss",
+      "label": "Dismiss copy",
+      "options": null
+    },
+    {
+      "default_value": "http://playground.optimizely.how/mens",
+      "field_type": "text",
+      "name": "cta_url",
+      "label": "CTA URL",
+      "options": null
+    },
+    {
+      "default_value": "Add one more product to your cart and get 15% off at checkout!",
+      "field_type": "text",
+      "name": "msg_copy",
+      "label": "Message copy",
+      "options": null
+    },
+    {
+      "default_value": "rgba(0, 0, 0, 0.75)",
+      "field_type": "color",
+      "name": "overlay_color",
+      "label": "Overlay background",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "#ffffff",
+      "field_type": "color",
+      "name": "modal_color",
+      "label": "Window background",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "#1da613",
+      "field_type": "color",
+      "name": "cta_color",
+      "label": "CTA color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "#0e59b4",
+      "field_type": "color",
+      "name": "msg_color",
+      "label": "Message color",
+      "options": {
+        "mode": "hex"
+      }
+    }
+  ],
+  "description": "",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"cv-main\" style=\"background-color:{{ extension.overlay_color }}\">\n\t<div class=\"cv-modal\" style=\"background-color:{{ extension.modal_color }}\">\n\t\t<p class=\"cv-msg\" style=\"color:{{ extension.msg_color }}\">{{ extension.msg_copy }}</p>\n\t\t<a href=\"{{ extension.cta_url }}\" class=\"cv-cta\" style=\"background-color:{{ extension.cta_color }}\">{{ extension.text_cta }}</a>\n\t\t<a href=\"#\" class=\"cv-dismiss\">{{ extension.text_dismiss }}</a>\n\t</div>\n</div>",
+    "css": ".cv-main{width:100%;height:100%;background-color:rgba(0,0,0,0.7);position:fixed;top:0;left:0;z-index:1000;display:none;}\n.cv-modal{width:700px;padding:40px;border:10px solid #999;background-color:#fff;position:absolute;top:50%;left:50%;margin:-180px 0 0 -360px;}\n.cv-msg{margin-bottom:30px;font-size:30px;line-height:40px;text-align:center;font-weight:bold;text-transform:uppercase;letter-spacing:-1px;}\n.cv-cta{width:300px;height:60px;margin:0 auto 30px auto;display:block;background-color:#0048f3;font-size:20px;line-height:60px;font-weight:bold;text-transform:uppercase;text-align:center;color:#fff!important;}\n.cv-cta:hover{opacity:0.8}\n.cv-dismiss{width:500px;display:block;margin:0 auto;font-size:12px;line-height:12px;text-align:center;color:#666}\n.cv-dismiss:hover{text-decoration:underline;} ",
+    "apply_js": "$(document).ready(function() {\n  $('body').prepend(extension.$html);\n  \n  $('.cv-main').fadeIn().promise().done(function() {\n    localStorage.setItem('seenModal','true');\n  });\n  \n  $('.cv-main, .cv-main .cv-dismiss').on('click',function(e) {\n    e.preventDefault();\n\n    if (e.target === this) {\n      $('.cv-main').fadeOut();\n    }\n  });\n\n  $('.cv-main .cv-cta').on('click',function(e) {\n    e.preventDefault();\n\n    window.location.replace($(this).prop('href'));\n  });\n});",
+    "undo_js": "var extensionHtml = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionHtml) extensionHtml.remove();\n"
+  }
+}
