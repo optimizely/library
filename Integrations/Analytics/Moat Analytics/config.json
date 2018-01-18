@@ -4,6 +4,6 @@
   "form_schema": [],
   "description": "Moat Integration ",
   "options": {
-    "track_layer_decision": "var state = optimizely.get('state');\nvar string = state.getDecisionString({\"campaignId\":campaignId,\"shouldCleanString\":true});\nif (string) {\n\twindow.optimizelyMoat = window.optimizelyMoat || [];\n\twindow.optimizelyMoat.push(string);\n}"
+    "track_layer_decision": "var state = optimizely.get('state');\nvar string = state.getDecisionString({\"campaignId\":campaignId,\"shouldCleanString\":true});\nif(string){\n\tvar array = string.split(':');\n\tvar key = array[0];\n\tvar value = array.slice(1).join('|');\n  var pipe_string = key + ':' + value;\n\twindow.optimizelyMoat = window.optimizelyMoat || [];\n\twindow.optimizelyMoat.push(pipe_string);\n}\t"
   }
 }
