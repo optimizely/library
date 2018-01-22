@@ -20,6 +20,8 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Email%20Capture%20Pop-up)
 * [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up)
 * [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up%202)
+* [Multibuy Offer Reminder](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Multibuy%20Offer%20Reminder)
+* [Price Changer](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Price%20Changer)
 * [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sidebar%20Sliding%20Card)
 * [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sliding%20Card%20Advanced)
 * [Social Share Popup](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Social%20Share%20Popup)
