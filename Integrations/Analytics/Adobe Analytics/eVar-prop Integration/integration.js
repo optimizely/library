@@ -22,6 +22,7 @@ var adobeIntegrator = {
   },
   // Accepts "s" variable as a param and assigns eVars to object, then dispatches custom link tracking.
   trackDelayedCampaigns: function(sVariable) {
+    sVariable.linkTrackVars = (sVariable.linkTrackVars ? sVariable.linkTrackVars += ',' : '') + Object.keys(this.campaignDecisions);
     this.populateTrackerClearDecisions(sVariable);
     sVariable.tl(true, "o", "OptimizelyLayerDecision");
   }
