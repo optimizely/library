@@ -1,0 +1,64 @@
+{
+  "plugin_type": "widget",
+  "name": "Localized Copy Change",
+  "edit_page_url": "http://www.atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": ".hero__title",
+      "field_type": "selector",
+      "name": "selector",
+      "label": "Element",
+      "options": null
+    },
+    {
+      "default_value": "New English Text",
+      "field_type": "text",
+      "name": "str_en",
+      "label": "English",
+      "options": null
+    },
+    {
+      "default_value": "New German Text",
+      "field_type": "text",
+      "name": "str_de",
+      "label": "German",
+      "options": null
+    },
+    {
+      "default_value": "New Spanish Text",
+      "field_type": "text",
+      "name": "str_es",
+      "label": "Spanish",
+      "options": null
+    },
+    {
+      "default_value": "str_de",
+      "field_type": "dropdown",
+      "name": "preview",
+      "label": "Preview Language",
+      "options": {
+        "choices": [
+          {
+            "value": "str_en",
+            "label": "English"
+          },
+          {
+            "value": "str_de",
+            "label": "German"
+          },
+          {
+            "value": "str_es",
+            "label": "Spanish"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "Make a copy change on your website in multiple languages",
+  "options": {
+    "html": "",
+    "css": "",
+    "apply_js": "var utils = window.optimizely.get('utils');\nvar previewMode = (document.referrer.indexOf('app.optimizely.com') != -1 ? true : false);\n\nvar userLang = window.navigator.language || window.navigator.userLanguage;\nvar str;\n\nconsole.log(userLang);\n\nswitch (userLang) {\n\tcase 'en':\n\tcase 'en-US':\n\t\tstr = extension['str_en'];\n\t\tbreak;\n\t\t\n\tcase 'de':\n\t\tstr = extension['str_de'];\n\t\tbreak;\n\n\tcase 'es':\n\t\tstr = extension['str_es'];\n\t\tbreak;\n\n  default: \n    break;\n}\n\nif (previewMode === true) str = extension[extension.preview];\n\nutils.waitForElement(extension.selector).then(function() {\n\tif (str != undefined) document.querySelector(extension.selector).innerText = str;\n});\n\n\n",
+    "undo_js": ""
+  }
+}
