@@ -12,6 +12,9 @@ For more information on this feature from Facebook see the [developer docs](http
 
 Additionally, if you wish to learn more about how to experiment with a Facebook Messenger bot using Optimizely Full Stack, see this [blog post](https://blog.optimizely.com/2017/10/03/build-messenger-bot-node/).
 
+
+![Screenshot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Facebook%20Messenger%20Widget%20-%20beta/screenshot.png)
+
 ## Fields
 
 * Facebook App ID
