@@ -1,1630 +1,1630 @@
 {
-  "plugin_type": "analytics_integration",
-  "name": "Custom Adobe Analytics [eVar]",
-  "form_schema": [
-    {
-      "default_value": "eVar1",
-      "field_type": "dropdown",
-      "name": "eVar",
-      "label": "Conversion Variable",
-      "options": {
-        "choices": [
-          {
-            "value": "eVar1",
-            "label": "eVar1"
-          },
-          {
-            "value": "eVar2",
-            "label": "eVar2"
-          },
-          {
-            "value": "eVar3",
-            "label": "eVar3"
-          },
-          {
-            "value": "eVar4",
-            "label": "eVar4"
-          },
-          {
-            "value": "eVar5",
-            "label": "eVar5"
-          },
-          {
-            "value": "eVar6",
-            "label": "eVar6"
-          },
-          {
-            "value": "eVar7",
-            "label": "eVar7"
-          },
-          {
-            "value": "eVar8",
-            "label": "eVar8"
-          },
-          {
-            "value": "eVar9",
-            "label": "eVar9"
-          },
-          {
-            "value": "eVar10",
-            "label": "eVar10"
-          },
-          {
-            "value": "eVar11",
-            "label": "eVar11"
-          },
-          {
-            "value": "eVar12",
-            "label": "eVar12"
-          },
-          {
-            "value": "eVar13",
-            "label": "eVar13"
-          },
-          {
-            "value": "eVar14",
-            "label": "eVar14"
-          },
-          {
-            "value": "eVar15",
-            "label": "eVar15"
-          },
-          {
-            "value": "eVar16",
-            "label": "eVar16"
-          },
-          {
-            "value": "eVar17",
-            "label": "eVar17"
-          },
-          {
-            "value": "eVar18",
-            "label": "eVar18"
-          },
-          {
-            "value": "eVar19",
-            "label": "eVar19"
-          },
-          {
-            "value": "eVar20",
-            "label": "eVar20"
-          },
-          {
-            "value": "eVar21",
-            "label": "eVar21"
-          },
-          {
-            "value": "eVar22",
-            "label": "eVar22"
-          },
-          {
-            "value": "eVar23",
-            "label": "eVar23"
-          },
-          {
-            "value": "eVar24",
-            "label": "eVar24"
-          },
-          {
-            "value": "eVar25",
-            "label": "eVar25"
-          },
-          {
-            "value": "eVar26",
-            "label": "eVar26"
-          },
-          {
-            "value": "eVar27",
-            "label": "eVar27"
-          },
-          {
-            "value": "eVar28",
-            "label": "eVar28"
-          },
-          {
-            "value": "eVar29",
-            "label": "eVar29"
-          },
-          {
-            "value": "eVar30",
-            "label": "eVar30"
-          },
-          {
-            "value": "eVar31",
-            "label": "eVar31"
-          },
-          {
-            "value": "eVar32",
-            "label": "eVar32"
-          },
-          {
-            "value": "eVar33",
-            "label": "eVar33"
-          },
-          {
-            "value": "eVar34",
-            "label": "eVar34"
-          },
-          {
-            "value": "eVar35",
-            "label": "eVar35"
-          },
-          {
-            "value": "eVar36",
-            "label": "eVar36"
-          },
-          {
-            "value": "eVar37",
-            "label": "eVar37"
-          },
-          {
-            "value": "eVar38",
-            "label": "eVar38"
-          },
-          {
-            "value": "eVar39",
-            "label": "eVar39"
-          },
-          {
-            "value": "eVar40",
-            "label": "eVar40"
-          },
-          {
-            "value": "eVar41",
-            "label": "eVar41"
-          },
-          {
-            "value": "eVar42",
-            "label": "eVar42"
-          },
-          {
-            "value": "eVar43",
-            "label": "eVar43"
-          },
-          {
-            "value": "eVar44",
-            "label": "eVar44"
-          },
-          {
-            "value": "eVar45",
-            "label": "eVar45"
-          },
-          {
-            "value": "eVar46",
-            "label": "eVar46"
-          },
-          {
-            "value": "eVar47",
-            "label": "eVar47"
-          },
-          {
-            "value": "eVar48",
-            "label": "eVar48"
-          },
-          {
-            "value": "eVar49",
-            "label": "eVar49"
-          },
-          {
-            "value": "eVar50",
-            "label": "eVar50"
-          },
-          {
-            "value": "eVar51",
-            "label": "eVar51"
-          },
-          {
-            "value": "eVar52",
-            "label": "eVar52"
-          },
-          {
-            "value": "eVar53",
-            "label": "eVar53"
-          },
-          {
-            "value": "eVar54",
-            "label": "eVar54"
-          },
-          {
-            "value": "eVar55",
-            "label": "eVar55"
-          },
-          {
-            "value": "eVar56",
-            "label": "eVar56"
-          },
-          {
-            "value": "eVar57",
-            "label": "eVar57"
-          },
-          {
-            "value": "eVar58",
-            "label": "eVar58"
-          },
-          {
-            "value": "eVar59",
-            "label": "eVar59"
-          },
-          {
-            "value": "eVar60",
-            "label": "eVar60"
-          },
-          {
-            "value": "eVar61",
-            "label": "eVar61"
-          },
-          {
-            "value": "eVar62",
-            "label": "eVar62"
-          },
-          {
-            "value": "eVar63",
-            "label": "eVar63"
-          },
-          {
-            "value": "eVar64",
-            "label": "eVar64"
-          },
-          {
-            "value": "eVar65",
-            "label": "eVar65"
-          },
-          {
-            "value": "eVar66",
-            "label": "eVar66"
-          },
-          {
-            "value": "eVar67",
-            "label": "eVar67"
-          },
-          {
-            "value": "eVar68",
-            "label": "eVar68"
-          },
-          {
-            "value": "eVar69",
-            "label": "eVar69"
-          },
-          {
-            "value": "eVar70",
-            "label": "eVar70"
-          },
-          {
-            "value": "eVar71",
-            "label": "eVar71"
-          },
-          {
-            "value": "eVar72",
-            "label": "eVar72"
-          },
-          {
-            "value": "eVar73",
-            "label": "eVar73"
-          },
-          {
-            "value": "eVar74",
-            "label": "eVar74"
-          },
-          {
-            "value": "eVar75",
-            "label": "eVar75"
-          },
-          {
-            "value": "eVar76",
-            "label": "eVar76"
-          },
-          {
-            "value": "eVar77",
-            "label": "eVar77"
-          },
-          {
-            "value": "eVar78",
-            "label": "eVar78"
-          },
-          {
-            "value": "eVar79",
-            "label": "eVar79"
-          },
-          {
-            "value": "eVar80",
-            "label": "eVar80"
-          },
-          {
-            "value": "eVar81",
-            "label": "eVar81"
-          },
-          {
-            "value": "eVar82",
-            "label": "eVar82"
-          },
-          {
-            "value": "eVar83",
-            "label": "eVar83"
-          },
-          {
-            "value": "eVar84",
-            "label": "eVar84"
-          },
-          {
-            "value": "eVar85",
-            "label": "eVar85"
-          },
-          {
-            "value": "eVar86",
-            "label": "eVar86"
-          },
-          {
-            "value": "eVar87",
-            "label": "eVar87"
-          },
-          {
-            "value": "eVar88",
-            "label": "eVar88"
-          },
-          {
-            "value": "eVar89",
-            "label": "eVar89"
-          },
-          {
-            "value": "eVar90",
-            "label": "eVar90"
-          },
-          {
-            "value": "eVar91",
-            "label": "eVar91"
-          },
-          {
-            "value": "eVar92",
-            "label": "eVar92"
-          },
-          {
-            "value": "eVar93",
-            "label": "eVar93"
-          },
-          {
-            "value": "eVar94",
-            "label": "eVar94"
-          },
-          {
-            "value": "eVar95",
-            "label": "eVar95"
-          },
-          {
-            "value": "eVar96",
-            "label": "eVar96"
-          },
-          {
-            "value": "eVar97",
-            "label": "eVar97"
-          },
-          {
-            "value": "eVar98",
-            "label": "eVar98"
-          },
-          {
-            "value": "eVar99",
-            "label": "eVar99"
-          },
-          {
-            "value": "eVar100",
-            "label": "eVar100"
-          },
-          {
-            "value": "eVar101",
-            "label": "eVar101"
-          },
-          {
-            "value": "eVar102",
-            "label": "eVar102"
-          },
-          {
-            "value": "eVar103",
-            "label": "eVar103"
-          },
-          {
-            "value": "eVar104",
-            "label": "eVar104"
-          },
-          {
-            "value": "eVar105",
-            "label": "eVar105"
-          },
-          {
-            "value": "eVar106",
-            "label": "eVar106"
-          },
-          {
-            "value": "eVar107",
-            "label": "eVar107"
-          },
-          {
-            "value": "eVar108",
-            "label": "eVar108"
-          },
-          {
-            "value": "eVar109",
-            "label": "eVar109"
-          },
-          {
-            "value": "eVar110",
-            "label": "eVar110"
-          },
-          {
-            "value": "eVar111",
-            "label": "eVar111"
-          },
-          {
-            "value": "eVar112",
-            "label": "eVar112"
-          },
-          {
-            "value": "eVar113",
-            "label": "eVar113"
-          },
-          {
-            "value": "eVar114",
-            "label": "eVar114"
-          },
-          {
-            "value": "eVar115",
-            "label": "eVar115"
-          },
-          {
-            "value": "eVar116",
-            "label": "eVar116"
-          },
-          {
-            "value": "eVar117",
-            "label": "eVar117"
-          },
-          {
-            "value": "eVar118",
-            "label": "eVar118"
-          },
-          {
-            "value": "eVar119",
-            "label": "eVar119"
-          },
-          {
-            "value": "eVar120",
-            "label": "eVar120"
-          },
-          {
-            "value": "eVar121",
-            "label": "eVar121"
-          },
-          {
-            "value": "eVar122",
-            "label": "eVar122"
-          },
-          {
-            "value": "eVar123",
-            "label": "eVar123"
-          },
-          {
-            "value": "eVar124",
-            "label": "eVar124"
-          },
-          {
-            "value": "eVar125",
-            "label": "eVar125"
-          },
-          {
-            "value": "eVar126",
-            "label": "eVar126"
-          },
-          {
-            "value": "eVar127",
-            "label": "eVar127"
-          },
-          {
-            "value": "eVar128",
-            "label": "eVar128"
-          },
-          {
-            "value": "eVar129",
-            "label": "eVar129"
-          },
-          {
-            "value": "eVar130",
-            "label": "eVar130"
-          },
-          {
-            "value": "eVar131",
-            "label": "eVar131"
-          },
-          {
-            "value": "eVar132",
-            "label": "eVar132"
-          },
-          {
-            "value": "eVar133",
-            "label": "eVar133"
-          },
-          {
-            "value": "eVar134",
-            "label": "eVar134"
-          },
-          {
-            "value": "eVar135",
-            "label": "eVar135"
-          },
-          {
-            "value": "eVar136",
-            "label": "eVar136"
-          },
-          {
-            "value": "eVar137",
-            "label": "eVar137"
-          },
-          {
-            "value": "eVar138",
-            "label": "eVar138"
-          },
-          {
-            "value": "eVar139",
-            "label": "eVar139"
-          },
-          {
-            "value": "eVar140",
-            "label": "eVar140"
-          },
-          {
-            "value": "eVar141",
-            "label": "eVar141"
-          },
-          {
-            "value": "eVar142",
-            "label": "eVar142"
-          },
-          {
-            "value": "eVar143",
-            "label": "eVar143"
-          },
-          {
-            "value": "eVar144",
-            "label": "eVar144"
-          },
-          {
-            "value": "eVar145",
-            "label": "eVar145"
-          },
-          {
-            "value": "eVar146",
-            "label": "eVar146"
-          },
-          {
-            "value": "eVar147",
-            "label": "eVar147"
-          },
-          {
-            "value": "eVar148",
-            "label": "eVar148"
-          },
-          {
-            "value": "eVar149",
-            "label": "eVar149"
-          },
-          {
-            "value": "eVar150",
-            "label": "eVar150"
-          },
-          {
-            "value": "eVar151",
-            "label": "eVar151"
-          },
-          {
-            "value": "eVar152",
-            "label": "eVar152"
-          },
-          {
-            "value": "eVar153",
-            "label": "eVar153"
-          },
-          {
-            "value": "eVar154",
-            "label": "eVar154"
-          },
-          {
-            "value": "eVar155",
-            "label": "eVar155"
-          },
-          {
-            "value": "eVar156",
-            "label": "eVar156"
-          },
-          {
-            "value": "eVar157",
-            "label": "eVar157"
-          },
-          {
-            "value": "eVar158",
-            "label": "eVar158"
-          },
-          {
-            "value": "eVar159",
-            "label": "eVar159"
-          },
-          {
-            "value": "eVar160",
-            "label": "eVar160"
-          },
-          {
-            "value": "eVar161",
-            "label": "eVar161"
-          },
-          {
-            "value": "eVar162",
-            "label": "eVar162"
-          },
-          {
-            "value": "eVar163",
-            "label": "eVar163"
-          },
-          {
-            "value": "eVar164",
-            "label": "eVar164"
-          },
-          {
-            "value": "eVar165",
-            "label": "eVar165"
-          },
-          {
-            "value": "eVar166",
-            "label": "eVar166"
-          },
-          {
-            "value": "eVar167",
-            "label": "eVar167"
-          },
-          {
-            "value": "eVar168",
-            "label": "eVar168"
-          },
-          {
-            "value": "eVar169",
-            "label": "eVar169"
-          },
-          {
-            "value": "eVar170",
-            "label": "eVar170"
-          },
-          {
-            "value": "eVar171",
-            "label": "eVar171"
-          },
-          {
-            "value": "eVar172",
-            "label": "eVar172"
-          },
-          {
-            "value": "eVar173",
-            "label": "eVar173"
-          },
-          {
-            "value": "eVar174",
-            "label": "eVar174"
-          },
-          {
-            "value": "eVar175",
-            "label": "eVar175"
-          },
-          {
-            "value": "eVar176",
-            "label": "eVar176"
-          },
-          {
-            "value": "eVar177",
-            "label": "eVar177"
-          },
-          {
-            "value": "eVar178",
-            "label": "eVar178"
-          },
-          {
-            "value": "eVar179",
-            "label": "eVar179"
-          },
-          {
-            "value": "eVar180",
-            "label": "eVar180"
-          },
-          {
-            "value": "eVar181",
-            "label": "eVar181"
-          },
-          {
-            "value": "eVar182",
-            "label": "eVar182"
-          },
-          {
-            "value": "eVar183",
-            "label": "eVar183"
-          },
-          {
-            "value": "eVar184",
-            "label": "eVar184"
-          },
-          {
-            "value": "eVar185",
-            "label": "eVar185"
-          },
-          {
-            "value": "eVar186",
-            "label": "eVar186"
-          },
-          {
-            "value": "eVar187",
-            "label": "eVar187"
-          },
-          {
-            "value": "eVar188",
-            "label": "eVar188"
-          },
-          {
-            "value": "eVar189",
-            "label": "eVar189"
-          },
-          {
-            "value": "eVar190",
-            "label": "eVar190"
-          },
-          {
-            "value": "eVar191",
-            "label": "eVar191"
-          },
-          {
-            "value": "eVar192",
-            "label": "eVar192"
-          },
-          {
-            "value": "eVar193",
-            "label": "eVar193"
-          },
-          {
-            "value": "eVar194",
-            "label": "eVar194"
-          },
-          {
-            "value": "eVar195",
-            "label": "eVar195"
-          },
-          {
-            "value": "eVar196",
-            "label": "eVar196"
-          },
-          {
-            "value": "eVar197",
-            "label": "eVar197"
-          },
-          {
-            "value": "eVar198",
-            "label": "eVar198"
-          },
-          {
-            "value": "eVar199",
-            "label": "eVar199"
-          },
-          {
-            "value": "eVar200",
-            "label": "eVar200"
-          }
-        ]
-      }
-    },
-    {
-      "default_value": "prop1",
-      "field_type": "dropdown",
-      "name": "prop",
-      "label": "Traffic Variable",
-      "options": {
-        "choices": [
-          {
-            "value": "prop1",
-            "label": "prop1"
-          },
-          {
-            "value": "prop2",
-            "label": "prop2"
-          },
-          {
-            "value": "prop3",
-            "label": "prop3"
-          },
-          {
-            "value": "prop4",
-            "label": "prop4"
-          },
-          {
-            "value": "prop5",
-            "label": "prop5"
-          },
-          {
-            "value": "prop6",
-            "label": "prop6"
-          },
-          {
-            "value": "prop7",
-            "label": "prop7"
-          },
-          {
-            "value": "prop8",
-            "label": "prop8"
-          },
-          {
-            "value": "prop9",
-            "label": "prop9"
-          },
-          {
-            "value": "prop10",
-            "label": "prop10"
-          },
-          {
-            "value": "prop11",
-            "label": "prop11"
-          },
-          {
-            "value": "prop12",
-            "label": "prop12"
-          },
-          {
-            "value": "prop13",
-            "label": "prop13"
-          },
-          {
-            "value": "prop14",
-            "label": "prop14"
-          },
-          {
-            "value": "prop15",
-            "label": "prop15"
-          },
-          {
-            "value": "prop16",
-            "label": "prop16"
-          },
-          {
-            "value": "prop17",
-            "label": "prop17"
-          },
-          {
-            "value": "prop18",
-            "label": "prop18"
-          },
-          {
-            "value": "prop19",
-            "label": "prop19"
-          },
-          {
-            "value": "prop20",
-            "label": "prop20"
-          },
-          {
-            "value": "prop21",
-            "label": "prop21"
-          },
-          {
-            "value": "prop22",
-            "label": "prop22"
-          },
-          {
-            "value": "prop23",
-            "label": "prop23"
-          },
-          {
-            "value": "prop24",
-            "label": "prop24"
-          },
-          {
-            "value": "prop25",
-            "label": "prop25"
-          },
-          {
-            "value": "prop26",
-            "label": "prop26"
-          },
-          {
-            "value": "prop27",
-            "label": "prop27"
-          },
-          {
-            "value": "prop28",
-            "label": "prop28"
-          },
-          {
-            "value": "prop29",
-            "label": "prop29"
-          },
-          {
-            "value": "prop30",
-            "label": "prop30"
-          },
-          {
-            "value": "prop31",
-            "label": "prop31"
-          },
-          {
-            "value": "prop32",
-            "label": "prop32"
-          },
-          {
-            "value": "prop33",
-            "label": "prop33"
-          },
-          {
-            "value": "prop34",
-            "label": "prop34"
-          },
-          {
-            "value": "prop35",
-            "label": "prop35"
-          },
-          {
-            "value": "prop36",
-            "label": "prop36"
-          },
-          {
-            "value": "prop37",
-            "label": "prop37"
-          },
-          {
-            "value": "prop38",
-            "label": "prop38"
-          },
-          {
-            "value": "prop39",
-            "label": "prop39"
-          },
-          {
-            "value": "prop40",
-            "label": "prop40"
-          },
-          {
-            "value": "prop41",
-            "label": "prop41"
-          },
-          {
-            "value": "prop42",
-            "label": "prop42"
-          },
-          {
-            "value": "prop43",
-            "label": "prop43"
-          },
-          {
-            "value": "prop44",
-            "label": "prop44"
-          },
-          {
-            "value": "prop45",
-            "label": "prop45"
-          },
-          {
-            "value": "prop46",
-            "label": "prop46"
-          },
-          {
-            "value": "prop47",
-            "label": "prop47"
-          },
-          {
-            "value": "prop48",
-            "label": "prop48"
-          },
-          {
-            "value": "prop49",
-            "label": "prop49"
-          },
-          {
-            "value": "prop50",
-            "label": "prop50"
-          },
-          {
-            "value": "prop51",
-            "label": "prop51"
-          },
-          {
-            "value": "prop52",
-            "label": "prop52"
-          },
-          {
-            "value": "prop53",
-            "label": "prop53"
-          },
-          {
-            "value": "prop54",
-            "label": "prop54"
-          },
-          {
-            "value": "prop55",
-            "label": "prop55"
-          },
-          {
-            "value": "prop56",
-            "label": "prop56"
-          },
-          {
-            "value": "prop57",
-            "label": "prop57"
-          },
-          {
-            "value": "prop58",
-            "label": "prop58"
-          },
-          {
-            "value": "prop59",
-            "label": "prop59"
-          },
-          {
-            "value": "prop60",
-            "label": "prop60"
-          },
-          {
-            "value": "prop61",
-            "label": "prop61"
-          },
-          {
-            "value": "prop62",
-            "label": "prop62"
-          },
-          {
-            "value": "prop63",
-            "label": "prop63"
-          },
-          {
-            "value": "prop64",
-            "label": "prop64"
-          },
-          {
-            "value": "prop65",
-            "label": "prop65"
-          },
-          {
-            "value": "prop66",
-            "label": "prop66"
-          },
-          {
-            "value": "prop67",
-            "label": "prop67"
-          },
-          {
-            "value": "prop68",
-            "label": "prop68"
-          },
-          {
-            "value": "prop69",
-            "label": "prop69"
-          },
-          {
-            "value": "prop70",
-            "label": "prop70"
-          },
-          {
-            "value": "prop71",
-            "label": "prop71"
-          },
-          {
-            "value": "prop72",
-            "label": "prop72"
-          },
-          {
-            "value": "prop73",
-            "label": "prop73"
-          },
-          {
-            "value": "prop74",
-            "label": "prop74"
-          },
-          {
-            "value": "prop75",
-            "label": "prop75"
-          },
-          {
-            "value": "prop76",
-            "label": "prop76"
-          },
-          {
-            "value": "prop77",
-            "label": "prop77"
-          },
-          {
-            "value": "prop78",
-            "label": "prop78"
-          },
-          {
-            "value": "prop79",
-            "label": "prop79"
-          },
-          {
-            "value": "prop80",
-            "label": "prop80"
-          },
-          {
-            "value": "prop81",
-            "label": "prop81"
-          },
-          {
-            "value": "prop82",
-            "label": "prop82"
-          },
-          {
-            "value": "prop83",
-            "label": "prop83"
-          },
-          {
-            "value": "prop84",
-            "label": "prop84"
-          },
-          {
-            "value": "prop85",
-            "label": "prop85"
-          },
-          {
-            "value": "prop86",
-            "label": "prop86"
-          },
-          {
-            "value": "prop87",
-            "label": "prop87"
-          },
-          {
-            "value": "prop88",
-            "label": "prop88"
-          },
-          {
-            "value": "prop89",
-            "label": "prop89"
-          },
-          {
-            "value": "prop90",
-            "label": "prop90"
-          },
-          {
-            "value": "prop91",
-            "label": "prop91"
-          },
-          {
-            "value": "prop92",
-            "label": "prop92"
-          },
-          {
-            "value": "prop93",
-            "label": "prop93"
-          },
-          {
-            "value": "prop94",
-            "label": "prop94"
-          },
-          {
-            "value": "prop95",
-            "label": "prop95"
-          },
-          {
-            "value": "prop96",
-            "label": "prop96"
-          },
-          {
-            "value": "prop97",
-            "label": "prop97"
-          },
-          {
-            "value": "prop98",
-            "label": "prop98"
-          },
-          {
-            "value": "prop99",
-            "label": "prop99"
-          },
-          {
-            "value": "prop100",
-            "label": "prop100"
-          },
-          {
-            "value": "prop101",
-            "label": "prop101"
-          },
-          {
-            "value": "prop102",
-            "label": "prop102"
-          },
-          {
-            "value": "prop103",
-            "label": "prop103"
-          },
-          {
-            "value": "prop104",
-            "label": "prop104"
-          },
-          {
-            "value": "prop105",
-            "label": "prop105"
-          },
-          {
-            "value": "prop106",
-            "label": "prop106"
-          },
-          {
-            "value": "prop107",
-            "label": "prop107"
-          },
-          {
-            "value": "prop108",
-            "label": "prop108"
-          },
-          {
-            "value": "prop109",
-            "label": "prop109"
-          },
-          {
-            "value": "prop110",
-            "label": "prop110"
-          },
-          {
-            "value": "prop111",
-            "label": "prop111"
-          },
-          {
-            "value": "prop112",
-            "label": "prop112"
-          },
-          {
-            "value": "prop113",
-            "label": "prop113"
-          },
-          {
-            "value": "prop114",
-            "label": "prop114"
-          },
-          {
-            "value": "prop115",
-            "label": "prop115"
-          },
-          {
-            "value": "prop116",
-            "label": "prop116"
-          },
-          {
-            "value": "prop117",
-            "label": "prop117"
-          },
-          {
-            "value": "prop118",
-            "label": "prop118"
-          },
-          {
-            "value": "prop119",
-            "label": "prop119"
-          },
-          {
-            "value": "prop120",
-            "label": "prop120"
-          },
-          {
-            "value": "prop121",
-            "label": "prop121"
-          },
-          {
-            "value": "prop122",
-            "label": "prop122"
-          },
-          {
-            "value": "prop123",
-            "label": "prop123"
-          },
-          {
-            "value": "prop124",
-            "label": "prop124"
-          },
-          {
-            "value": "prop125",
-            "label": "prop125"
-          },
-          {
-            "value": "prop126",
-            "label": "prop126"
-          },
-          {
-            "value": "prop127",
-            "label": "prop127"
-          },
-          {
-            "value": "prop128",
-            "label": "prop128"
-          },
-          {
-            "value": "prop129",
-            "label": "prop129"
-          },
-          {
-            "value": "prop130",
-            "label": "prop130"
-          },
-          {
-            "value": "prop131",
-            "label": "prop131"
-          },
-          {
-            "value": "prop132",
-            "label": "prop132"
-          },
-          {
-            "value": "prop133",
-            "label": "prop133"
-          },
-          {
-            "value": "prop134",
-            "label": "prop134"
-          },
-          {
-            "value": "prop135",
-            "label": "prop135"
-          },
-          {
-            "value": "prop136",
-            "label": "prop136"
-          },
-          {
-            "value": "prop137",
-            "label": "prop137"
-          },
-          {
-            "value": "prop138",
-            "label": "prop138"
-          },
-          {
-            "value": "prop139",
-            "label": "prop139"
-          },
-          {
-            "value": "prop140",
-            "label": "prop140"
-          },
-          {
-            "value": "prop141",
-            "label": "prop141"
-          },
-          {
-            "value": "prop142",
-            "label": "prop142"
-          },
-          {
-            "value": "prop143",
-            "label": "prop143"
-          },
-          {
-            "value": "prop144",
-            "label": "prop144"
-          },
-          {
-            "value": "prop145",
-            "label": "prop145"
-          },
-          {
-            "value": "prop146",
-            "label": "prop146"
-          },
-          {
-            "value": "prop147",
-            "label": "prop147"
-          },
-          {
-            "value": "prop148",
-            "label": "prop148"
-          },
-          {
-            "value": "prop149",
-            "label": "prop149"
-          },
-          {
-            "value": "prop150",
-            "label": "prop150"
-          },
-          {
-            "value": "prop151",
-            "label": "prop151"
-          },
-          {
-            "value": "prop152",
-            "label": "prop152"
-          },
-          {
-            "value": "prop153",
-            "label": "prop153"
-          },
-          {
-            "value": "prop154",
-            "label": "prop154"
-          },
-          {
-            "value": "prop155",
-            "label": "prop155"
-          },
-          {
-            "value": "prop156",
-            "label": "prop156"
-          },
-          {
-            "value": "prop157",
-            "label": "prop157"
-          },
-          {
-            "value": "prop158",
-            "label": "prop158"
-          },
-          {
-            "value": "prop159",
-            "label": "prop159"
-          },
-          {
-            "value": "prop160",
-            "label": "prop160"
-          },
-          {
-            "value": "prop161",
-            "label": "prop161"
-          },
-          {
-            "value": "prop162",
-            "label": "prop162"
-          },
-          {
-            "value": "prop163",
-            "label": "prop163"
-          },
-          {
-            "value": "prop164",
-            "label": "prop164"
-          },
-          {
-            "value": "prop165",
-            "label": "prop165"
-          },
-          {
-            "value": "prop166",
-            "label": "prop166"
-          },
-          {
-            "value": "prop167",
-            "label": "prop167"
-          },
-          {
-            "value": "prop168",
-            "label": "prop168"
-          },
-          {
-            "value": "prop169",
-            "label": "prop169"
-          },
-          {
-            "value": "prop170",
-            "label": "prop170"
-          },
-          {
-            "value": "prop171",
-            "label": "prop171"
-          },
-          {
-            "value": "prop172",
-            "label": "prop172"
-          },
-          {
-            "value": "prop173",
-            "label": "prop173"
-          },
-          {
-            "value": "prop174",
-            "label": "prop174"
-          },
-          {
-            "value": "prop175",
-            "label": "prop175"
-          },
-          {
-            "value": "prop176",
-            "label": "prop176"
-          },
-          {
-            "value": "prop177",
-            "label": "prop177"
-          },
-          {
-            "value": "prop178",
-            "label": "prop178"
-          },
-          {
-            "value": "prop179",
-            "label": "prop179"
-          },
-          {
-            "value": "prop180",
-            "label": "prop180"
-          },
-          {
-            "value": "prop181",
-            "label": "prop181"
-          },
-          {
-            "value": "prop182",
-            "label": "prop182"
-          },
-          {
-            "value": "prop183",
-            "label": "prop183"
-          },
-          {
-            "value": "prop184",
-            "label": "prop184"
-          },
-          {
-            "value": "prop185",
-            "label": "prop185"
-          },
-          {
-            "value": "prop186",
-            "label": "prop186"
-          },
-          {
-            "value": "prop187",
-            "label": "prop187"
-          },
-          {
-            "value": "prop188",
-            "label": "prop188"
-          },
-          {
-            "value": "prop189",
-            "label": "prop189"
-          },
-          {
-            "value": "prop190",
-            "label": "prop190"
-          },
-          {
-            "value": "prop191",
-            "label": "prop191"
-          },
-          {
-            "value": "prop192",
-            "label": "prop192"
-          },
-          {
-            "value": "prop193",
-            "label": "prop193"
-          },
-          {
-            "value": "prop194",
-            "label": "prop194"
-          },
-          {
-            "value": "prop195",
-            "label": "prop195"
-          },
-          {
-            "value": "prop196",
-            "label": "prop196"
-          },
-          {
-            "value": "prop197",
-            "label": "prop197"
-          },
-          {
-            "value": "prop198",
-            "label": "prop198"
-          },
-          {
-            "value": "prop199",
-            "label": "prop199"
-          },
-          {
-            "value": "prop200",
-            "label": "prop200"
-          }
-        ]
-      }
-    }
-  ],
-  "description": "",
-  "options": {
-    "track_layer_decision": "var decisionString = window.optimizely.get('state').getDecisionString({\n  campaignId: campaignId,\n  shouldCleanString: true\n});\nvar redirectInfo = window.optimizely.get('state').getRedirectInfo();\nvar eVar = extension.eVar;\nvar prop = extension.prop;\n\n// Public Methods\nvar adobeIntegrator = {\n  campaignDecisions: {},\n  // Accepts \"s\" variable as a param and assigns eVars to object.\n  populateTrackerClearDecisions: function(sVariable) {\n    for (var allocation in this.campaignDecisions) {\n      sVariable[allocation] = this.campaignDecisions[allocation];\n    }\n    this.campaignDecisions = {};\n  },\n  assignCampaigns: function(sVariable) {\n    if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;\n    this.populateTrackerClearDecisions(sVariable);\n  },\n  // Accepts \"s\" variable as a param and assigns eVars to object, then dispatches custom link tracking.\n  trackDelayedCampaigns: function(sVariable) {\n    this.populateTrackerClearDecisions(sVariable);\n    sVariable.tl(true, \"o\", \"OptimizelyLayerDecision\");\n  }\n};\n\n// Scopes `campaignArray` to Optimizely object.\nif (!window.optimizely.get(\"custom/adobeIntegrator\")) {\n  window.optimizely.push({\n    type: \"registerModule\",\n    moduleName: \"adobeIntegrator\",\n    module: adobeIntegrator\n  });\n}\n\n// Failing Audiences returns `null`, failing Traffic Allocation returns `undefined` for decisionString.\nif (!!decisionString) {\n  if (eVar) window.optimizely.get(\"custom/adobeIntegrator\").campaignDecisions[eVar] = decisionString;\n  if (prop) window.optimizely.get(\"custom/adobeIntegrator\").campaignDecisions[prop] = decisionString;\n}"
-  }
+"plugin_type": "analytics_integration",
+"name": "Custom Adobe Analytics [eVar]",
+"form_schema": [
+{
+"default_value": "eVar1",
+"field_type": "dropdown",
+"name": "eVar",
+"label": "Conversion Variable",
+"options": {
+"choices": [
+{
+"value": "eVar1",
+"label": "eVar1"
+},
+{
+"value": "eVar2",
+"label": "eVar2"
+},
+{
+"value": "eVar3",
+"label": "eVar3"
+},
+{
+"value": "eVar4",
+"label": "eVar4"
+},
+{
+"value": "eVar5",
+"label": "eVar5"
+},
+{
+"value": "eVar6",
+"label": "eVar6"
+},
+{
+"value": "eVar7",
+"label": "eVar7"
+},
+{
+"value": "eVar8",
+"label": "eVar8"
+},
+{
+"value": "eVar9",
+"label": "eVar9"
+},
+{
+"value": "eVar10",
+"label": "eVar10"
+},
+{
+"value": "eVar11",
+"label": "eVar11"
+},
+{
+"value": "eVar12",
+"label": "eVar12"
+},
+{
+"value": "eVar13",
+"label": "eVar13"
+},
+{
+"value": "eVar14",
+"label": "eVar14"
+},
+{
+"value": "eVar15",
+"label": "eVar15"
+},
+{
+"value": "eVar16",
+"label": "eVar16"
+},
+{
+"value": "eVar17",
+"label": "eVar17"
+},
+{
+"value": "eVar18",
+"label": "eVar18"
+},
+{
+"value": "eVar19",
+"label": "eVar19"
+},
+{
+"value": "eVar20",
+"label": "eVar20"
+},
+{
+"value": "eVar21",
+"label": "eVar21"
+},
+{
+"value": "eVar22",
+"label": "eVar22"
+},
+{
+"value": "eVar23",
+"label": "eVar23"
+},
+{
+"value": "eVar24",
+"label": "eVar24"
+},
+{
+"value": "eVar25",
+"label": "eVar25"
+},
+{
+"value": "eVar26",
+"label": "eVar26"
+},
+{
+"value": "eVar27",
+"label": "eVar27"
+},
+{
+"value": "eVar28",
+"label": "eVar28"
+},
+{
+"value": "eVar29",
+"label": "eVar29"
+},
+{
+"value": "eVar30",
+"label": "eVar30"
+},
+{
+"value": "eVar31",
+"label": "eVar31"
+},
+{
+"value": "eVar32",
+"label": "eVar32"
+},
+{
+"value": "eVar33",
+"label": "eVar33"
+},
+{
+"value": "eVar34",
+"label": "eVar34"
+},
+{
+"value": "eVar35",
+"label": "eVar35"
+},
+{
+"value": "eVar36",
+"label": "eVar36"
+},
+{
+"value": "eVar37",
+"label": "eVar37"
+},
+{
+"value": "eVar38",
+"label": "eVar38"
+},
+{
+"value": "eVar39",
+"label": "eVar39"
+},
+{
+"value": "eVar40",
+"label": "eVar40"
+},
+{
+"value": "eVar41",
+"label": "eVar41"
+},
+{
+"value": "eVar42",
+"label": "eVar42"
+},
+{
+"value": "eVar43",
+"label": "eVar43"
+},
+{
+"value": "eVar44",
+"label": "eVar44"
+},
+{
+"value": "eVar45",
+"label": "eVar45"
+},
+{
+"value": "eVar46",
+"label": "eVar46"
+},
+{
+"value": "eVar47",
+"label": "eVar47"
+},
+{
+"value": "eVar48",
+"label": "eVar48"
+},
+{
+"value": "eVar49",
+"label": "eVar49"
+},
+{
+"value": "eVar50",
+"label": "eVar50"
+},
+{
+"value": "eVar51",
+"label": "eVar51"
+},
+{
+"value": "eVar52",
+"label": "eVar52"
+},
+{
+"value": "eVar53",
+"label": "eVar53"
+},
+{
+"value": "eVar54",
+"label": "eVar54"
+},
+{
+"value": "eVar55",
+"label": "eVar55"
+},
+{
+"value": "eVar56",
+"label": "eVar56"
+},
+{
+"value": "eVar57",
+"label": "eVar57"
+},
+{
+"value": "eVar58",
+"label": "eVar58"
+},
+{
+"value": "eVar59",
+"label": "eVar59"
+},
+{
+"value": "eVar60",
+"label": "eVar60"
+},
+{
+"value": "eVar61",
+"label": "eVar61"
+},
+{
+"value": "eVar62",
+"label": "eVar62"
+},
+{
+"value": "eVar63",
+"label": "eVar63"
+},
+{
+"value": "eVar64",
+"label": "eVar64"
+},
+{
+"value": "eVar65",
+"label": "eVar65"
+},
+{
+"value": "eVar66",
+"label": "eVar66"
+},
+{
+"value": "eVar67",
+"label": "eVar67"
+},
+{
+"value": "eVar68",
+"label": "eVar68"
+},
+{
+"value": "eVar69",
+"label": "eVar69"
+},
+{
+"value": "eVar70",
+"label": "eVar70"
+},
+{
+"value": "eVar71",
+"label": "eVar71"
+},
+{
+"value": "eVar72",
+"label": "eVar72"
+},
+{
+"value": "eVar73",
+"label": "eVar73"
+},
+{
+"value": "eVar74",
+"label": "eVar74"
+},
+{
+"value": "eVar75",
+"label": "eVar75"
+},
+{
+"value": "eVar76",
+"label": "eVar76"
+},
+{
+"value": "eVar77",
+"label": "eVar77"
+},
+{
+"value": "eVar78",
+"label": "eVar78"
+},
+{
+"value": "eVar79",
+"label": "eVar79"
+},
+{
+"value": "eVar80",
+"label": "eVar80"
+},
+{
+"value": "eVar81",
+"label": "eVar81"
+},
+{
+"value": "eVar82",
+"label": "eVar82"
+},
+{
+"value": "eVar83",
+"label": "eVar83"
+},
+{
+"value": "eVar84",
+"label": "eVar84"
+},
+{
+"value": "eVar85",
+"label": "eVar85"
+},
+{
+"value": "eVar86",
+"label": "eVar86"
+},
+{
+"value": "eVar87",
+"label": "eVar87"
+},
+{
+"value": "eVar88",
+"label": "eVar88"
+},
+{
+"value": "eVar89",
+"label": "eVar89"
+},
+{
+"value": "eVar90",
+"label": "eVar90"
+},
+{
+"value": "eVar91",
+"label": "eVar91"
+},
+{
+"value": "eVar92",
+"label": "eVar92"
+},
+{
+"value": "eVar93",
+"label": "eVar93"
+},
+{
+"value": "eVar94",
+"label": "eVar94"
+},
+{
+"value": "eVar95",
+"label": "eVar95"
+},
+{
+"value": "eVar96",
+"label": "eVar96"
+},
+{
+"value": "eVar97",
+"label": "eVar97"
+},
+{
+"value": "eVar98",
+"label": "eVar98"
+},
+{
+"value": "eVar99",
+"label": "eVar99"
+},
+{
+"value": "eVar100",
+"label": "eVar100"
+},
+{
+"value": "eVar101",
+"label": "eVar101"
+},
+{
+"value": "eVar102",
+"label": "eVar102"
+},
+{
+"value": "eVar103",
+"label": "eVar103"
+},
+{
+"value": "eVar104",
+"label": "eVar104"
+},
+{
+"value": "eVar105",
+"label": "eVar105"
+},
+{
+"value": "eVar106",
+"label": "eVar106"
+},
+{
+"value": "eVar107",
+"label": "eVar107"
+},
+{
+"value": "eVar108",
+"label": "eVar108"
+},
+{
+"value": "eVar109",
+"label": "eVar109"
+},
+{
+"value": "eVar110",
+"label": "eVar110"
+},
+{
+"value": "eVar111",
+"label": "eVar111"
+},
+{
+"value": "eVar112",
+"label": "eVar112"
+},
+{
+"value": "eVar113",
+"label": "eVar113"
+},
+{
+"value": "eVar114",
+"label": "eVar114"
+},
+{
+"value": "eVar115",
+"label": "eVar115"
+},
+{
+"value": "eVar116",
+"label": "eVar116"
+},
+{
+"value": "eVar117",
+"label": "eVar117"
+},
+{
+"value": "eVar118",
+"label": "eVar118"
+},
+{
+"value": "eVar119",
+"label": "eVar119"
+},
+{
+"value": "eVar120",
+"label": "eVar120"
+},
+{
+"value": "eVar121",
+"label": "eVar121"
+},
+{
+"value": "eVar122",
+"label": "eVar122"
+},
+{
+"value": "eVar123",
+"label": "eVar123"
+},
+{
+"value": "eVar124",
+"label": "eVar124"
+},
+{
+"value": "eVar125",
+"label": "eVar125"
+},
+{
+"value": "eVar126",
+"label": "eVar126"
+},
+{
+"value": "eVar127",
+"label": "eVar127"
+},
+{
+"value": "eVar128",
+"label": "eVar128"
+},
+{
+"value": "eVar129",
+"label": "eVar129"
+},
+{
+"value": "eVar130",
+"label": "eVar130"
+},
+{
+"value": "eVar131",
+"label": "eVar131"
+},
+{
+"value": "eVar132",
+"label": "eVar132"
+},
+{
+"value": "eVar133",
+"label": "eVar133"
+},
+{
+"value": "eVar134",
+"label": "eVar134"
+},
+{
+"value": "eVar135",
+"label": "eVar135"
+},
+{
+"value": "eVar136",
+"label": "eVar136"
+},
+{
+"value": "eVar137",
+"label": "eVar137"
+},
+{
+"value": "eVar138",
+"label": "eVar138"
+},
+{
+"value": "eVar139",
+"label": "eVar139"
+},
+{
+"value": "eVar140",
+"label": "eVar140"
+},
+{
+"value": "eVar141",
+"label": "eVar141"
+},
+{
+"value": "eVar142",
+"label": "eVar142"
+},
+{
+"value": "eVar143",
+"label": "eVar143"
+},
+{
+"value": "eVar144",
+"label": "eVar144"
+},
+{
+"value": "eVar145",
+"label": "eVar145"
+},
+{
+"value": "eVar146",
+"label": "eVar146"
+},
+{
+"value": "eVar147",
+"label": "eVar147"
+},
+{
+"value": "eVar148",
+"label": "eVar148"
+},
+{
+"value": "eVar149",
+"label": "eVar149"
+},
+{
+"value": "eVar150",
+"label": "eVar150"
+},
+{
+"value": "eVar151",
+"label": "eVar151"
+},
+{
+"value": "eVar152",
+"label": "eVar152"
+},
+{
+"value": "eVar153",
+"label": "eVar153"
+},
+{
+"value": "eVar154",
+"label": "eVar154"
+},
+{
+"value": "eVar155",
+"label": "eVar155"
+},
+{
+"value": "eVar156",
+"label": "eVar156"
+},
+{
+"value": "eVar157",
+"label": "eVar157"
+},
+{
+"value": "eVar158",
+"label": "eVar158"
+},
+{
+"value": "eVar159",
+"label": "eVar159"
+},
+{
+"value": "eVar160",
+"label": "eVar160"
+},
+{
+"value": "eVar161",
+"label": "eVar161"
+},
+{
+"value": "eVar162",
+"label": "eVar162"
+},
+{
+"value": "eVar163",
+"label": "eVar163"
+},
+{
+"value": "eVar164",
+"label": "eVar164"
+},
+{
+"value": "eVar165",
+"label": "eVar165"
+},
+{
+"value": "eVar166",
+"label": "eVar166"
+},
+{
+"value": "eVar167",
+"label": "eVar167"
+},
+{
+"value": "eVar168",
+"label": "eVar168"
+},
+{
+"value": "eVar169",
+"label": "eVar169"
+},
+{
+"value": "eVar170",
+"label": "eVar170"
+},
+{
+"value": "eVar171",
+"label": "eVar171"
+},
+{
+"value": "eVar172",
+"label": "eVar172"
+},
+{
+"value": "eVar173",
+"label": "eVar173"
+},
+{
+"value": "eVar174",
+"label": "eVar174"
+},
+{
+"value": "eVar175",
+"label": "eVar175"
+},
+{
+"value": "eVar176",
+"label": "eVar176"
+},
+{
+"value": "eVar177",
+"label": "eVar177"
+},
+{
+"value": "eVar178",
+"label": "eVar178"
+},
+{
+"value": "eVar179",
+"label": "eVar179"
+},
+{
+"value": "eVar180",
+"label": "eVar180"
+},
+{
+"value": "eVar181",
+"label": "eVar181"
+},
+{
+"value": "eVar182",
+"label": "eVar182"
+},
+{
+"value": "eVar183",
+"label": "eVar183"
+},
+{
+"value": "eVar184",
+"label": "eVar184"
+},
+{
+"value": "eVar185",
+"label": "eVar185"
+},
+{
+"value": "eVar186",
+"label": "eVar186"
+},
+{
+"value": "eVar187",
+"label": "eVar187"
+},
+{
+"value": "eVar188",
+"label": "eVar188"
+},
+{
+"value": "eVar189",
+"label": "eVar189"
+},
+{
+"value": "eVar190",
+"label": "eVar190"
+},
+{
+"value": "eVar191",
+"label": "eVar191"
+},
+{
+"value": "eVar192",
+"label": "eVar192"
+},
+{
+"value": "eVar193",
+"label": "eVar193"
+},
+{
+"value": "eVar194",
+"label": "eVar194"
+},
+{
+"value": "eVar195",
+"label": "eVar195"
+},
+{
+"value": "eVar196",
+"label": "eVar196"
+},
+{
+"value": "eVar197",
+"label": "eVar197"
+},
+{
+"value": "eVar198",
+"label": "eVar198"
+},
+{
+"value": "eVar199",
+"label": "eVar199"
+},
+{
+"value": "eVar200",
+"label": "eVar200"
+}
+]
+}
+},
+{
+"default_value": "prop1",
+"field_type": "dropdown",
+"name": "prop",
+"label": "Traffic Variable",
+"options": {
+"choices": [
+{
+"value": "prop1",
+"label": "prop1"
+},
+{
+"value": "prop2",
+"label": "prop2"
+},
+{
+"value": "prop3",
+"label": "prop3"
+},
+{
+"value": "prop4",
+"label": "prop4"
+},
+{
+"value": "prop5",
+"label": "prop5"
+},
+{
+"value": "prop6",
+"label": "prop6"
+},
+{
+"value": "prop7",
+"label": "prop7"
+},
+{
+"value": "prop8",
+"label": "prop8"
+},
+{
+"value": "prop9",
+"label": "prop9"
+},
+{
+"value": "prop10",
+"label": "prop10"
+},
+{
+"value": "prop11",
+"label": "prop11"
+},
+{
+"value": "prop12",
+"label": "prop12"
+},
+{
+"value": "prop13",
+"label": "prop13"
+},
+{
+"value": "prop14",
+"label": "prop14"
+},
+{
+"value": "prop15",
+"label": "prop15"
+},
+{
+"value": "prop16",
+"label": "prop16"
+},
+{
+"value": "prop17",
+"label": "prop17"
+},
+{
+"value": "prop18",
+"label": "prop18"
+},
+{
+"value": "prop19",
+"label": "prop19"
+},
+{
+"value": "prop20",
+"label": "prop20"
+},
+{
+"value": "prop21",
+"label": "prop21"
+},
+{
+"value": "prop22",
+"label": "prop22"
+},
+{
+"value": "prop23",
+"label": "prop23"
+},
+{
+"value": "prop24",
+"label": "prop24"
+},
+{
+"value": "prop25",
+"label": "prop25"
+},
+{
+"value": "prop26",
+"label": "prop26"
+},
+{
+"value": "prop27",
+"label": "prop27"
+},
+{
+"value": "prop28",
+"label": "prop28"
+},
+{
+"value": "prop29",
+"label": "prop29"
+},
+{
+"value": "prop30",
+"label": "prop30"
+},
+{
+"value": "prop31",
+"label": "prop31"
+},
+{
+"value": "prop32",
+"label": "prop32"
+},
+{
+"value": "prop33",
+"label": "prop33"
+},
+{
+"value": "prop34",
+"label": "prop34"
+},
+{
+"value": "prop35",
+"label": "prop35"
+},
+{
+"value": "prop36",
+"label": "prop36"
+},
+{
+"value": "prop37",
+"label": "prop37"
+},
+{
+"value": "prop38",
+"label": "prop38"
+},
+{
+"value": "prop39",
+"label": "prop39"
+},
+{
+"value": "prop40",
+"label": "prop40"
+},
+{
+"value": "prop41",
+"label": "prop41"
+},
+{
+"value": "prop42",
+"label": "prop42"
+},
+{
+"value": "prop43",
+"label": "prop43"
+},
+{
+"value": "prop44",
+"label": "prop44"
+},
+{
+"value": "prop45",
+"label": "prop45"
+},
+{
+"value": "prop46",
+"label": "prop46"
+},
+{
+"value": "prop47",
+"label": "prop47"
+},
+{
+"value": "prop48",
+"label": "prop48"
+},
+{
+"value": "prop49",
+"label": "prop49"
+},
+{
+"value": "prop50",
+"label": "prop50"
+},
+{
+"value": "prop51",
+"label": "prop51"
+},
+{
+"value": "prop52",
+"label": "prop52"
+},
+{
+"value": "prop53",
+"label": "prop53"
+},
+{
+"value": "prop54",
+"label": "prop54"
+},
+{
+"value": "prop55",
+"label": "prop55"
+},
+{
+"value": "prop56",
+"label": "prop56"
+},
+{
+"value": "prop57",
+"label": "prop57"
+},
+{
+"value": "prop58",
+"label": "prop58"
+},
+{
+"value": "prop59",
+"label": "prop59"
+},
+{
+"value": "prop60",
+"label": "prop60"
+},
+{
+"value": "prop61",
+"label": "prop61"
+},
+{
+"value": "prop62",
+"label": "prop62"
+},
+{
+"value": "prop63",
+"label": "prop63"
+},
+{
+"value": "prop64",
+"label": "prop64"
+},
+{
+"value": "prop65",
+"label": "prop65"
+},
+{
+"value": "prop66",
+"label": "prop66"
+},
+{
+"value": "prop67",
+"label": "prop67"
+},
+{
+"value": "prop68",
+"label": "prop68"
+},
+{
+"value": "prop69",
+"label": "prop69"
+},
+{
+"value": "prop70",
+"label": "prop70"
+},
+{
+"value": "prop71",
+"label": "prop71"
+},
+{
+"value": "prop72",
+"label": "prop72"
+},
+{
+"value": "prop73",
+"label": "prop73"
+},
+{
+"value": "prop74",
+"label": "prop74"
+},
+{
+"value": "prop75",
+"label": "prop75"
+},
+{
+"value": "prop76",
+"label": "prop76"
+},
+{
+"value": "prop77",
+"label": "prop77"
+},
+{
+"value": "prop78",
+"label": "prop78"
+},
+{
+"value": "prop79",
+"label": "prop79"
+},
+{
+"value": "prop80",
+"label": "prop80"
+},
+{
+"value": "prop81",
+"label": "prop81"
+},
+{
+"value": "prop82",
+"label": "prop82"
+},
+{
+"value": "prop83",
+"label": "prop83"
+},
+{
+"value": "prop84",
+"label": "prop84"
+},
+{
+"value": "prop85",
+"label": "prop85"
+},
+{
+"value": "prop86",
+"label": "prop86"
+},
+{
+"value": "prop87",
+"label": "prop87"
+},
+{
+"value": "prop88",
+"label": "prop88"
+},
+{
+"value": "prop89",
+"label": "prop89"
+},
+{
+"value": "prop90",
+"label": "prop90"
+},
+{
+"value": "prop91",
+"label": "prop91"
+},
+{
+"value": "prop92",
+"label": "prop92"
+},
+{
+"value": "prop93",
+"label": "prop93"
+},
+{
+"value": "prop94",
+"label": "prop94"
+},
+{
+"value": "prop95",
+"label": "prop95"
+},
+{
+"value": "prop96",
+"label": "prop96"
+},
+{
+"value": "prop97",
+"label": "prop97"
+},
+{
+"value": "prop98",
+"label": "prop98"
+},
+{
+"value": "prop99",
+"label": "prop99"
+},
+{
+"value": "prop100",
+"label": "prop100"
+},
+{
+"value": "prop101",
+"label": "prop101"
+},
+{
+"value": "prop102",
+"label": "prop102"
+},
+{
+"value": "prop103",
+"label": "prop103"
+},
+{
+"value": "prop104",
+"label": "prop104"
+},
+{
+"value": "prop105",
+"label": "prop105"
+},
+{
+"value": "prop106",
+"label": "prop106"
+},
+{
+"value": "prop107",
+"label": "prop107"
+},
+{
+"value": "prop108",
+"label": "prop108"
+},
+{
+"value": "prop109",
+"label": "prop109"
+},
+{
+"value": "prop110",
+"label": "prop110"
+},
+{
+"value": "prop111",
+"label": "prop111"
+},
+{
+"value": "prop112",
+"label": "prop112"
+},
+{
+"value": "prop113",
+"label": "prop113"
+},
+{
+"value": "prop114",
+"label": "prop114"
+},
+{
+"value": "prop115",
+"label": "prop115"
+},
+{
+"value": "prop116",
+"label": "prop116"
+},
+{
+"value": "prop117",
+"label": "prop117"
+},
+{
+"value": "prop118",
+"label": "prop118"
+},
+{
+"value": "prop119",
+"label": "prop119"
+},
+{
+"value": "prop120",
+"label": "prop120"
+},
+{
+"value": "prop121",
+"label": "prop121"
+},
+{
+"value": "prop122",
+"label": "prop122"
+},
+{
+"value": "prop123",
+"label": "prop123"
+},
+{
+"value": "prop124",
+"label": "prop124"
+},
+{
+"value": "prop125",
+"label": "prop125"
+},
+{
+"value": "prop126",
+"label": "prop126"
+},
+{
+"value": "prop127",
+"label": "prop127"
+},
+{
+"value": "prop128",
+"label": "prop128"
+},
+{
+"value": "prop129",
+"label": "prop129"
+},
+{
+"value": "prop130",
+"label": "prop130"
+},
+{
+"value": "prop131",
+"label": "prop131"
+},
+{
+"value": "prop132",
+"label": "prop132"
+},
+{
+"value": "prop133",
+"label": "prop133"
+},
+{
+"value": "prop134",
+"label": "prop134"
+},
+{
+"value": "prop135",
+"label": "prop135"
+},
+{
+"value": "prop136",
+"label": "prop136"
+},
+{
+"value": "prop137",
+"label": "prop137"
+},
+{
+"value": "prop138",
+"label": "prop138"
+},
+{
+"value": "prop139",
+"label": "prop139"
+},
+{
+"value": "prop140",
+"label": "prop140"
+},
+{
+"value": "prop141",
+"label": "prop141"
+},
+{
+"value": "prop142",
+"label": "prop142"
+},
+{
+"value": "prop143",
+"label": "prop143"
+},
+{
+"value": "prop144",
+"label": "prop144"
+},
+{
+"value": "prop145",
+"label": "prop145"
+},
+{
+"value": "prop146",
+"label": "prop146"
+},
+{
+"value": "prop147",
+"label": "prop147"
+},
+{
+"value": "prop148",
+"label": "prop148"
+},
+{
+"value": "prop149",
+"label": "prop149"
+},
+{
+"value": "prop150",
+"label": "prop150"
+},
+{
+"value": "prop151",
+"label": "prop151"
+},
+{
+"value": "prop152",
+"label": "prop152"
+},
+{
+"value": "prop153",
+"label": "prop153"
+},
+{
+"value": "prop154",
+"label": "prop154"
+},
+{
+"value": "prop155",
+"label": "prop155"
+},
+{
+"value": "prop156",
+"label": "prop156"
+},
+{
+"value": "prop157",
+"label": "prop157"
+},
+{
+"value": "prop158",
+"label": "prop158"
+},
+{
+"value": "prop159",
+"label": "prop159"
+},
+{
+"value": "prop160",
+"label": "prop160"
+},
+{
+"value": "prop161",
+"label": "prop161"
+},
+{
+"value": "prop162",
+"label": "prop162"
+},
+{
+"value": "prop163",
+"label": "prop163"
+},
+{
+"value": "prop164",
+"label": "prop164"
+},
+{
+"value": "prop165",
+"label": "prop165"
+},
+{
+"value": "prop166",
+"label": "prop166"
+},
+{
+"value": "prop167",
+"label": "prop167"
+},
+{
+"value": "prop168",
+"label": "prop168"
+},
+{
+"value": "prop169",
+"label": "prop169"
+},
+{
+"value": "prop170",
+"label": "prop170"
+},
+{
+"value": "prop171",
+"label": "prop171"
+},
+{
+"value": "prop172",
+"label": "prop172"
+},
+{
+"value": "prop173",
+"label": "prop173"
+},
+{
+"value": "prop174",
+"label": "prop174"
+},
+{
+"value": "prop175",
+"label": "prop175"
+},
+{
+"value": "prop176",
+"label": "prop176"
+},
+{
+"value": "prop177",
+"label": "prop177"
+},
+{
+"value": "prop178",
+"label": "prop178"
+},
+{
+"value": "prop179",
+"label": "prop179"
+},
+{
+"value": "prop180",
+"label": "prop180"
+},
+{
+"value": "prop181",
+"label": "prop181"
+},
+{
+"value": "prop182",
+"label": "prop182"
+},
+{
+"value": "prop183",
+"label": "prop183"
+},
+{
+"value": "prop184",
+"label": "prop184"
+},
+{
+"value": "prop185",
+"label": "prop185"
+},
+{
+"value": "prop186",
+"label": "prop186"
+},
+{
+"value": "prop187",
+"label": "prop187"
+},
+{
+"value": "prop188",
+"label": "prop188"
+},
+{
+"value": "prop189",
+"label": "prop189"
+},
+{
+"value": "prop190",
+"label": "prop190"
+},
+{
+"value": "prop191",
+"label": "prop191"
+},
+{
+"value": "prop192",
+"label": "prop192"
+},
+{
+"value": "prop193",
+"label": "prop193"
+},
+{
+"value": "prop194",
+"label": "prop194"
+},
+{
+"value": "prop195",
+"label": "prop195"
+},
+{
+"value": "prop196",
+"label": "prop196"
+},
+{
+"value": "prop197",
+"label": "prop197"
+},
+{
+"value": "prop198",
+"label": "prop198"
+},
+{
+"value": "prop199",
+"label": "prop199"
+},
+{
+"value": "prop200",
+"label": "prop200"
+}
+]
+}
+}
+],
+"description": "",
+"options": {
+"track_layer_decision": "var decisionString = window.optimizely.get('state').getDecisionString({\n  campaignId: campaignId,\n  shouldCleanString: true\n});\nvar redirectInfo = window.optimizely.get('state').getRedirectInfo();\nvar eVar = extension.eVar;\nvar prop = extension.prop;\n\n// Public Methods\nvar adobeIntegrator = {\n  campaignDecisions: {},\n  // Accepts \"s\" variable as a param and assigns eVars to object.\n  populateTrackerClearDecisions: function(sVariable) {\n    for (var allocation in this.campaignDecisions) {\n      sVariable[allocation] = this.campaignDecisions[allocation];\n    }\n    this.campaignDecisions = {};\n  },\n  assignCampaigns: function(sVariable) {\n    if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;\n    this.populateTrackerClearDecisions(sVariable);\n  },\n  // Accepts \"s\" variable as a param and assigns eVars to object, then dispatches custom link tracking.\n  trackDelayedCampaigns: function(sVariable) {\n    sVariable.linkTrackVars = (sVariable.linkTrackVars ? sVariable.linkTrackVars += ',' : '') + Object.keys(this.campaignDecisions);\n    this.populateTrackerClearDecisions(sVariable);\n    sVariable.tl(true, \"o\", \"OptimizelyLayerDecision\");\n  }\n};\n\n// Scopes `campaignArray` to Optimizely object.\nif (!window.optimizely.get(\"custom/adobeIntegrator\")) {\n  window.optimizely.push({\n    type: \"registerModule\",\n    moduleName: \"adobeIntegrator\",\n    module: adobeIntegrator\n  });\n}\n\n// Failing Audiences returns `null`, failing Traffic Allocation returns `undefined` for decisionString.\nif (!!decisionString) {\n  if (eVar) window.optimizely.get(\"custom/adobeIntegrator\").campaignDecisions[eVar] = decisionString;\n  if (prop) window.optimizely.get(\"custom/adobeIntegrator\").campaignDecisions[prop] = decisionString;\n}"
+}
 }
