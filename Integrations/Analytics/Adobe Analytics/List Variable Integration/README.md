@@ -36,10 +36,6 @@ To accommodate delayed use cases, the integration exposes another function, `tra
 window.optimizely.get("custom/adobeIntegrator").trackDelayedCampaigns(window.s);
 ```
 
-## Limitations
-
-As of August 10th, 2017, this integration will only work with redirect experiments if you're whitelisted for Optimizely's V2 redirect logic. Please contact your Customer Success Manager (CSM) to get your account whitelisted.
-
 ## Support
 
 If you have questions about this integration or if you're experiencing unexpected behavior, please submit a support ticket via the Help menu on the left side of the Optimizely Dashboard.
