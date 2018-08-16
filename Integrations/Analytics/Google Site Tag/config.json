@@ -1,0 +1,17 @@
+{
+    "plugin_type": "analytics_integration",
+    "name": "Google Site Tag Integration",
+    "form_schema": [
+      {
+        "default_value": "",
+        "field_type": "text",
+        "name": "dimension_name",
+        "label": "Custom Dimension Name",
+        "options": null
+      }
+    ],
+    "description": "",
+    "options": {
+      "track_layer_decision": "/*\n * Javascript written in this tab will run every time a user is\n * assigned to an experiment and variation, but before any experiment\n * code runs. This hook is useful for tracking which variations a\n * visitor has been assigned to. Click the help icon for more information.\n */\n\nvar decisionString = optimizely.get('state').getDecisionString({\n  campaignId: campaignId,\n  shouldCleanString: true,\n  maxLength: 255\n});\n\nif(!!decisionString) {\n    optimizely.get('utils').waitUntil(function() {\n      return window.gtag !== undefined\n    }).then(function() {\n        var payload = {};\n        payload[extension['dimension_name']] = decisionString;\n        payload['event_category'] = decisionString;\n        gtag('event', 'Optimizely Experiment', payload);\n    }); \n}\n"
+    }
+  }
