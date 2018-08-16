@@ -24,7 +24,7 @@ By default, the Global Site Tag looks like this:
 
 where `GA_TRACKING_ID` is your Google Analytics tracking ID. 
 
-We'll need to update it the last line of code to look like this: 
+We'll need to update the last line of code to look like this: 
 
 ```javascript
 gtag('config', 'GA_TRACKING_ID', {
@@ -46,8 +46,8 @@ gtag('config', 'GA_TRACKING_ID', {
 });
 ```
 
-Next, go into Optimizely, head to the experiment that you want to integrate Google Analytics with. 
+Next, go into Optimizely, head to the experiment that you want to integrate Google Site Tag with. 
 
-Turn on the [Google Site Tag Custom Analytics extension]() and in the experiment integration settings, enter the Custom Dimension name as you see it in the Google Analytics interface. 
+Turn on the Google Site Tag Custom Analytics extension and in the experiment integration settings, enter the Custom Dimension name as you see it in the Google Analytics interface. 
 
 Save and you should be good to go!
