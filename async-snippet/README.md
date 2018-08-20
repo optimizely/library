@@ -26,7 +26,6 @@ sample code:
   */
   var cssRuleManager = {
     sheet: (function() {
-      // https://davidwalsh.name/add-rules-stylesheets
       var style = document.createElement("style");
       style.appendChild(document.createTextNode(""));
       document.head.appendChild(style);
@@ -108,7 +107,6 @@ sample code
   */
   var cssRuleManager = {
     sheet: (function() {
-      // https://davidwalsh.name/add-rules-stylesheets
       var style = document.createElement("style");
       style.appendChild(document.createTextNode(""));
       document.head.appendChild(style);
