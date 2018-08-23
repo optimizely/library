@@ -48,6 +48,7 @@ sample code:
   var removeMask = function() {
     if(syncChangesApplied) return;
     cssRuleManager.sheet.disabled = true;
+    syncChangesApplied = true;
   }
 
   // Mask <body> immediately
@@ -131,6 +132,7 @@ sample code
     // its adequate to remove mask class once on the first sync change
     if(syncChangesApplied) return;
     cssRuleManager.sheet.disabled = true;
+    syncChangesApplied = true;
   }
 
   /**
