@@ -4,6 +4,13 @@ The scripts below illustrate a simple flicker management mechanism for asynchron
 ### Option 1. Masking the entire `<body>`, using `<style>` tag
 > _no configuration necessary_
 
+This variation requires a style tag that sets the `body` to `opacity:0`. Once Optimizely syncronous changes have been applied, the `stylesheet` will be disabled and the body will become visible.
+
+#### Approach
+* Define a <style id="optimizely-mask"> tag somewhere in the `<head>`
+* Wait until Optimizely synchronous changes have been applied (`lifecycle.activated`)
+* Query for the `style#optimizely-mask` node and set `disabled = true` to show the body.
+
 sample code:
 ```html
 <!DOCTYPE html>
@@ -59,7 +66,7 @@ body {opacity: 0;}
 ### Option 2. Masking the entire `<body>`, JS only
 > _no configuration necessary_
 
-This variation will set `opacity:0` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, that body will be unhidden.
+This variation will set `opacity:0` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, the body will be unhidden.
 
 #### Approach
 * Within the `<head>`, add CSSRule to dynamic CSSStyleSheet that says body `{opacity: 0}`
