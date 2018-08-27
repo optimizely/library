@@ -49,11 +49,15 @@ sample code:
 
   setTimeout(removeMask, maskTimeout);
 </script>    
+
+<!-- Optimizely snippet -->
 <script type="text/javascript" src="https://cdn.optimizely.com/js/PROJECTID.js" async></script>
+  
 <!-- masking stylesheet -->
 <style id="optimizely-mask">
 body {opacity: 0;}
 </style>
+  
 </head>
 <body>
 
