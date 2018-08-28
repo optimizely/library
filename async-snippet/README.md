@@ -1,8 +1,8 @@
 ## Async Snippet Installation 
 The scripts below illustrate a simple flicker management mechanism for asynchronous installs of Optimizely X Web. The mechanism works by masking certain elements until all syncronous Optimizely variation code has been executed, preventing the "flicker" of original content as the page is loading.
 
-### Option 1. Masking the entire `<body>`, using `<style>` tag
-> _no configuration necessary_
+### Option 1. Masking the entire `<body>`
+> _minimal configuration: requires a `<style>` tag that masks the body_
 
 This variation requires a style tag that sets the `body` to `opacity:0`. Once Optimizely syncronous changes have been applied, the `stylesheet` will be disabled and the body will become visible.
 
@@ -148,7 +148,7 @@ sample code:
 ---
 
 ### Option 3. Masking individual elements, JS only
-> _configuration required_
+> _configuration required: must provide a list of selectors to mask_
 
 This variation will set `opacity:0` to the individual elements that are being manipulated as part of the variation treatment. Once Optimizely syncronous changes have been applied, the hidden elements will reappear. 
 
