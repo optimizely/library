@@ -1,10 +1,76 @@
 ## Async Snippet Installation 
 The scripts below illustrate a simple flicker management mechanism for asynchronous installs of Optimizely X Web. The mechanism works by masking certain elements until all syncronous Optimizely variation code has been executed, preventing the "flicker" of original content as the page is loading.
 
-### Option 1. Masking the entire `<body>`
+### Option 1. Masking the entire `<body>`, using `<style>` tag
 > _no configuration necessary_
 
-This variation will set `opacity:0` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, that body will be unhidden.
+This variation requires a style tag that sets the `body` to `opacity:0`. Once Optimizely syncronous changes have been applied, the `stylesheet` will be disabled and the body will become visible.
+
+#### Approach
+* Define a <style id="optimizely-mask"> tag somewhere in the `<head>`
+* Wait until Optimizely synchronous changes have been applied (`lifecycle.activated`)
+* Query for the `style#optimizely-mask` node and set `disabled = true` to show the body.
+
+sample code:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+  var maskTimeout          = 3000,
+      syncChangesApplied   = false;
+
+  /**
+  * Fired in the first call of Optimizely `action.applied`
+  * Disables "masking" stylesheet
+  */
+  var removeMask = function() {
+    if(syncChangesApplied) return;
+    try {
+      var styleNode = document.querySelector('style#optimizely-mask');
+      styleNode.disabled = true;
+    } catch(err) { }
+    syncChangesApplied = true;
+  }
+
+  /**
+  * Listen for first sync change applied
+  * and unmask nodes
+  */
+  window.optimizely = window.optimizely || [];
+  window.optimizely.push({
+    type: "addListener",
+    filter: {
+      type: "lifecycle",
+      name: "campaignDecided"
+    },
+    "handler": removeMask
+  }); 
+
+  setTimeout(removeMask, maskTimeout);
+</script>    
+
+<!-- Optimizely snippet -->
+<script type="text/javascript" src="https://cdn.optimizely.com/js/PROJECTID.js" async></script>
+  
+<!-- masking stylesheet -->
+<style id="optimizely-mask">
+body {opacity: 0;}
+</style>
+  
+</head>
+<body>
+
+    <h1>Async Snippet</h1>
+
+</body>
+</html>
+```
+
+### Option 2. Masking the entire `<body>`, JS only
+> _no configuration necessary_
+
+This variation will set `opacity:0` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, the body will be unhidden.
 
 #### Approach
 * Within the `<head>`, add CSSRule to dynamic CSSStyleSheet that says body `{opacity: 0}`
@@ -26,6 +92,7 @@ sample code:
   */
   var cssRuleManager = {
     sheet: (function() {
+      // https://davidwalsh.name/add-rules-stylesheets
       var style = document.createElement("style");
       style.appendChild(document.createTextNode(""));
       document.head.appendChild(style);
@@ -47,6 +114,7 @@ sample code:
   var removeMask = function() {
     if(syncChangesApplied) return;
     cssRuleManager.sheet.disabled = true;
+    syncChangesApplied = true;
   }
 
   // Mask <body> immediately
@@ -79,7 +147,7 @@ sample code:
 ```
 ---
 
-### Option 2. Masking individual elements
+### Option 3. Masking individual elements, JS only
 > _configuration required_
 
 This variation will set `opacity:0` to the individual elements that are being manipulated as part of the variation treatment. Once Optimizely syncronous changes have been applied, the hidden elements will reappear. 
@@ -107,6 +175,7 @@ sample code
   */
   var cssRuleManager = {
     sheet: (function() {
+      // https://davidwalsh.name/add-rules-stylesheets
       var style = document.createElement("style");
       style.appendChild(document.createTextNode(""));
       document.head.appendChild(style);
@@ -129,6 +198,7 @@ sample code
     // its adequate to remove mask class once on the first sync change
     if(syncChangesApplied) return;
     cssRuleManager.sheet.disabled = true;
+    syncChangesApplied = true;
   }
 
   /**
