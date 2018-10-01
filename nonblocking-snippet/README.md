@@ -1,7 +1,7 @@
 ## Non-blocking Snippet Installation 
 The scripts below illustrate a simple flicker management mechanism for non-blocking installs of Optimizely X Web. The mechanism works by masking certain elements until all synchronous Optimizely variation code has been executed, preventing the "flicker" of original content as the page is loading.
 
-The key to enabling the Optimizely snippet to be loaded as non-blocking (or less-blocking) is by adding either the `defer` or `async` attribute to the `<script>` tag. This article does an excellent job of detailing the difference between the two approaches: https://flaviocopes.com/javascript-async-defer/#performance-comparison.
+The key to enabling the Optimizely snippet to be loaded as a non-blocking (or less-blocking) resource is by adding either the `defer` or `async` attribute to the `<script>` tag. This article does an excellent job of detailing the difference between the two approaches: https://flaviocopes.com/javascript-async-defer/#performance-comparison.
 
 ### Option 1. Masking the entire `<body>`
 > _minimal configuration: requires a `<style>` tag that masks the body_
