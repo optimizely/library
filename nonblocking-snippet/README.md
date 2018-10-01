@@ -1,5 +1,5 @@
-## Async Snippet Installation 
-The scripts below illustrate a simple flicker management mechanism for asynchronous installs of Optimizely X Web. The mechanism works by masking certain elements until all syncronous Optimizely variation code has been executed, preventing the "flicker" of original content as the page is loading.
+## Non-blocking Snippet Installation 
+The scripts below illustrate a simple flicker management mechanism for non-blocking installs of Optimizely X Web. The mechanism works by masking certain elements until all syncronous Optimizely variation code has been executed, preventing the "flicker" of original content as the page is loading.
 
 ### Option 1. Masking the entire `<body>`
 > _minimal configuration: requires a `<style>` tag that masks the body_
@@ -61,7 +61,7 @@ body {opacity: 0;}
 </head>
 <body>
 
-    <h1>Async Snippet</h1>
+    <h1>Nonblocking Snippet</h1>
 
 </body>
 </html>
@@ -140,7 +140,7 @@ sample code:
 </head>
 <body>
 
-    <h1>Async Snippet</h1>
+    <h1>Nonblocking Snippet</h1>
 
 </body>
 </html>
@@ -229,7 +229,7 @@ sample code
 </head>
 <body>
 
-    <h1>Async Snippet</h1>
+    <h1>Nonblocking Snippet</h1>
 
 </body>
 </html>
