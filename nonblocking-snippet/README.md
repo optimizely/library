@@ -6,7 +6,7 @@ The key to enabling the Optimizely snippet to be loaded as a non-blocking (or le
 ### Option 1. Masking the entire `<body>`
 > _minimal configuration: requires a `<style>` tag that masks the body_
 
-This variation requires a style tag that sets the `body` to `opacity:0`. Once Optimizely syncronous changes have been applied, the `stylesheet` will be disabled and the body will become visible.
+This variation requires a style tag that sets the `body` to `visibility:hidden`. Once Optimizely syncronous changes have been applied, the `stylesheet` will be disabled and the body will become visible.
 
 #### Approach
 * Define a <style id="optimizely-mask"> tag somewhere in the `<head>`
@@ -57,7 +57,7 @@ sample code:
   
 <!-- masking stylesheet -->
 <style id="optimizely-mask">
-body {opacity: 0;}
+body {visibility:hidden;}
 </style>
   
 </head>
@@ -72,10 +72,10 @@ body {opacity: 0;}
 ### Option 2. Masking the entire `<body>`, JS only
 > _no configuration necessary_
 
-This variation will set `opacity:0` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, the body will be unhidden.
+This variation will set `visibility:hidden` to the <body> prior to any elements becoming visible. Once Optimizely syncronous changes have been applied, the body will be unhidden.
 
 #### Approach
-* Within the `<head>`, add CSSRule to dynamic CSSStyleSheet that says body `{opacity: 0}`
+* Within the `<head>`, add CSSRule to dynamic CSSStyleSheet that says body `{visibility:hidden}`
 * Wait until Optimizely synchronous changes have been applied (`lifecycle.activated`)
 * Disable dynamic CSSStyleSheet, unhiding body.
 
@@ -120,7 +120,7 @@ sample code:
   }
 
   // Mask <body> immediately
-  cssRuleManager.addCSSRule('body', 'opacity:0');
+  cssRuleManager.addCSSRule('body', 'visibility:hidden');
 
   /**
   * Listen for first sync change applied
@@ -152,11 +152,11 @@ sample code:
 ### Option 3. Masking individual elements, JS only
 > _configuration required: must provide a list of selectors to mask_
 
-This variation will set `opacity:0` to the individual elements that are being manipulated as part of the variation treatment. Once Optimizely syncronous changes have been applied, the hidden elements will reappear. 
+This variation will set `visibility:hidden` to the individual elements that are being manipulated as part of the variation treatment. Once Optimizely syncronous changes have been applied, the hidden elements will reappear. 
 
 #### Approach
 * Supply an Array of element selectors to become hidden
-* For each selector supplied, add CSSRule to dynamic CSSStyleSheet that says SELECTOR `{opacity: 0}`
+* For each selector supplied, add CSSRule to dynamic CSSStyleSheet that says SELECTOR `{visibility:hidden}`
 * Wait until Optimizely synchronous changes have been applied (`lifecycle.activated`)
 * Disable dynamic CSSStyleSheet, unhiding body.
 
@@ -208,7 +208,7 @@ sample code
   * Binds Optimizely `action.applied` to unhide nodes by removing CSSRules
   */
   hideElementSelectors.forEach(function(selector) {
-    cssRuleManager.addCSSRule(selector, 'opacity:0');
+    cssRuleManager.addCSSRule(selector, 'visibility:hidden');
   });
 
   /**
