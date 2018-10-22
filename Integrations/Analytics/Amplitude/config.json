@@ -1,0 +1,42 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "Amplitude Analytics Integration",
+  "form_schema": [
+    {
+      "default_value": "[Optimizely Experiment]",
+      "field_type": "text",
+      "name": "property_prefix",
+      "label": "User Property Prefix",
+      "options": null
+    },
+    {
+      "default_value": "n",
+      "field_type": "dropdown",
+      "name": "sendevent",
+      "label": "Send Event",
+      "options": {
+        "choices": [
+          {
+            "value": "n",
+            "label": "No (not needed)"
+          },
+          {
+            "value": "y",
+            "label": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "User in Experiment",
+      "field_type": "text",
+      "name": "event_name",
+      "label": "Amplitude Event Name (optional)",
+      "options": null
+    }
+  ],
+  "description": "",
+  "options": {
+    "track_layer_decision": "function getCampaignInfo() {\n  return window.optimizely.get('state').getDecisionObject({campaignId: campaignId });\n}\n\nfunction logEvent() {\n  var campaignInfo = getCampaignInfo();\n\n  if (campaignInfo) {\n    var eventProperties = {\n      '[Optimizely Campaign]': campaignInfo.campaign,\n      '[Optimizely Experiment]': campaignInfo.experiment,\n      '[Optimizely Variation]': campaignInfo.variation,\n      '[Optimizely Holdback]': campaignInfo.holdback\n    };\n    amplitude.getInstance().logEvent(extension.event_name, eventProperties);\n  }\n}\n\nfunction identifyCall() {\n  var campaignInfo = getCampaignInfo();\n\n  if (campaignInfo) {\n    var identify = new amplitude.Identify().set(\n      extension.property_prefix + ' ' + campaignInfo.experiment,\n      campaignInfo.variation\n    );\n    amplitude.getInstance().identify(identify);\n  }\n}\n\nvar MAX_ATTEMPTS = 9;\n\nfunction sendToAmplitude(call) {\n  if (call >= MAX_ATTEMPTS) {\n    return;\n  }\n\n  if (\n    window.amplitude &&\n    window.amplitude._instances &&\n    window.amplitude._instances['$default_instance'] &&\n    window.amplitude._instances['$default_instance'].options &&\n    window.amplitude._instances['$default_instance'].options.apiKey\n  ) {\n    identifyCall();\n    if (extension.sendevent === 'y') {\n      logEvent();\n    }\n  } else {\n    return setTimeout(function () {\n      sendToAmplitude(call + 1);\n    },\n    1000);\n  }\n}\n\nsendToAmplitude(0);"
+  }
+}
