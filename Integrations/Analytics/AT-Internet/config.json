@@ -1,6 +1,6 @@
 {
   "plugin_type": "analytics_integration",
-  "name": "AT Internet Test (BD)",
+  "name": "AT Internet",
   "form_schema": [],
   "description": "",
   "options": {
