@@ -1,0 +1,9 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "AT Internet Test (BD)",
+  "form_schema": [],
+  "description": "",
+  "options": {
+    "track_layer_decision": "window.ATInternet = window.ATInternet || {};\nwindow.ATInternet.Callbacks = window.ATInternet.Callbacks || {};\nwindow.ATInternet.Callbacks['OptimizelyX-'+campaign.id] = window.ATInternet.Callbacks['OptimizelyX-'+campaign.id] || function (tag) {\n  \n  var optimizelyState = optimizely.get('state'),\n      campaignLabel = campaign.name || campaign.id, // In case the \"Mask descriptive names...\" setting is On \n      variationLabel = optimizelyState.getVariationMap()[experimentId].name || variationId;\n  \n  // Removing first 2 digits to campaign/variation IDs because they are too long for our systems\n  tag.mvTesting.set({\n    test: campaign.id.substring(2)+'['+encodeURIComponent(campaignLabel)+']',\n    waveId: 1,\n    creation: variationId.substring(2)+'['+encodeURIComponent(variationLabel)+']'\n  });\n\n  tag.dispatch();\n};\nwindow.ATInternet.Utils = window.ATInternet.Utils || {dispatchCallbackEvent: function () {}};\nwindow.ATInternet.Utils.dispatchCallbackEvent('OptimizelyX-'+campaign.id);"
+  }
+}
