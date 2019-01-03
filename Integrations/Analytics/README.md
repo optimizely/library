@@ -15,4 +15,9 @@ The below integrations are supported by Optimizely and can easily be added to ou
 
 * [Google Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Google%20Analytics)
 * [Adobe Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Adobe%20Analytics)
+* [Amplitude](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Amplitude)
 * [Moat Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Moat%20Analytics)
+* [Hotjar HeatMaps & Recordings](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/HotJar%20HeatMaps%20%26%20Recordings)
+* [AT Internet](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/AT-Internet)
+* [econda Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/econda%20Analytics)
+
