@@ -4,7 +4,7 @@ Analytics integrations allow customers to track Optimizely experiments in an ext
 
 ## Building Integrations
 
-You can build a custom integration using our [developer documentation](https://developers.optimizely.com/x/integrations/#custom-analytics-beta-). To create a new custom extension, go to Implementation > Extensions > Create New > Create New Integration Extension. Once you create the integration, you'll land in the Integration Builder. In the right panel, there is a code editor, with a few tabs. In each of these tabs, you can write code that will run at a different point in the campaign lifecycle.
+You can build a custom integration using our [Knowledge Base article](https://help.optimizely.com/Integrate_Other_Platforms/Custom_analytics_integrations_in_Optimizely_X) and [developer documentation](https://developers.optimizely.com/x/integrations/#custom-analytics-beta-). To create a new custom extension, go to Implementation > Extensions > Create New > Create New Integration Extension. Once you create the integration, you'll land in the Integration Builder. In the right panel, there is a code editor, with a few tabs. In each of these tabs, you can write code that will run at a different point in the campaign lifecycle.
 
 ## Supported Integrations
 
