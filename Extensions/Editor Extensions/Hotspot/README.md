@@ -1,4 +1,4 @@
-# Hot Spot
+# Hotspot
 
 ![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Hotspot/screenshot.gif)
 
