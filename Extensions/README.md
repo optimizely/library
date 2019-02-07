@@ -15,6 +15,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Background Image Swapper](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Background%20Image%20Swapper)
 * [Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner)
 * [Banner 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Banner%202)
+* [Banner with close button](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Banner%20with%20close%20button)
 * [Bottom Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Bottom%20Banner)
 * [Countdown Timer](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Countdown%20Timer)
 * [Email Capture Pop-up](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Email%20Capture%20Pop-up)
