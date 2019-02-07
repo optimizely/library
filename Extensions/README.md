@@ -21,6 +21,7 @@ Please email us at developers@optimizely.com or open a GitHub Issue with any pro
 * [Exit Intent Pop-up](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up)
 * [Exit Intent Pop-up 2](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Exit%20Intent%20Pop-up%202)
 * [Facebook Messenger Widget - beta](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Facebook%20Messenger%20Widget%20-%20beta)
+* [Hotspot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Hotspot)
 * [Localized Copy Change](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Localized%20Copy%20Change)
 * [Multibuy Offer Reminder](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Multibuy%20Offer%20Reminder)
 * [Price Changer](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Price%20Changer)
