@@ -1,6 +1,6 @@
 # Hot Spot
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Hotspot/screenshot.png)
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Hotspot/screenshot.gif)
 
 ## Description
 
