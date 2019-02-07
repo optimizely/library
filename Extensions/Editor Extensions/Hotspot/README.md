@@ -1,5 +1,7 @@
 # Hot Spot
 
+![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Hotspot/screenshot.png)
+
 ## Description
 
 The hotspot extension draws your user's attention to specific elements on your page.
