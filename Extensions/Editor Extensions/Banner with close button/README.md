@@ -1,6 +1,6 @@
 # Banner with close button
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Banner%20with%20close%20button/screenshot_.png)
+![Screenshot](https://github.com/optimizely/addons-library/blob/master/Extensions/Editor%20Extensions/Banner%20with%20close%20button/screenshot.png)
 
 ## Description
 
