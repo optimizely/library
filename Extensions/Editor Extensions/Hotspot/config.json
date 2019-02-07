@@ -1,0 +1,21 @@
+{
+  "plugin_type": "widget",
+  "name": "Hotspot",
+  "edit_page_url": "http://www.atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": "li:nth-of-type(2) > a.site-nav__link",
+      "field_type": "selector",
+      "name": "attachElement",
+      "label": "Selector to attach hotspot",
+      "options": null
+    }
+  ],
+  "description": "Movable hotspot to highlight an area in the app",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"optly-hotspot\">\n  <img src=\"https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/6/63/Rippling_gif.gif/revision/latest?cb=20171010181455\" />\n</div>",
+    "css": ".optly-hotspot {\n position: absolute;\n z-index: 5000;\n width: 40px;\n}\n\n.optly-hotspot img {\n width: 40px;\n display: inline;\n  \n}\n\n.optly-hotspot-hidden {\n display: none; \n}",
+    "apply_js": "var utils = optimizely.get('utils');\n\nutils.waitForElement(extension.attachElement)\n  .then(function(elem) {\n    // Prepend the extension html to the body\n    elem.insertAdjacentHTML('afterbegin', extension.$html);\n  \t\n  \tvar attachElement = document.querySelector(extension.attachElement);\n\t\tvar hotspot = document.querySelector(\"#optimizely-extension-\" + extension.$instance);\n\n  \n  \tattachElement.prepend(hotspot);\n\n  \thotspot.addEventListener(\"click\",function(){\n      hotspot.classList.add('optly-hotspot-hidden');\n      // trigger click to element the hotspot is attached to\n      attachElement.click();\n    });\n});\n",
+    "undo_js": "var extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}\n"
+  }
+}
