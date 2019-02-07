@@ -1,0 +1,34 @@
+.banner {
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  z-index: 100000000;
+  width: 100%;
+  text-align: center;
+  height: 45px;
+}
+
+.link {
+  text-decoration: underline;
+  color: white;
+}
+
+body {
+  margin-top: 45px;
+}
+
+#parka {
+  float: right;
+  text-decoration: none;
+}
+
+.hide-banner {
+  display:none;
+  visibility: none;
+  height: 0px;
+}
+
+.body-no-margin {
+  margin-top: 0;
+}
