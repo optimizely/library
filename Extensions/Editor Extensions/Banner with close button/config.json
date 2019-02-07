@@ -1,6 +1,6 @@
 {
   "plugin_type": "widget",
-  "name": "Banner with Dismiss X",
+  "name": "Banner with close button",
   "edit_page_url": "http://www.atticandbutton.us/",
   "form_schema": [
     {
