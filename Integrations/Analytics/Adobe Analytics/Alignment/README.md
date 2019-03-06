@@ -9,7 +9,7 @@ Optimizely offers the [hold/send API](https://help.optimizely.com/Set_Up_Optimiz
 
 ## Two scenarios
 
-### Adobe Loaded Ahead of Optimizely Snippet
+### #1. Adobe Loaded Ahead of Optimizely Snippet
 
 Since Adobe is loaded first, we know the `s` variable is already defined by the time Optimizely Project JavaScript runs. We don't have to await it being defined. Hold events at the top of Project JS, register an Adobe pre-track handler that calls `sendEvents`.
 
@@ -23,7 +23,7 @@ s.registerPreTrackCallback(function() {
 });
 ```
 
-### Adobe not guaranteed to load ahead of Optimizely Snippet
+### #2. Adobe not guaranteed to load ahead of Optimizely Snippet
 
 #### Recommended
 
