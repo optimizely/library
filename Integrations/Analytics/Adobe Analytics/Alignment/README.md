@@ -11,4 +11,51 @@ Optimizely offers the [hold/send API](https://help.optimizely.com/Set_Up_Optimiz
 
 ### Adobe Loaded Ahead of Optimizely Snippet
 
+Since Adobe is loaded first, we know the `s` variable is already defined by the time Optimizely Project JavaScript runs. We don't have to await it being defined. Hold events at the top of Project JS, register an Adobe pre-track handler that calls `sendEvents`.
+
+```javascript
+window.optimizely = window.optimizely || [];
+window.optimizely.push({type: "holdEvents"});
+
+s.registerPreTrackCallback(function() {
+  // right before Adobe call
+  window.optimizely.push({type: "sendEvents"});
+});
+```
+
 ### Adobe not guaranteed to load ahead of Optimizely Snippet
+
+We need to wait for the `s` variable to be defined in order to register our pre-track handler. We can wrap our `registerPreTrackCallback` invocation with `waitUntil`, in order to guarantee that it can be called on the `s` variable.
+
+```javascript
+window.optimizely = window.optimizely || [];
+window.optimizely.push({type: "holdEvents"});
+
+var waitFor = function(v, cb) {
+  var POLL, 
+      WAIT_TIMEOUT = 2000, 
+      POLL_INTERVAL_MS = 50;
+
+  if(typeof v !== 'undefined') {
+    cb(v);
+    return;
+  }
+  POLL = setInterval(function() {
+    if(typeof v !== 'undefined') {
+      cb(v);
+      clearInterval(POLL)
+    }
+  }, POLL_INTERVAL_MS);
+  setTimeout(function() {
+    clearInterval(POLL)
+  }, WAIT_TIMEOUT);
+}
+
+waitFor(window.s, function(sVariable) {
+  sVariable.registerPreTrackCallback(function() {
+    // right before Adobe call
+    window.optimizely.push({type: "sendEvents"});
+  });
+});
+```
+
