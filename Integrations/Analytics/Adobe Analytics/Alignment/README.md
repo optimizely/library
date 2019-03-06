@@ -31,11 +31,10 @@ We need to wait for the `s` variable to be defined in order to register our pre-
 window.optimizely = window.optimizely || [];
 window.optimizely.push({type: "holdEvents"});
 
-var waitFor = function(v, cb) {
+var waitFor = function(v, cb, expiredCb) {
   var POLL, 
       WAIT_TIMEOUT = 2000, 
       POLL_INTERVAL_MS = 50;
-
   if(typeof v !== 'undefined') {
     cb(v);
     return;
@@ -47,7 +46,8 @@ var waitFor = function(v, cb) {
     }
   }, POLL_INTERVAL_MS);
   setTimeout(function() {
-    clearInterval(POLL)
+    clearInterval(POLL);
+    typeof expiredCb !== 'undefined' ? expiredCb() : null;
   }, WAIT_TIMEOUT);
 }
 
@@ -56,6 +56,9 @@ waitFor(window.s, function(sVariable) {
     // right before Adobe call
     window.optimizely.push({type: "sendEvents"});
   });
+}, function() {
+  // Adobe s variable polling expired, release events
+  window.optimizely.push({type: "sendEvents"});
 });
 ```
 
