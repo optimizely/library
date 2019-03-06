@@ -25,7 +25,7 @@ s.registerPreTrackCallback(function() {
 
 ### Adobe not guaranteed to load ahead of Optimizely Snippet
 
-##### Recommended
+#### Recommended
 
 Add the `holdEvents` call to the top of Project JavaScript
 
@@ -41,8 +41,8 @@ Add this JavaScript code to your Adobe Analytics `s_code.js` file in the *plug-i
   window.optimizely.push({type: "sendEvents"});
 ```
 
-##### Not recommended
-Uses `setInterval` polling
+#### Not recommended
+> Uses `setInterval` polling
 
 We need to wait for the `s` variable to be defined in order to register our pre-track handler. We can wrap our `registerPreTrackCallback` invocation with `waitUntil`, in order to guarantee that it can be called on the `s` variable.
 
