@@ -14,7 +14,7 @@ Please contact developers@optimizely.com if you have any questions.
 
 Extensions are reusable templates for making changes in the visual editor. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](https://github.com/optimizely/extension-library/tree/master/Extensions). 
 
-- [Background Image Swapper](Extensions/Editor&#32;Extensions/Background&#32;Image&#32;Swapper) - Swaps a background image on the page when Optimizely initially loads to prevent flicker
+- [Background Image Swapper](Extensions/Editor&#32;Extensions/Background&#32;Image&#32;Swapper) - Swaps a background image without flicker
 - [Banner](Extensions/Editor&#32;Extensions/Banner) - Provides a top-level banner across the top of your page
 - [Bottom Banner](Extensions/Editor&#32;Extensions/Bottom&#32;Banner) - Provides a bottom-level banner across the bottom of your page
 - [Countdown Timer](Extensions/Editor&#32;Extensions/Countdown&#32;Timer) - Adds a customizable countdown timer to your page
