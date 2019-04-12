@@ -24,10 +24,10 @@ Extensions are reusable templates for making changes in the visual editor. View 
 - [Facebook Messenger Widget - beta](Extensions/Editor&#32;Extensions/Facebook&#32;Messenger&#32;Widget&#32;-&#32;beta) - Deploy a facebook messenger widget on your page to engage customers
 - [Hotspot](Extensions/Editor&#32;Extensions/Hotspot) - Draw attention to a particular element on your page to guide user behavior
 - [Localized Copy Change](Extensions/Editor&#32;Extensions/Localized&#32;Copy&#32;Change) - Make a copy change on your website in multiple languages
-- [Multibuy Offer Reminder](Extensions/Editor&#32;Extensions/Multibuy&#32;Offer&#32;Reminder) - Display an offer pop-up when the audience conditions are met (ex: visitor added 3 items to the shopping cart)
+- [Multibuy Offer Reminder](Extensions/Editor&#32;Extensions/Multibuy&#32;Offer&#32;Reminder) - Display an offer pop-up based on user behaviors
 - [Price Changer](Extensions/Editor&#32;Extensions/Price&#32;Changer) - Change prices site-wide on the page (Note: does not edit prices in the your servers).
 - [Sidebar Sliding Card](Extensions/Editor&#32;Extensions/Sidebar&#32;Sliding&#32;Card) - Sliding card for subtle reminders
-- [Sliding Card Advanced](Extensions/Editor&#32;Extensions/Sliding&#32;Card&#32;Advanced) - Sliding card for subtle reminders which contain advanced information based on the user's browsing behavior
+- [Sliding Card Advanced](Extensions/Editor&#32;Extensions/Sliding&#32;Card&#32;Advanced) - Sliding card for subtle reminders based on user's browsing behavior
 - [Social Share Popup](Extensions/Editor&#32;Extensions/Social&#32;Share&#32;Popup) - Pop-up which allows users to share selected text on social media
 - [Text Swapper](Extensions/Editor&#32;Extensions/Text&#32;Swapper) - Change text quickly to prevent chance of flicker above the fold
 - [Timed Modal](Extensions/Editor&#32;Extensions/Timed&#32;Modal) - Pop-up which launches after a defined number of seconds
