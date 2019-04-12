@@ -1,6 +1,6 @@
 # Unsplash Photo Finder
 
-![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Unsplash%20Photo%20Finder/screenshot_.png)
+![Screenshot](screenshot.png)
 
 ## Description
 
