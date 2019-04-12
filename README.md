@@ -1,6 +1,6 @@
 <div align="center">
   <div style="margin-left: -65px;">
-    <img width="500" src="./assets/logo.png" alt="Optimizely Library" />
+    <img width="500" src="./logo.png" alt="Optimizely Library" />
   </div>
 </div>
 
