@@ -6,7 +6,7 @@
 
 ## About
 
-This library houses all of Optimizely’s Add On components. Add Ons allow you to build on-top and extend Optimizely. Currently, we support Extensions and Custom Integrations.
+This library houses all of Optimizely’s add on components. Add Ons allow you to build on-top and extend Optimizely. Currently, we support Extensions and Custom Integrations.
 
 Please contact developers@optimizely.com if you have any questions.
 
