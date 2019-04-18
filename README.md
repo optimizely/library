@@ -98,3 +98,8 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### REST API
 - [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json)
 
+
+
+<div align="center">
+  <img width="20" src="https://library.optimizely.com/optimizely_rings.png" alt="Optimizely Library" />
+</div>
