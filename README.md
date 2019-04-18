@@ -14,6 +14,7 @@ Please contact developers@optimizely.com if you have any questions.
 
 - [Web](#web)
 - [FullStack and Rollouts](#fullstack-and-rollouts)
+- [Platform](#platform)
 
 ## Web
 
@@ -90,3 +91,10 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 
 ### iOS
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
+
+
+## Platform
+
+### REST API
+- [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json)
+
