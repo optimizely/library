@@ -12,9 +12,9 @@ Please contact developers@optimizely.com if you have any questions.
 
 ## Contents
 
-- [Web](#web)
-- [FullStack and Rollouts](#fullstack-and-rollouts)
-- [Platform](#platform)
+- [Optimizely Web](#web)
+- [Optimizely FullStack and Rollouts](#fullstack-and-rollouts)
+- [Optimizely Platform](#platform)
 
 ## Web
 
