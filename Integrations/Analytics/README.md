@@ -11,7 +11,7 @@ You can build a custom integration using our [Knowledge Base article](https://he
 The below integrations are supported by Optimizely and can easily be added to our account by using the provided JSON config file. To add the integration, copy the JSON contents, navigate to to Implemenation > Extensions within your Optimizely account and Create a new Analytic Extension.
 
 
-## Library (More coming soon)
+## Library
 
 * [Google Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Google%20Analytics)
 * [Adobe Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Adobe%20Analytics)
