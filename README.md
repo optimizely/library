@@ -62,8 +62,6 @@ Optimizely FullStack is A/B testing and feature flag management for product deve
 
 Optimizely Rollouts is free feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation](https://docs.developers.optimizely.com/rollouts/docs).
 
-Note: Both FullStack & Rollouts use the same SDK.
-
 ### JavaScript
 - [Demo App: Algorithm Testing](https://github.com/optimizely/javascript-sdk-demo-app) - Learn how to do experimentation
 - [Demo App: Isomorphic React Web App](https://github.com/optimizely/isomorphic-react-demo-app) - Learn how to do isomorphic experimentation
