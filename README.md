@@ -6,13 +6,20 @@
 
 ## About
 
-This library houses all of Optimizely’s Add On components. Add Ons allow you to build on-top and extend Optimizely. Currently, we support Extensions and Custom Integrations.
+This library houses a collection of Optimizely extensions, add-ons, guides, and samples for educating and enabling users of Optimizely.
 
 Please contact developers@optimizely.com if you have any questions.
 
-## Extensions
+## Contents
 
-Extensions are reusable templates for making changes in the visual editor. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](https://github.com/optimizely/extension-library/tree/master/Extensions). 
+- [Web](#web)
+- [FullStack and Rollouts](#fullstack-and-rollouts)
+
+## Web
+
+### Extensions
+
+Extensions are reusable templates for making changes in the visual editor of Optimizely Web. View the [documentation](https://developers.optimizely.com/x/extensions/) or our code samples in the [Extension Library](https://github.com/optimizely/extension-library/tree/master/Extensions). 
 
 - [Background Image Swapper](Extensions/Editor&#32;Extensions/Background&#32;Image&#32;Swapper) - Swaps a background image without flicker
 - [Banner](Extensions/Editor&#32;Extensions/Banner) - Add a top-level banner
@@ -35,9 +42,9 @@ Extensions are reusable templates for making changes in the visual editor. View 
 - [Unsplash Photo Finder](Extensions/Editor&#32;Extensions/Unsplash&#32;Photo&#32;Finder) - Insert images from unsplash
 
 
-## Custom Integrations
+### Custom Integrations
 
-Custom integrations allow customers to create project level integrations that can be enabled/disabled for individual campaigns. Today, we support analytic integrations to extend Optimizely to your third party analytic tools. View our supported integrations in the [Integration Library](https://github.com/optimizely/extension-library/tree/master/Integrations/Analytics). 
+Custom integrations allow customers to create project level integrations that can be enabled/disabled for individual campaigns in Optimizely Web. Today, we support analytic integrations to extend Optimizely to your third party analytic tools. View our supported integrations in the [Integration Library](https://github.com/optimizely/extension-library/tree/master/Integrations/Analytics). 
 
 - [AT-Internet](Integrations/Analytics/AT-Internet)
 - [Adobe Analytics](Integrations/Analytics/Adobe&#32;Analytics)
@@ -47,3 +54,41 @@ Custom integrations allow customers to create project level integrations that ca
 - [HotJar HeatMaps & Recordings](Integrations/Analytics/HotJar&#32;HeatMaps&#32;&&#32;Recordings)
 - [Moat Analytics](Integrations/Analytics/Moat&#32;Analytics)
 - [econda Analytics](Integrations/Analytics/econda&#32;Analytics)
+
+
+## FullStack & Rollouts
+
+Optimizely FullStack is A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack/docs).
+
+Optimizely Rollouts is free feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation](https://docs.developers.optimizely.com/rollouts/docs).
+
+Note: Both FullStack & Rollouts use the same SDK.
+
+### JavaScript
+- [Demo App: Algorithm Testing](https://github.com/optimizely/javascript-sdk-demo-app) - Learn how to do experimentation
+- [Demo App: Isomorphic React Web App](https://github.com/optimizely/isomorphic-react-demo-app) - Learn how to do isomorphic experimentation
+- [Event Dispatcher: Experimental Solution for Tracking Redirect Clicks](https://github.com/optimizely/javascript-sdk-plugin-pending-events)
+- [Redux Reducer: JavaScript SDK React Integration](https://github.com/thegreekjester/react_redux_js_integration)
+- [SDK Wrapper: Client Manager](https://github.com/cooperreid-optimizely/optimizely-jsclient-manager)
+
+### React
+- [React SDK](https://github.com/optimizely/fullstack-labs/tree/master/packages/react-sdk)
+
+### PHP
+- [Demo App: Algorithm Testing](https://github.com/optimizely/php-sdk-demo-app)
+
+### Python
+- [Demo App: Algorithm Testing](https://github.com/optimizely/python-sdk-demo-app)
+- [Demo App: SMS with Twilio](https://github.com/optimizely/fullstack-outbound-marketing)
+- [SDK Wrapper: Async Event Dispatcher](https://gist.github.com/cooperreid-optimizely/4d57682b39deb3557d437ae79c991eb3)
+- [SDK Wrapper: Bulk Event Dispatcher with AWS SQS](https://github.com/mauerbac/opti_fullstack_event_dispatcher)
+
+### Ruby
+- [Demo App: Algorithm Testing](https://github.com/optimizely/ruby_full_stack_demo)
+- [SDK Wrapper: Cached Datafile](https://github.com/ankit8898/optimizely_server_side)
+
+### Android
+- [Demo App](https://github.com/optimizely/android-sdk/tree/master/test-app)
+
+### iOS
+- [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
