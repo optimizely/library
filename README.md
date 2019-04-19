@@ -95,8 +95,12 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 
 ## Platform
 
+### CLI
+- [Optimizely CLI](https://github.com/optimizely/optimizely-cli) - Command line interface for the REST API
+
 ### REST API
 - [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json)
+
 
 
 
