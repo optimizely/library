@@ -36,7 +36,7 @@
   ],
   "description": "A horizontal banner across the top of the page",
   "options": {
-    "html": "<div class=\"banner\" style=\"background-color: {{extension.color}}\">\n  {{{ extension.text }}}. \n  <a href=\"{{extension.link}}#\">{{{ extension.link_text }}}</a>\n</div>",
+    "html": "<div class=\"banner\" style=\"background-color: {{extension.color}}\">\n  {{{ extension.text }}}. \n  <a href=\"{{extension.link}}\">{{{ extension.link_text }}}</a>\n</div>",
     "css": ".banner {\n  color: white;\n  padding: 10px;\n\tposition: fixed;\n  top: 0px;\n  z-index: 100000000;\n  width: 100%;\n  text-align: center;\n  height: 45px;\n}\n\n.banner a {\n\ttext-decoration: underline;\n  color: white;\n}\n\nbody {\n margin-top: 45px; \n}",
     "apply_js": "var utils = window.optimizely.get('utils');\n\nutils.waitForElement('body').then(function(element){\n  var html = widget.$html;\n\telement.insertAdjacentHTML('afterbegin',html);\n});\n",
     "undo_js": "var extensionHTML = document.querySelector('.banner');\nif(extensionHTML) extensionHTML.remove();"
