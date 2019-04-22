@@ -11,4 +11,3 @@ Provides a top-level banner.
 * Banner text
 * CTA link
 * Banner background color
-
