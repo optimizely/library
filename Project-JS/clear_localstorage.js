@@ -10,5 +10,5 @@ window.clearOptlyLocalStorage = function(){
 //The function can be called from Optimizely Project JS based on an available boolean flag, such as a cookie's value 
 var should_clear = window.customer_storage_flag_boolean;
 if(should_clear){
-    clearOptimizelyLocalStorage();
+    clearOptlyLocalStorage();
 }
