@@ -69,7 +69,8 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [Event Dispatcher: Experimental Solution for Tracking Redirect Clicks](https://github.com/optimizely/javascript-sdk-plugin-pending-events)
 - [Redux Reducer: JavaScript SDK React Integration](https://github.com/thegreekjester/react_redux_js_integration)
 - [SDK Wrapper: Client Manager](https://github.com/cooperreid-optimizely/optimizely-jsclient-manager)
-- [Amazon Alexa + FullStack Demo](https://github.com/optimizely/alexa-demo)
+- [Demo App: Amazon Alexa + FullStack](https://github.com/optimizely/alexa-demo)
+- [Demo App: CLI + FullStack](https://github.com/pcolombo/optimizely-fullstack-sandbox)
 
 ### React
 - [React SDK](https://github.com/optimizely/fullstack-labs/tree/master/packages/react-sdk)
