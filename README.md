@@ -8,7 +8,7 @@
 
 This library houses a collection of Optimizely extensions, add-ons, guides, and samples for educating and enabling users of Optimizely.
 
-Please contact developers@optimizely.com if you have any questions.
+If you have any questions please open an issue on this repository or the repository in question.
 
 ## Contents
 
