@@ -57,6 +57,12 @@ Custom integrations allow customers to create project level integrations that ca
 - [econda Analytics](Integrations/Analytics/econda&#32;Analytics)
 
 
+### Project JavaScript
+
+Project Javascript is an advanced configuration setting that provides a code field for JS to be executed before the Optimizely snippet's core logic begins executing. To learn more view our documentation.
+
+ - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
+
 ## FullStack and Rollouts
 
 Optimizely FullStack is A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack/docs).
