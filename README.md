@@ -84,7 +84,7 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [React SDK](https://github.com/optimizely/fullstack-labs/tree/master/packages/react-sdk)
 
 ### Node
-- [Express SDK)(https://github.com/optimizely/express-sdk)
+- [Express SDK](https://github.com/optimizely/express-sdk)
 
 ### PHP
 - [Demo App: Algorithm Testing](https://github.com/optimizely/php-sdk-demo-app)
