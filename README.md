@@ -8,7 +8,7 @@
 
 This library houses a collection of Optimizely extensions, add-ons, guides, and samples for educating and enabling users of Optimizely.
 
-If you have any questions, please open an issue on this repository or the repository in question.
+If you can't find what you are looking or have any feedback, [open an issue](https://github.com/optimizely/library/issues) on this repository.
 
 ## Contents
 
@@ -114,9 +114,6 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 
 ### REST API
 - [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json) - Download [Postman](https://www.getpostman.com/downloads/) and import this collection to view API request examples
-
-
-
 
 <div align="center">
   <img width="20" src="https://library.optimizely.com/optimizely_rings.png" alt="Optimizely Library" />
