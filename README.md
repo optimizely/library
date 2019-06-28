@@ -87,6 +87,8 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### Node
 - [Express Middleware](https://github.com/optimizely/express-middleware)
 - [Guide: Feature Flag Rollouts](https://blog.optimizely.com/2019/06/17/feature-flags-node-express/) - Rollout customer-by-customer with Feature Flags in Express
+- [RunKit: Simple Node Feature Flag](https://runkit.com/asaschachar/optimizely-node-sdk-example)
+- [RunKit: Secure Webhook Implementation](https://runkit.com/asaschachar/secure-webhook-example-node)
 
 ### PHP
 - [Demo App: Algorithm Testing](https://github.com/optimizely/php-sdk-demo-app)
