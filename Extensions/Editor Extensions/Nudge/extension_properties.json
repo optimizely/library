@@ -1,0 +1,91 @@
+{
+  "plugin_type": "widget",
+  "name": "Nudge",
+  "edit_page_url": "https://optimizely.github.io/asa/playground/index.html",
+  "form_schema": [
+    {
+      "default_value": "Look here!",
+      "field_type": "text",
+      "name": "text",
+      "label": "A text field",
+      "options": null
+    },
+    {
+      "default_value": "div:nth-of-type(2) > div:nth-of-type(2)",
+      "field_type": "selector",
+      "name": "element_selector",
+      "label": "Element to Nudge",
+      "options": null
+    },
+    {
+      "default_value": "Check out this awesome element, you won't want to miss it",
+      "field_type": "html",
+      "name": "subtext",
+      "label": "Subtext",
+      "options": null
+    },
+    {
+      "default_value": "rgba(95, 145, 180, 1)",
+      "field_type": "color",
+      "name": "color",
+      "label": "Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "left",
+      "field_type": "dropdown",
+      "name": "placement",
+      "label": "Placement",
+      "options": {
+        "choices": [
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "text_color",
+      "label": "Text Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "always",
+      "field_type": "dropdown",
+      "name": "frequency",
+      "label": "Frequency",
+      "options": {
+        "choices": [
+          {
+            "value": "once",
+            "label": "Show once"
+          },
+          {
+            "value": "always",
+            "label": "Show every time"
+          }
+        ]
+      }
+    }
+  ],
+  "description": ""
+}
