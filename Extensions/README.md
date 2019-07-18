@@ -6,7 +6,7 @@ This repo contains a collection of sample Editor Extensions built by Optimizely 
 
 The provided JSON config file will create all components necessary for the Extension. To add to your own Optimizely account, copy the JSON contents, navigate to to Implemenation > Extensions within your Optimizely account and Create a new Extension using JSON.
 
-Please email us at developers@optimizely.com or open a GitHub Issue with any problems or questions about the provided samples. We encourge contributions from the community and will reguarlly review Pull Requests. You can also email us to add your Extension to the library.
+If you can't find what you are looking or have any feedback, [open a GitHub Issue](https://github.com/optimizely/library/issues) on this repository with any problems or questions about the provided samples. We encourge contributions from the community and will regularly review Pull Requests. You can also email us to add your Extension to the library.
 
 ## Editor Extensions
 
