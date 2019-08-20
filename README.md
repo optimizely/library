@@ -118,6 +118,11 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### REST API
 - [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json) - Download [Postman](https://www.getpostman.com/downloads/) and import this collection to view API request examples
 
+### Cloudflare Workers
+[Cloudflare Workers](https://blog.cloudflare.com/enhancing-optimizely-with-cloudflare-workers/) is a globally distributed serverless compute platform that runs across Cloudflare’s network of 180 locations worldwide. Workers are designed for flexibility, with many different use cases ranging from customizing configuration of Cloudflare services and features to building full, independent applications. They can be used to extend and enhance functionality for Optimizely in several different ways
+
+-[Set optimizelyEndUserId Cookie]()
+
 <div align="center">
   <img width="20" src="https://library.optimizely.com/optimizely_rings.png" alt="Optimizely Library" />
 </div>
