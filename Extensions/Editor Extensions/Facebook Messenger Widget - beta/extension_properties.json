@@ -1,0 +1,63 @@
+{
+  "plugin_type": "widget",
+  "name": "Facebook Messenger Widget",
+  "edit_page_url": "https://www.atticandbutton.com",
+  "form_schema": [
+    {
+      "default_value": "<<YOUR FACEBOOK APP ID>>",
+      "field_type": "text",
+      "name": "appId",
+      "label": "Facebook App ID",
+      "options": null
+    },
+    {
+      "default_value": "<<YOUR FACEBOOK PAGE ID>>",
+      "field_type": "text",
+      "name": "pageId",
+      "label": "Facebook Page ID",
+      "options": null
+    },
+    {
+      "default_value": "#1eb2fc",
+      "field_type": "color",
+      "name": "theme",
+      "label": "Theme Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "Need some help? We're here to chat!",
+      "field_type": "text",
+      "name": "greeting",
+      "label": "Greeting Message",
+      "options": null
+    },
+    {
+      "default_value": "Need some help? Login to Facebook to chat",
+      "field_type": "text",
+      "name": "loggedOut",
+      "label": "Logged Out Message",
+      "options": null
+    },
+    {
+      "default_value": "true",
+      "field_type": "toggle",
+      "name": "minimized",
+      "label": "Minimized",
+      "options": {
+        "choices": [
+          {
+            "value": "true",
+            "label": "True"
+          },
+          {
+            "value": "false",
+            "label": "False"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "Applies a Facebook Messenger Chat widget to any webpage."
+}
