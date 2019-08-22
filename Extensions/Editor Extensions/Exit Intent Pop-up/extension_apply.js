@@ -16,12 +16,13 @@ function showPopup() {
   document.querySelector('.exit-intent-modal').classList += ' fade-in';
 }
 
-function hidePopup() {
-  document.querySelector('.exit-intent-modal').classList += ' fade-out';
+function closePopup() {
+	var modal = document.querySelector('.exit-intent-modal');
+  modal.parentNode.removeChild(modal);
 }
 
 function bindCloseBtn() {
 	document.querySelector('.exit-popup-close').addEventListener('click', function(e){
-    hidePopup();
+    closePopup();
   });
 }
