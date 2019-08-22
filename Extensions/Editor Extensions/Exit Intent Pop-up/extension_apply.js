@@ -17,7 +17,7 @@ function showPopup() {
 }
 
 function closePopup() {
-	var modal = document.querySelector('.exit-intent-modal');
+  var modal = document.querySelector('.exit-intent-modal');
   modal.parentNode.removeChild(modal);
 }
 
