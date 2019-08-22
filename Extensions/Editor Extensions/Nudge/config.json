@@ -1,0 +1,97 @@
+{
+  "plugin_type": "widget",
+  "name": "Nudge",
+  "edit_page_url": "https://optimizely.github.io/asa/playground/index.html",
+  "form_schema": [
+    {
+      "default_value": "Look here!",
+      "field_type": "text",
+      "name": "text",
+      "label": "A text field",
+      "options": null
+    },
+    {
+      "default_value": "div:nth-of-type(2) > div:nth-of-type(2)",
+      "field_type": "selector",
+      "name": "element_selector",
+      "label": "Element to Nudge",
+      "options": null
+    },
+    {
+      "default_value": "Check out this awesome element, you won't want to miss it",
+      "field_type": "html",
+      "name": "subtext",
+      "label": "Subtext",
+      "options": null
+    },
+    {
+      "default_value": "rgba(95, 145, 180, 1)",
+      "field_type": "color",
+      "name": "color",
+      "label": "Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "left",
+      "field_type": "dropdown",
+      "name": "placement",
+      "label": "Placement",
+      "options": {
+        "choices": [
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "text_color",
+      "label": "Text Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "always",
+      "field_type": "dropdown",
+      "name": "frequency",
+      "label": "Frequency",
+      "options": {
+        "choices": [
+          {
+            "value": "once",
+            "label": "Show once"
+          },
+          {
+            "value": "always",
+            "label": "Show every time"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"nudge\">\n  <div class=\"nudge-container\">\n    <div class=\"close\">X</div>\n    <div class=\"arrow-container\"><div class=\"arrow\"></div></div>\n    <div data-extension=\"nudge-content\" class=\"nudge-content\" style=\"background-color: {{ extension.color }};\">\n      <div class=\"text\">\n        {{ extension.text }}\n      </div>\n      <div class=\"sub-text\">\n        {{{ extension.subtext }}}\n      </div>\n    </div>\n  </div>\n</div>",
+    "css": ".nudge {\n  position: absolute;\n}\n\n.nudge-container {\n  position: relative;\n}\n\n.nudge-content {\n  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);\n  padding: 10px;\n  border-radius: 10px;\n  min-width: 100px;\n  max-width: 200px;\n}\n\n.arrow-left-container {\n  position: absolute;\n  left: 0;\n  height: 100%;\n  display: flex;\n  width: 0;\n  align-items: center;\n  justify-content: center;\n  flex-direction: row;\n}\n\n.arrow-up-container {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  justify-content: center;\n}\n\n.arrow-right-container {\n  position: absolute;\n  left: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  justify-content: center;\n}\n\n.arrow-down-container {\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  height: 0;\n  display: flex;\n  justify-content: center;\n  flex-direction: row;\n}\n\n.arrow-left {\n  width: 0; \n  height: 0;\n  margin-left: -7px;\n  border-top: 7px solid transparent;\n  border-bottom: 7px solid transparent; \n  border-right: 7px solid; \n}\n\n.arrow-up {\n  width: 0; \n  height: 0;\n  margin-top: -7px;\n  border-left: 7px solid transparent;\n  border-right: 7px solid transparent;\n  border-bottom: 7px solid;\n}\n\n.arrow-down {\n  width: 0; \n  height: 0; \n  border-left: 7px solid transparent;\n  border-right: 7px solid transparent;\n  border-top: 7px solid;\n}\n\n.arrow-right {\n  width: 0; \n  height: 0;\n  border-top: 7px solid transparent;\n  border-bottom: 7px solid transparent;\n  border-left: 7px solid;\n}\n\n.text {\n  font-weight: bold;\n}\n\n\n.close {\n  position: absolute;\n  padding: 5px 10px 10px 10px;\n  right: 0;\n  top: 0;\n  font-size: 14px;\n  font-weight: bold;\n  color: white;\n}\n\n.wiggler {\n  animation: wiggle 0.75s ease-in-out infinite alternate, fade-in 0.33s ease-in forwards;\n}\n\n.bouncer {\n  animation: bounce 0.75s ease-in-out infinite alternate, fade-in 0.33s ease-in forwards;\n}\n\n@keyframes wiggle {\n  0% {\n    transform: translate(0px,0);\n  }\n  100% {\n    transform: translate(10px,0);\n  }\n}\n\n@keyframes bounce {\n  0% {\n    transform: translate(0px,0);\n  }\n  100% {\n    transform: translate(0px,10px);\n  }\n}\n\n\n",
+    "apply_js": "var utils = optimizely.get('utils');\nvar extensionId = 'optimizely-extension-' + extension.$instance\n\nvar removeExtension = function() {\n  var extensionElement = document.getElementById(extensionId);\n  if (extensionElement) {\n    extensionElement.parentElement.removeChild(extensionElement);\n    localStorage.setItem(extensionId, new Date());\n  }\n}\n\nutils.waitForElement(extension.element_selector)\n  .then(function(elem) {\n    if (!localStorage.getItem(extensionId) || extension.frequency === 'always') {\n      elem.insertAdjacentHTML('afterbegin', extension.$html);\n      var nudgeElement = elem.querySelector('.nudge-container');\n      var arrowContainer = nudgeElement.querySelector('.arrow-container');\n      var arrow = nudgeElement.querySelector('.arrow');\n      nudgeElement.style.width = nudgeElement.offsetWidth + 'px';\n      nudgeElement.style.color = extension.text_color;\n\n      switch (extension.placement) {\n        case 'right':\n          nudgeElement.style.left = elem.offsetWidth / 2 + nudgeElement.offsetWidth / 2 + 10;\n          nudgeElement.classList.add('wiggler');\n          arrowContainer.classList.add('arrow-left-container');\n          arrow.classList.add('arrow-left');\n          arrow.style.borderRightColor = extension.color;\n          break;\n        case 'left':\n          nudgeElement.style.left = - elem.offsetWidth / 2 - nudgeElement.offsetWidth / 2 - 10 - 10;\n          nudgeElement.classList.add('wiggler');\n          arrowContainer.classList.add('arrow-right-container');\n          arrow.classList.add('arrow-right');\n          arrow.style.borderLeftColor = extension.color;\n          break;\n        case 'top':\n          nudgeElement.style.top = - elem.offsetHeight / 2 - nudgeElement.offsetHeight / 2 - 10 - 10;\n          nudgeElement.classList.add('bouncer');\n          arrowContainer.classList.add('arrow-down-container');\n          arrow.classList.add('arrow-down');\n          arrow.style.borderTopColor = extension.color;\n          break;\n        case 'bottom':\n          nudgeElement.style.top = elem.offsetHeight / 2 + nudgeElement.offsetHeight / 2 + 10;\n          nudgeElement.classList.add('bouncer');\n          arrowContainer.classList.add('arrow-up-container');\n          arrow.classList.add('arrow-up');\n          arrow.style.borderBottomColor = extension.color;\n          break;\n        default:\n          break;\n      }\n\n      var closeButton = nudgeElement.querySelector('.close');\n      closeButton.addEventListener('click', removeExtension);\n    }\n  });\n\n",
+    "undo_js": "var extensionId = 'optimizely-extension-' + extension.$instance\nvar extensionElement = document.getElementById(extensionId);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}\nlocalStorage.removeItem(extensionId);\n"
+  }
+}
