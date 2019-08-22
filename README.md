@@ -33,6 +33,7 @@ Extensions are reusable templates for making changes in the visual editor of Opt
 - [Hotspot](Extensions/Editor&#32;Extensions/Hotspot) - Hotspot to draw attention to an element on your page to guide user behavior
 - [Localized Copy Change](Extensions/Editor&#32;Extensions/Localized&#32;Copy&#32;Change) - Make a copy change on your website in multiple languages
 - [Multibuy Offer Reminder](Extensions/Editor&#32;Extensions/Multibuy&#32;Offer&#32;Reminder) - Display an offer pop-up based on user behaviors
+- [Nudge](Extensions/Editor&#32;Extensions/Nudge) - Nudge the user towards a location to guide the user through a product
 - [Price Changer](Extensions/Editor&#32;Extensions/Price&#32;Changer) - Change prices site-wide on the page (Note: does not edit prices in the your servers).
 - [Sidebar Sliding Card](Extensions/Editor&#32;Extensions/Sidebar&#32;Sliding&#32;Card) - Add a sliding card for subtle reminders
 - [Sliding Card Advanced](Extensions/Editor&#32;Extensions/Sliding&#32;Card&#32;Advanced) - Add a sliding card for subtle reminders based on user's browsing behavior
