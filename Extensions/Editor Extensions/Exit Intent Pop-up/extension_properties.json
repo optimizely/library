@@ -1,0 +1,88 @@
+{
+  "plugin_type": "widget",
+  "name": "Exit Intent Popup",
+  "edit_page_url": "http://www.atticandbutton.us",
+  "form_schema": [
+    {
+      "default_value": "Don't go yet!",
+      "field_type": "text",
+      "name": "headline",
+      "label": "Headline",
+      "options": null
+    },
+    {
+      "default_value": "Stick around and buy some stuff!",
+      "field_type": "text",
+      "name": "secondary",
+      "label": "Secondary Text",
+      "options": null
+    },
+    {
+      "default_value": "http://www.google.com",
+      "field_type": "text",
+      "name": "link",
+      "label": "Link URL",
+      "options": null
+    },
+    {
+      "default_value": "RSVP YES",
+      "field_type": "text",
+      "name": "link_text",
+      "label": "Link Text",
+      "options": null
+    },
+    {
+      "default_value": "rgba(229, 27, 233, 0)",
+      "field_type": "color",
+      "name": "overlay_color",
+      "label": "Modal Overlay Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "modal_color",
+      "label": "Modal Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(0, 0, 0, 1)",
+      "field_type": "color",
+      "name": "headline_color",
+      "label": "Headline Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "secondary_color",
+      "label": "Secondary Text Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "rgba(0, 0, 0, 1)",
+      "field_type": "color",
+      "name": "button_color",
+      "label": "Button Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "Graphik, Lato, Helvetica, Verdana, sans-serif",
+      "field_type": "text",
+      "name": "modal_font",
+      "label": "Font Family",
+      "options": null
+    }
+  ],
+  "description": "If the user tries to leave the window, a popup will show asking them not to leave. "
+}

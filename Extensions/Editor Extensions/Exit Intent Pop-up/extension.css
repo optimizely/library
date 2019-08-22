@@ -1,0 +1,134 @@
+.exit-intent-modal{
+	opacity: 0;
+  position: fixed;
+  z-index: 3001;
+  width: 100%;
+  text-align: center;
+	height: 100% !important;
+}
+
+body {
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+#exit-popup-overlay {
+  height: 100vh !important;
+  z-index: 3000;
+  position: fixed;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+#exit-popup-wrapper {
+  margin: 50px 0;
+  position: fixed;
+  z-index: 3001;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+#exit-popup {
+  width: 500px;
+  display: inline-block;
+  background: #fff;
+  padding: 50px 20px;
+  position: relative;
+}
+
+#exit-popup h2 {
+  margin-top: 20px;
+}
+
+#exit-popup p {
+  
+}
+#exit-popup-close {
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+}
+#exit-popup-close:hover {
+  color: #999;
+}
+
+.fade-in {
+    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+         -o-animation: fadein .5s; /* Opera < 12.1 */
+            animation: fadein .5s;
+  opacity: 1 !important;
+}
+
+.fade-out {
+    -webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeout 1s; /* Firefox < 16 */
+        -ms-animation: fadeout 1s; /* Internet Explorer */
+         -o-animation: fadeout 1s; /* Opera < 12.1 */
+            animation: fadeout 1s;
+    opacity: 0 !important;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1*/
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer*/
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1*/
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
