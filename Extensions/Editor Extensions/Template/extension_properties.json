@@ -11,19 +11,19 @@
       "options": {
         "choices": [
           {
-            "value": "before",
+            "value": "beforebegin",
             "label": "Before"
           },
           {
-            "value": "after",
+            "value": "afterend",
             "label": "After"
           },
           {
-            "value": "prepend",
+            "value": "afterbegin",
             "label": "At Beginning"
           },
           {
-            "value": "append",
+            "value": "beforeend",
             "label": "At End Of"
           }
         ]

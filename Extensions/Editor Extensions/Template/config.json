@@ -10,22 +10,22 @@
       "label": "Position",
       "options": {
         "choices": [
-        {
-          "value": "before",
-          "label": "Before"
-        },
-        {
-          "value": "after",
-          "label": "After"
-        },
-        {
-          "value": "prepend",
-          "label": "At Beginning"
-        },
-        {
-          "value": "append",
-          "label": "At End Of"
-        }
+          {
+            "value": "beforebegin",
+            "label": "Before"
+          },
+          {
+            "value": "afterend",
+            "label": "After"
+          },
+          {
+            "value": "afterbegin",
+            "label": "At Beginning"
+          },
+          {
+            "value": "beforeend",
+            "label": "At End Of"
+          }
         ]
       }
     },
@@ -53,9 +53,9 @@
   ],
   "description": "",
   "options": {
-    "html": "<div id=\"optimizely-extension-{{ widget.$instance }}\" class=\"heroWidget\">\n</div>",
+    "html": "<div id=\"optimizely-extension-{{ widget.$instance }}\"> </div>\n",
     "css": "",
-    "apply_js": "\n  \nif(extension.position == \"before\"){ \n  \tdocument.querySelector(extension.selector).insertAdjacentHTML('beforebegin', extension.$html); \n} else if(extension.position == \"prepend\") { \n    document.querySelector(extension.selector).insertAdjacentHTML('afterbegin', extension.$html); \n} else if(extension.position == \"after\") { \n    document.querySelector(extension.selector).insertAdjacentHTML('afterend', extension.$html); \n} else if(extension.position == \"append\") { \n    document.querySelector(extension.selector).insertAdjacentHTML('beforeend', extension.$html); \n}\n",
+    "apply_js": "document.querySelector(extension.selector).insertAdjacentHTML(extension.position, extension.$html);\n",
     "undo_js": "document.getElementById(\"optimizely-extension-\" + extension.$instance).remove();"
   }
 }
