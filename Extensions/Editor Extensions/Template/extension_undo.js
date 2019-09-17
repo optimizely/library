@@ -1,0 +1,1 @@
+document.getElementById("optimizely-extension-" + extension.$instance).remove();
