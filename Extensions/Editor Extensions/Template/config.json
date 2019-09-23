@@ -4,7 +4,7 @@
   "edit_page_url": "www.optimizely.com",
   "form_schema": [
     {
-      "default_value": "append",
+      "default_value": "beforebegin",
       "field_type": "dropdown",
       "name": "position",
       "label": "Position",
@@ -53,9 +53,9 @@
   ],
   "description": "",
   "options": {
-    "html": "<div id=\"optimizely-extension-{{ widget.$instance }}\"> </div>\n",
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\"> \n\t\n</div>\n",
     "css": "",
-    "apply_js": "document.querySelector(extension.selector).insertAdjacentHTML(extension.position, extension.$html);\n",
-    "undo_js": "document.getElementById(\"optimizely-extension-\" + extension.$instance).remove();"
+    "apply_js": "var utils = optimizely.get('utils');\n\nutils.waitForElement('body')\n  .then(function(elem) {\n\t\tdocument.querySelector(extension.selector).insertAdjacentHTML(extension.position, extension.$html);\n});\n",
+    "undo_js": "if (document.getElementById(\"optimizely-extension-\" + extension.$instance)){\n\tdocument.getElementById(\"optimizely-extension-\" + extension.$instance).remove();\n}"
   }
 }
