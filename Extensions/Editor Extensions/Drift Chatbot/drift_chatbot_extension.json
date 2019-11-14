@@ -1,0 +1,21 @@
+{
+  "plugin_type": "widget",
+  "name": "Drift Bot Activation",
+  "edit_page_url": "www.optimizely.com",
+  "form_schema": [
+    {
+      "default_value": 0,
+      "field_type": "number",
+      "name": "drift_id",
+      "label": "Drift ID",
+      "options": null
+    }
+  ],
+  "description": "Activate a Drift bot with just the ID of the bot",
+  "options": {
+    "apply_js": "var utils = window[\"optimizely\"].get(\"utils\");\n\nutils.waitUntil(function() {\n return (typeof(drift) !== 'undefined');\n}).then(function() {\n drift.on('ready',function(api, payload) {\n   // activate playbook\n   drift.api.startInteraction({ interactionId: Number(extension.drift_id) });\n  \t\n });\n});\n\n\n\n\n\n",
+    "html": "",
+    "css": "",
+    "undo_js": ""
+  }
+}
