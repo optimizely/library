@@ -34,9 +34,3 @@ If you can't find what you are looking or have any feedback, [open a GitHub Issu
 * [Typed Messages](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Typed%20Messages)
 * [Dynamic Banner](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Dynamic%20Banner)
 
-
-### Nonprofit focused
-* [Exit Intent Pop-up](https://optimizely.github.io/jess/extensions/exit-popup.html)
-* [Pop-up](https://optimizely.github.io/jess/extensions/popup.html)
-* [Butter Bar](https://optimizely.github.io/jess/extensions/butterbar.html)
-
