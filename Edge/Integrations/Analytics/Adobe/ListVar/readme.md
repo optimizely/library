@@ -4,9 +4,15 @@ This integration is used to track your Optimizely Performance Edge campaigns and
 
 For additional background on the design of this solution, please see [WebX Adobe ListVar integration](https://github.com/optimizely/library/blob/cooper-edge-adobe-listvar/Integrations/Analytics/Adobe%20Analytics/List%20Variable%20Integration/README.md)
 
-### Implementation
+## Implementation
 
-Add this JavaScript code to your Adobe Analytics `s_code.js` file in the plug-ins section (or directly on your page after the `s_code.js` loads, but before the Adobe Analytics `s.t();` call is made):
+#### 1. Add & configure Project JS code
+
+Add the [listvar.project.js](listvar.projectjs.js) code to your Project JavaScript. Set the `LISTVAR` variable to your desired list variable.
+
+#### 2. Add `s_code.js`
+
+Add the following JavaScript code to your Adobe Analytics `s_code.js` file in the plug-ins section (or directly on your page after the `s_code.js` loads, but before the Adobe Analytics `s.t();` call is made):
 
 If you're using both Web & Edge and need Adobe to integration with both, you can simply add both calls above each other within `s_code.js`.
 
