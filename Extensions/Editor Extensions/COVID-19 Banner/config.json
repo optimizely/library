@@ -1,0 +1,71 @@
+{
+  "plugin_type": "widget",
+  "name": "COVID-19 Banner",
+  "edit_page_url": "http://www.atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": "Coronavirus (COVID-19) - ",
+      "field_type": "text",
+      "name": "text",
+      "label": "Text",
+      "options": null
+    },
+    {
+      "default_value": "https://www.example.com/",
+      "field_type": "text",
+      "name": "link",
+      "label": "Link",
+      "options": null
+    },
+    {
+      "default_value": "Read the latest updates",
+      "field_type": "text",
+      "name": "link_text",
+      "label": "Link Text",
+      "options": null
+    },
+    {
+      "default_value": "#ac3307",
+      "field_type": "color",
+      "name": "color",
+      "label": "Background Color",
+      "options": {
+        "mode": "hex"
+      }
+    },
+    {
+      "default_value": "rgba(255, 255, 255, 1)",
+      "field_type": "color",
+      "name": "t_color",
+      "label": "Text Color",
+      "options": {
+        "mode": "rgba"
+      }
+    },
+    {
+      "default_value": "bold",
+      "field_type": "dropdown",
+      "name": "font_weight",
+      "label": "Font Weight",
+      "options": {
+        "choices": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "bold",
+            "label": "Bold"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "A horizontal banner across the top of the page",
+  "options": {
+    "apply_js": "var utils = window.optimizely.get('utils');\n\n// helper functions from developer documentation: https://developers.optimizely.com/classic/javascript/code-samples/index.html\nvar setCookie = function(c_name,value,exdays,c_domain) { \n  c_domain = (typeof c_domain === \"undefined\") ? \"\" : \"domain=\" + c_domain + \";\"; \n  var exdate=new Date(); exdate.setDate(exdate.getDate() + exdays); \n  var c_value=escape(value) + ((exdays==null) ? \"\" : \"; expires=\"+exdate.toUTCString()); \n  document.cookie=c_name + \"=\" + c_value + \";\" + c_domain + \"path=/\"; \n};\n\n var getCookie = function(name) {\n   var match = document.cookie.match(name+'=([^;]*)');\n   return match ? match[1] : undefined;\n };\n\nutils.waitForElement('body').then(function(element){\n  var html = widget.$html;\n  var cookieName = 'butterbar_' + widget.$id + '_dismissed';\n  var cookiePresent = getCookie(cookieName);\n  \n  // check to make sure cookie is undefined\n  if (!cookiePresent) {\n    element.insertAdjacentHTML('afterbegin',html);\n\n    // Handle close action \n    utils.waitUntil(function() {\n      var closerOnPage = document.querySelectorAll('#opti-banner-close');\n      return closerOnPage.length > 0;\n    }).then(function() {\n        document.getElementById(\"opti-banner-close\").addEventListener('click', function (event) {\n          document.getElementsByClassName('opti-banner')[0].classList.add('opti-hide-banner');\n          document.getElementsByTagName('body')[0].classList.add('opti-body-no-margin');\n          setCookie(cookieName, 'true', 1);\n        });\n    });\n  }\n  \n});\n",
+    "html": "<div class=\"opti-banner\" style=\"background-color: {{extension.color}};color:{{extension.t_color}};font-weight:{{extension.font_weight}};\">\n  {{{ extension.text }}}\n  <a class=\"opti-link\" href=\"{{extension.link}}\" style=\"color:{{extension.t_color}};font-weight:{{extension.font_weight}};\" >{{{ extension.link_text }}}</a>\n  <a id=\"opti-banner-close\"style=\"color:{{extension.t_color}}; font-weight:{{extension.font_weight}};\" > X </a>\n</div>",
+    "css": ".opti-banner {\n  color: white;\n  padding: 10px;\n\tposition: fixed;\n  top: 0px;\n  z-index: 100000000;\n  width: 100%;\n  text-align: center;\n  height: 45px;\n}\n\n.opti-link {\n\ttext-decoration: underline;\n  color: white;\n}\n\nbody {\n margin-top: 45px; \n}\n\n#opti-banner-close {\n float: right; \n text-decoration: none;\n}\n\n.opti-hide-banner {\n  display:none;\n  height: 0px;\n}\n\n.opti-body-no-margin {\n margin-top: 0; \n}",
+    "undo_js": "var extensionHTML = document.querySelector('.banner');\nif(extensionHTML) extensionHTML.remove();"
+  }
+}
