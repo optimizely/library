@@ -1,6 +1,6 @@
 # COVID-19 Banner
 
-![Screenshot](https://github.com/dyelkassakoumba-optimizely/addons-library/blob/patch-2/Extensions/Editor%20Extensions/COVID-19%20Banner/Covid-19:%20Extension%20Editable%20Fields.png)
+![Screenshot](https://github.com/dyelkassakoumba-optimizely/addons-library/blob/patch-2/Extensions/Editor%20Extensions/COVID-19%20Banner/Attic%20&%20Button.png?)
 
 ## Description
 
@@ -8,10 +8,12 @@ Provides a top-level banner to quickly link your website visitors to specific in
 
 This extension helps you put up a top banner in no time, please find below all editable fields:
 
+![Screenshot](https://github.com/dyelkassakoumba-optimizely/addons-library/blob/patch-2/Extensions/Editor%20Extensions/COVID-19%20Banner/Covid-19:%20Extension%20Editable%20Fields.png)
+
 ## Fields
 
 * Text
-* Link
+* Link URL
 * Link Text
 * Color
 * Text Color
