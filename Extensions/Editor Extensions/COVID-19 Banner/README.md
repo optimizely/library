@@ -1,4 +1,4 @@
-# Banner with close button
+# COVID-19 Banner
 
 ![Screenshot](https://github.com/dyelkassakoumba-optimizely/addons-library/blob/patch-2/Extensions/Editor%20Extensions/COVID-19%20Banner/Covid-19:%20Extension%20Editable%20Fields.png)
 
