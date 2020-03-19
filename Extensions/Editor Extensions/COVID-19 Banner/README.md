@@ -4,8 +4,9 @@
 
 ## Description
 
-Provides a top-level banner to quickly link 
-your customer to specic information you might want to provide to them.
+Provides a top-level banner to quickly link your website visitors to specific information you might want to provide to them.
+
+This extension helps you put up a top banner in no time, please find below all editable fields:
 
 ## Fields
 
