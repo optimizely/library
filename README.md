@@ -116,6 +116,9 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### Android
 - [Demo App](https://github.com/optimizely/android-sdk/tree/master/test-app)
 
+### Java & Kotlin
+- [poetimizely](https://github.com/patxibocos/poetimizely/) - generate type safe accessors for Optimizely experiments and features.
+
 ### iOS
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
 
