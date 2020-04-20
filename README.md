@@ -66,15 +66,6 @@ Project Javascript is an advanced configuration setting that provides a code fie
  - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
 
 
-## Edge
-
-### Custom Change Appliers
- - Coming soon...
- 
-### Analytics Integrations
- - Coming soon...
-
-
 ## FullStack and Rollouts
 
 Optimizely FullStack is A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack/docs).
@@ -122,6 +113,12 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### iOS
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
 
+### Edge
+- [Cloudflare Worker Example](https://medium.com/opendoor-labs/cloudflare-workers-opendoor-landing-page-infrastructure-824853a34551) - blog example of using Optimizely in a Cloudflare worker
+
+### Microservice
+- [Optimizely Agent](https://github.com/optimizely/agent) - Optimizely containerized for use in a microservice environment
+- [Microservice Example](https://medium.com/compass-true-north/adopting-optimizely-at-compass-158ab86b82f4) - blog example of using Optimizely in a microservice environment
 
 ## Platform
 
