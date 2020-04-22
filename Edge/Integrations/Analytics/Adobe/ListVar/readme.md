@@ -18,5 +18,7 @@ Add the following JavaScript code to your Adobe Analytics `s_code.js` file in th
 // `s` must reference your primary Adobe variable to which evars and listvars get attached.
 try {
   window.OptimizelyEdgeIntegrators.get('adobe').assignCampaigns(s);
-} catch(err) { }
+} catch(err) { 
+  console.warn('[Optimizely] Optimizely Edge Integrator failed to assign Adobe Analytics campaigns with error' + err);
+}
 ```
