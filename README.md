@@ -65,6 +65,8 @@ Project Javascript is an advanced configuration setting that provides a code fie
 
  - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
 
+## Edge
+- [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
 
 ## FullStack and Rollouts
 
@@ -113,7 +115,7 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### iOS
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
 
-### Edge
+### FullStack Edge
 - [Cloudflare Worker Example](https://medium.com/opendoor-labs/cloudflare-workers-opendoor-landing-page-infrastructure-824853a34551) - blog example of using Optimizely in a Cloudflare worker
 
 ### Microservice
