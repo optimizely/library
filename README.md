@@ -66,7 +66,7 @@ Project Javascript is an advanced configuration setting that provides a code fie
  - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
 
 ## Edge
-- [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
+- [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/ListVar/) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
 
 ## FullStack and Rollouts
 
