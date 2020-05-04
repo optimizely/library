@@ -160,6 +160,7 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [5 Powerful Capabilities of Optimizely](https://www.youtube.com/watch?v=DVjnOYi4214)
 - [Implementing Optimizely’s Astronaut Demo](https://www.youtube.com/watch?v=o9qEttpdTI0&t=73s)
 - [Introduction to Rollouts](https://youtu.be/ovI0IyPmido)
+- [Why doesn't Optimizely Full Stack slow down your application](https://www.youtube.com/watch?v=igGMFAz6rqc)
 
 
 <div align="center">
