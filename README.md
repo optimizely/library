@@ -157,6 +157,7 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ## Videos 
 - [Implementing Backend Feature Flags in JavaScript](https://www.youtube.com/watch?v=0k5HQVmlItc)
 - [Implementing A/B Tests in React](https://www.youtube.com/watch?v=-HMoI9UcR1k)
+- [Implementing Static Site Feature Flags](https://www.youtube.com/watch?v=Q7xjIvQf2G4)
 - [5 Powerful Capabilities of Optimizely](https://www.youtube.com/watch?v=DVjnOYi4214)
 - [Implementing Optimizely’s Astronaut Demo](https://www.youtube.com/watch?v=o9qEttpdTI0&t=73s)
 - [Introduction to Rollouts](https://youtu.be/ovI0IyPmido)
