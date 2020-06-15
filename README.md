@@ -167,5 +167,5 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 
 
 <div align="center">
-  <img width="20" src="https://library.optimizely.com/optimizely_rings.png" alt="Optimizely Library" />
+  <img width="20" src="./logo_small.jpg" alt="Optimizely Library" />
 </div>
