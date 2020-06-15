@@ -164,6 +164,7 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [Why doesn't Optimizely Full Stack slow down your application](https://www.youtube.com/watch?v=igGMFAz6rqc)
 - [What happens if Optimizely Full Stack goes down](https://youtu.be/Ty89bLUcc_o)
 - [How does Audience targeting work in Optimizely](https://www.youtube.com/watch?v=tJEveVFR4WE)
+- [How does Optimizely Full Stack work in Microservices](https://www.youtube.com/watch?v=n5RveFQt6Rg)
 
 
 <div align="center">
