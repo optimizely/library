@@ -20,4 +20,4 @@ The below integrations are supported by Optimizely and can easily be added to ou
 * [Hotjar HeatMaps & Recordings](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/HotJar%20HeatMaps%20%26%20Recordings)
 * [AT Internet](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/AT-Internet)
 * [econda Analytics](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/econda%20Analytics)
-
+* [Quantum Metric](https://github.com/optimizely/addons-library/tree/master/Integrations/Analytics/Quantum%20Metric)
