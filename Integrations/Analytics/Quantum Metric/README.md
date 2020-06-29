@@ -12,7 +12,7 @@ This will allow you to segment reports, heatmaps and session replays in Quantum 
 
 3. [Add the extension](https://help.optimizely.com/Integrate_Other_Platforms/Custom_analytics_integrations_in_Optimizely_X) to your Optimizely Web project, and enable it for your project.
 
-4. Enable this integraiton for each experiment / campaign you wish to track under the 'Integrations' tab of the experiment / campaign.
+4. Enable this integration for each experiment / campaign you wish to track under the 'Integrations' tab of the experiment / campaign.
 
 ## Configurable Fields
 
