@@ -61,7 +61,7 @@ Custom integrations allow customers to create project level integrations that ca
 - [HotJar HeatMaps & Recordings](Integrations/Analytics/HotJar&#32;HeatMaps&#32;&&#32;Recordings)
 - [Moat Analytics](Integrations/Analytics/Moat&#32;Analytics)
 - [econda Analytics](Integrations/Analytics/econda&#32;Analytics)
-
+- [Quantum Metric](Integrations/Analytics/Quantum&#32;Metric)
 
 ### Project JavaScript
 
