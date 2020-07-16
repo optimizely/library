@@ -71,6 +71,7 @@ Project Javascript is an advanced configuration setting that provides a code fie
 
 ## Edge
 - [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/Adobe/ListVar) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
+- [Google Analytics Integration](Edge/Integrations/Analytics/Google) - track your Optimizely Performance Edge campaigns and experiments in Google Analytics
 
 ## FullStack and Rollouts
 
