@@ -1,4 +1,4 @@
-# Google Analytics Integration for Edge
+# Google Analytics Integration for Performance Edge
 ## Overview
 1. Instead of passing data through a custom dimension like X Web, we use GA events.  Specifically, we populate eventCategory, eventAction, and eventLabel with data specific to your Optimizely experiments. Here's some output from the [GA Debugger Chrome Extension](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna?hl=en) that is logged when the Optimizely Experiment activation event is fired.
 ![image](https://user-images.githubusercontent.com/53874398/87724980-46b94400-c771-11ea-9072-44307e96e7f0.png)
@@ -10,7 +10,7 @@
 *Note: The integration could be modified to include readable names if you are willing to [un-mask descriptive names](https://help.optimizely.com/Classic/Project_Settings%3A_Privacy_in_Optimizely_Classic#Masking_Descriptive_Names).*
 
 ## Project JS Code
-In the projectjs.js, there are areas that will need to be configured per site.
+In projectjs.js, there are areas that will need to be configured per site.
 Line # | Configuration
 ------------ | -------------
 18| `{YOUR_DOMAIN}`
