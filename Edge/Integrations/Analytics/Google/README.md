@@ -14,5 +14,5 @@ In projectjs.js, there are areas that will need to be configured per site.
 Line # | Configuration
 ------------ | -------------
 18| `{YOUR_DOMAIN}`
-82 | `var prefix = 'tealium_0' + '.'; // Assign to ‘’ if no custom tracker`
+82 | `var prefix = '{custom_tracker}' + '.'; // Assign to ‘’ if no custom tracker`
 87 | `// Needs to be customized for specific websites. Defines how we identify if GA is available`
