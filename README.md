@@ -16,6 +16,10 @@ If you can't find what you are looking or have any feedback, [open an issue](htt
 - [Optimizely Edge](#edge)
 - [Optimizely FullStack and Rollouts](#fullstack-and-rollouts)
 - [Optimizely Platform](#platform)
+- [Demos](#demos)
+- [Community](#community)
+- [Blog Posts](#blog-posts)
+- [Videos](#videos)
 
 ## Web
 
@@ -57,7 +61,7 @@ Custom integrations allow customers to create project level integrations that ca
 - [HotJar HeatMaps & Recordings](Integrations/Analytics/HotJar&#32;HeatMaps&#32;&&#32;Recordings)
 - [Moat Analytics](Integrations/Analytics/Moat&#32;Analytics)
 - [econda Analytics](Integrations/Analytics/econda&#32;Analytics)
-
+- [Quantum Metric](Integrations/Analytics/Quantum&#32;Metric)
 
 ### Project JavaScript
 
@@ -65,15 +69,9 @@ Project Javascript is an advanced configuration setting that provides a code fie
 
  - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
 
-
 ## Edge
-
-### Custom Change Appliers
- - Coming soon...
- 
-### Analytics Integrations
- - Coming soon...
-
+- [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/Adobe/ListVar) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
+- [Google Analytics Integration](Edge/Integrations/Analytics/Google) - track your Optimizely Performance Edge campaigns and experiments in Google Analytics
 
 ## FullStack and Rollouts
 
@@ -91,11 +89,11 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [Demo App: CLI + FullStack](https://github.com/pcolombo/optimizely-fullstack-sandbox)
 
 ### React
-- [React SDK](https://github.com/optimizely/fullstack-labs/tree/master/packages/react-sdk)
+- [React SDK](https://github.com/optimizely/react-sdk)
 - [Guide: Feature Flag Rollouts](https://blog.optimizely.com/2019/06/05/react-feature-flags/) - Rollout customer-by-customer with React Feature Flags
 
 ### Node
-- [Express Middleware](https://github.com/optimizely/express-middleware)
+- [Express Middleware](https://github.com/optimizely/express-middleware) - convenient wrapper to make installation in an ExpressJS application easy
 - [Guide: Feature Flag Rollouts](https://blog.optimizely.com/2019/06/17/feature-flags-node-express/) - Rollout customer-by-customer with Feature Flags in Express
 - [RunKit: Simple Node Feature Flag](https://runkit.com/asaschachar/optimizely-node-sdk-example)
 - [RunKit: Secure Webhook Implementation](https://runkit.com/asaschachar/secure-webhook-example-node)
@@ -116,9 +114,18 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### Android
 - [Demo App](https://github.com/optimizely/android-sdk/tree/master/test-app)
 
+### Java & Kotlin
+- [poetimizely](https://github.com/patxibocos/poetimizely/) - generate type safe accessors for Optimizely experiments and features.
+
 ### iOS
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
 
+### FullStack Edge
+- [Cloudflare Worker Example](https://medium.com/opendoor-labs/cloudflare-workers-opendoor-landing-page-infrastructure-824853a34551) - blog example of using Optimizely in a Cloudflare worker
+
+### Microservice
+- [Optimizely Agent](https://github.com/optimizely/agent) - Optimizely containerized for use in a microservice environment
+- [Microservice Example](https://medium.com/compass-true-north/adopting-optimizely-at-compass-158ab86b82f4) - blog example of using Optimizely in a microservice environment
 
 ## Platform
 
@@ -128,6 +135,39 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 ### REST API
 - [FullStack Postman Collection](https://api.optimizely.com/collections/fullstack.json) - Download [Postman](https://www.getpostman.com/downloads/) and import this collection to view API request examples
 
+## Demos
+- [Flappy Bird Video](https://www.optimizely.com/resources/flappybird-video-tutorial/)
+- [Flappy Bird Step-by-Step](https://optimizely.github.io/asa/flappybird/)
+
+## Community
+- [Optimizely Slack community](https://www.optimizely.com/slack-community/)
+- [Optimizely Developer Newsletter](https://www.optimizely.com/developers/#newsletter) - sent on the last Wednesday of the month
+
+## Blog Posts
+- Powerful Feature Flags in [React](https://blog.optimizely.com/2019/06/05/react-feature-flags/)
+- Powerful Feature Flags in [Node](https://blog.optimizely.com/2019/06/17/feature-flags-node-express/)
+- Powerful Feature Flags in [iOS](https://blog.optimizely.com/2020/02/24/feature-flags-swift-ios/)
+- eBook: [Ship Confidently with Progressive Delivery and Experimentation](https://optimize.ly/ship-confidently-ebook)
+- [Write Automation Tests for Feature Flags](https://blog.optimizely.com/2020/03/26/automation-testing-feature-flags/)
+- [Keep Your Development Trains Running Through the Holiday Code Freeze](https://blog.optimizely.com/2019/10/30/keep-your-development-trains-running-through-the-holiday-code-freeze-2/)
+- [Manage Outdated Feature Flags](https://blog.optimizely.com/2019/07/16/manage-outdated-feature-flags/)
+- [Feature Flag Ownership Model: Which one is right for you?](https://blog.optimizely.com/2020/04/09/feature-flag-ownership-management/)
+- [Feature Flags: 3 Use Cases for your Development Cycle](https://blog.optimizely.com/2019/06/26/feature-flags-how-to-integrate-them-into-your-development-cycle/)
+- [When to Feature Flag, Rollout, or A/B test?](https://blog.optimizely.com/2020/04/23/feature-flags-vs-ab-testing/)
+
+## Videos 
+- [Implementing Backend Feature Flags in JavaScript](https://www.youtube.com/watch?v=0k5HQVmlItc)
+- [Implementing A/B Tests in React](https://www.youtube.com/watch?v=-HMoI9UcR1k)
+- [Implementing Static Site Feature Flags](https://www.youtube.com/watch?v=Q7xjIvQf2G4)
+- [5 Powerful Capabilities of Optimizely](https://www.youtube.com/watch?v=DVjnOYi4214)
+- [Implementing Optimizely’s Astronaut Demo](https://www.youtube.com/watch?v=o9qEttpdTI0&t=73s)
+- [Introduction to Rollouts](https://youtu.be/ovI0IyPmido)
+- [Why doesn't Optimizely Full Stack slow down your application](https://www.youtube.com/watch?v=igGMFAz6rqc)
+- [What happens if Optimizely Full Stack goes down](https://youtu.be/Ty89bLUcc_o)
+- [How does Audience targeting work in Optimizely](https://www.youtube.com/watch?v=tJEveVFR4WE)
+- [How does Optimizely Full Stack work in Microservices](https://www.youtube.com/watch?v=n5RveFQt6Rg)
+
+
 <div align="center">
-  <img width="20" src="https://library.optimizely.com/optimizely_rings.png" alt="Optimizely Library" />
+  <img width="20" src="./logo_small.jpg" alt="Optimizely Library" />
 </div>

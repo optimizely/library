@@ -1,0 +1,45 @@
+{
+  "plugin_type": "analytics_integration",
+  "name": "Quantum Metric Integration",
+  "form_schema": [
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "qm_decision_id",
+      "label": "QM Decision ID (Campaign, Experiment and Variation)",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "qm_campaign_id",
+      "label": "QM Campaign Event ID",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "qm_experiment_id",
+      "label": "QM Experiment Event ID",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "qm_variation_id",
+      "label": "QM Variation Event ID",
+      "options": null
+    },
+    {
+      "default_value": "",
+      "field_type": "text",
+      "name": "qm_holdback_id",
+      "label": "QM Holdback Event ID",
+      "options": null
+    }
+  ],
+  "description": "This integration sends Optimizely campaign, experiments and variation data to Quantum Metric as events for segmentation and analysis.",
+  "options": {
+    "track_layer_decision": "// Get the decision from the decision Object\nvar decisionObject = window.optimizely.get(\"state\").getDecisionObject({\n  campaignId: campaignId,\n  shouldCleanString: true\n});\n\nfunction sendDecisionData() {\n  if (extension.qm_decision_id) {\n    window.QuantumMetricAPI.sendEvent(\n      extension.qm_decision_id,\n      0,\n      \"Campaign: \" +\n        decisionObject.campaign +\n        \" \\nExperiment: \" +\n        decisionObject.experiment +\n        \" \\nVariation: \" +\n        decisionObject.variation\n    );\n  }\n  if (extension.qm_campaign_id) {\n    window.QuantumMetricAPI.sendEvent(\n      extension.qm_campaign_id,\n      0,\n      decisionObject.campaign\n    );\n  }\n  if (extension.qm_experiment_id) {\n    window.QuantumMetricAPI.sendEvent(\n      extension.qm_experiment_id,\n      0,\n      decisionObject.experiment\n    );\n  }\n  if (extension.qm_variation_id) {\n    window.QuantumMetricAPI.sendEvent(\n      extension.qm_variation_id,\n      0,\n      decisionObject.variation\n    );\n  }\n  if (extension.qm_holdback_id) {\n    window.QuantumMetricAPI.sendEvent(\n      extension.qm_holdback_id,\n      0,\n      decisionObject.variation\n    );\n  }\n}\n\nif (!!window.QuantumMetricAPI) {\n  sendDecisionData();\n} else {\n  window.addEventListener(\"quantumReady\", sendDecisionData);\n}"
+  }
+}
