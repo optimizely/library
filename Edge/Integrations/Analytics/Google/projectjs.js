@@ -79,7 +79,7 @@ window.optlyHelper.gaIntegration = (function () {
     allActiveExperiments;
   function _sendGaEvent(decisionString) {
     if (!!decisionString) {
-      var prefix = 'tealium_0' + '.'; // Assign to ‘’ if no custom tracker
+      var prefix = '{custom_tracker}' + '.'; // Assign to ‘’ if no custom tracker
       optlyHelper.helperLog("Sending decision event to GA");
       window.ga(prefix + 'send', 'event', 'Optimizely', 'Assigned to Experiment', decisionString, { nonInteraction: true });
     }
