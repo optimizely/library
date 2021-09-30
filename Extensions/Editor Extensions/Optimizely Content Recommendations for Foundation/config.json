@@ -1,17 +1,17 @@
 {
   "plugin_type": "widget",
-  "name": "Optimizely Content Recommendations",
-  "edit_page_url": "https://www.atticandbutton.us",
+  "name": "Optimizely Content Recommendations for Foundation",
+  "edit_page_url": "https://your.foundation.site",
   "form_schema": [
     {
-      "default_value": "#Hero",
+      "default_value": "#heroBlock-182",
       "field_type": "selector",
-      "name": "insertPoint",
+      "name": "insertafter",
       "label": "Insert After",
       "options": null
     },
     {
-      "default_value": 3,
+      "default_value": 2,
       "field_type": "number",
       "name": "numberofrecs",
       "label": "Number of recommendations",
@@ -34,9 +34,9 @@
   ],
   "description": "",
   "options": {
-    "html": "<script id=\"optimizely-extension-{{extension.$instance}}\" class=\"idio-recommendations\" type=\"text/x-mustache\" data-api-key=\"{{extension.recsapikey}}\" data-rpp=\"{{extension.numberofrecs}}\">\n[[#content]] \n  <div class=\"optimizely-recommendation\">    \n    <h2>[[title]]</h2>\n\t  <img src=\"[[main_image_url]]?w=500&h=300\" />\n    <p>[[abstract]]</p>\n    <a class=\"btn\" href=\"[[link_url]]\" title=\"[[title]]\">{{extension.ctatext}}</a>\n  </div>\n[[/content]]\n</script>\n",
-    "css": ".idio-recommendations {\n  display: flex;\n}\n\n.optimizely-recommendation {\n  width: 500px;\n\tmax-width: 500px; \n  height: auto;\n}\n",
-    "apply_js": "var utils = optimizely.get('utils');\n// Pick a source domain for the recommendations script - your Optimizely CSM can advise on what domain to set or\n// it can be found in Content Recommendations > Engage > Deliveries > [Edit a delivery] > Installation section\nvar ipsourcedomain = 's.idio.co';\n//var ipsourcedomain = 's.emea01.idio.episerver.net'; \n//var ipsourcedomain = 's.usea01.idio.episerver.net';\n//var ipsourcedomain = 's.apac01.idio.episerver.net';\n\nutils.waitForElement(extension.insertPoint)\n  .then(function(elem) {\n    elem.insertAdjacentHTML('afterend', extension.$html.replaceAll('[[', '{{').replaceAll(']]', '}}'));\n    !function(d,s){var ip=d.createElement(s);ip.async=1,s=d.getElementsByTagName(s)[0],ip.src='//' + ipsourcedomain + '/ip.js',s.parentNode.insertBefore(ip,s)}(document,'script');\n});",
+    "apply_js": "var utils = optimizely.get('utils');\n// Pick a source domain for the recommendations script - your Optimizely CSM can advise on what domain to set or\n// it can be found in Content Recommendations > Engage > Deliveries > [Edit a delivery] > Installation section\nvar ipsourcedomain = 's.idio.co';\n//var ipsourcedomain = 's.emea01.idio.episerver.net'; \n//var ipsourcedomain = 's.usea01.idio.episerver.net';\n//var ipsourcedomain = 's.apac01.idio.episerver.net';\n\nutils.waitForElement(extension.insertafter)\n  .then(function(elem) {\n    elem.insertAdjacentHTML('afterend', extension.$html.replaceAll('[[', '{{').replaceAll(']]', '}}'));\n    !function(d,s){var ip=d.createElement(s);ip.async=1,s=d.getElementsByTagName(s)[0],ip.src='//' + ipsourcedomain + '/ip.js',s.parentNode.insertBefore(ip,s)}(document,'script');\n});",
+    "html": "<script id=\"optimizely-extension-{{extension.$instance}}\" class=\"idio-recommendations\" type=\"text/x-mustache\" data-api-key=\"{{extension.recsapikey}}\" data-rpp=\"{{extension.numberofrecs}}\">\n[[#content]]\n<div class=\"idio-recommendation block col-lg-6 col-md-6 col-sm-12 col-xs-12 displaymode-half\">    \n    <div class=\"p-0 m-0\">\n        <div class=\"teaser teaser-theme--light teaser-content-align--left teaser--show-details\" style=\"padding-bottom: 50%\">\n        <div class=\"teaser__image\" style=\"background-image: url('[[main_image_url]]?w=1440'\"></div>\n        <div class=\"screen-width-wrapper\">\n            <div class=\"teaser-text teaser-text--white screen-width-container\">\n            <h2>[[title]]</h2>\n            <div class=\"teaser-text__details\">\n                <p>[[abstract]]</p>\n                <a class=\"button-transparent-white\" href=\"[[link_url]]\" title=\"[[title]]\">{{extension.ctatext}}</a>\n            </div>\n            </div>\n        </div>\n    </div>       \n    </div>\n</div>\n[[/content]]\n</script>",
+    "css": ".idio-recommendation {\n    width: calc(50% - 2px);\n}",
     "undo_js": "var extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}"
   }
 }
