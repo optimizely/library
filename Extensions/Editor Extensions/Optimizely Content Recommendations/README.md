@@ -1,4 +1,4 @@
-# Optimizely Content Recommendations
+# Optimizely Content Recommendations - requiring Optimizely Content Recommendations subscription
 
 ![Screenshot](https://github.com/optimizely/extension-library/blob/master/Extensions/Editor%20Extensions/Optimizely%20Content%20Recommendations/screenshot.png)
 
