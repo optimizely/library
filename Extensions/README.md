@@ -25,6 +25,8 @@ If you can't find what you are looking or have any feedback, [open a GitHub Issu
 * [Hotspot](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Hotspot)
 * [Localized Copy Change](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Localized%20Copy%20Change)
 * [Multibuy Offer Reminder](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Multibuy%20Offer%20Reminder)
+* [Optimizely Content Recommendations](https://github.com/optimizely/library/tree/master/Extensions/Editor%20Extensions/Optimizely%20Content%20Recommendations)
+* [Optimizely Content Recommendations for Foundation](https://github.com/optimizely/library/tree/master/Extensions/Editor%20Extensions/Optimizely%20Content%20Recommendations%20for%20Foundation)
 * [Price Changer](https://github.com/optimizely/addons-library/tree/master/Extensions/Editor%20Extensions/Price%20Changer)
 * [Sidebar Sliding Card](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sidebar%20Sliding%20Card)
 * [Sidebar Sliding Advanced](https://github.com/optimizely/extension-library/tree/master/Extensions/Editor%20Extensions/Sliding%20Card%20Advanced)
