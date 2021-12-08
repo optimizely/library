@@ -1,0 +1,55 @@
+{
+    "plugin_type": "widget",
+    "name": "Replace Picture Element (sizes & backup)",
+    "edit_page_url": "https://www.optimizely.com/",
+    "form_schema": [{
+            "default_value": "",
+            "field_type": "selector",
+            "name": "selector",
+            "label": "Select the Picture Element",
+            "options": null
+        },
+        {
+            "default_value": "",
+            "field_type": "text",
+            "name": "source_sm_img",
+            "label": "Small Image URL",
+            "options": null
+        },
+        {
+            "default_value": "",
+            "field_type": "text",
+            "name": "source_md_img",
+            "label": "Medium Image URL",
+            "options": null
+        },
+        {
+            "default_value": "",
+            "field_type": "text",
+            "name": "source_lg_img",
+            "label": "Large Image URL",
+            "options": null
+        },
+        {
+            "default_value": "",
+            "field_type": "text",
+            "name": "backup_img_url",
+            "label": "Backup Image URL (jpeg/png/gif)",
+            "options": null
+        },
+        {
+            "default_value": "my image",
+            "field_type": "text",
+            "name": "backup_img_alt",
+            "label": "Backup Image alt",
+            "options": null
+        }
+    ],
+    "description": "Select a picture element and replace source images based on 3 different sizes and also select a backup image.",
+    "options": {
+        "html": "<source srcset=\"{{ extension.source_sm_img }}\"\n          media=\"(max-width: 639px)\">\n<source srcset=\"{{ extension.source_md_img }}\"\n        media=\"(min-width: 640px) and (max-width: 1023px)\">\n<source srcset=\"{{ extension.source_lg_img }}\"\n        media=\"(min-width: 1024px)\">\n<img src=\"{{ extension.backup_img_url }}\" alt=\"{{ extension.backup_img_alt }}\">",
+        "css": "",
+        "apply_js": "var utils = optimizely.get('utils');\n\nutils.waitForElement(extension.selector)\n  .then(function(elem) {\n    elem.innerHTML = extension.$html;\n  });\n",
+        "undo_js": "var extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}\n"
+    }
+}
