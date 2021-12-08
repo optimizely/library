@@ -1,0 +1,34 @@
+{
+    "plugin_type": "widget",
+    "name": "Replace Picture Element",
+    "edit_page_url": "https://www.optimizely.com/",
+    "form_schema": [{
+            "default_value": "",
+            "field_type": "selector",
+            "name": "selector",
+            "label": "Select the Picture Element",
+            "options": null
+        },
+        {
+            "default_value": "",
+            "field_type": "text",
+            "name": "source_img",
+            "label": "Source Image URL (jpeg/png/gif)",
+            "options": null
+        },
+        {
+            "default_value": "my image",
+            "field_type": "text",
+            "name": "source_img_alt",
+            "label": "Source Image alt",
+            "options": null
+        }
+    ],
+    "description": "Select a picture element and replace source/backup image by choosing one image url and type.",
+    "options": {
+        "html": "<source srcset=\"{{ extension.source_img }}\"\n          media=\"(max-width: 639px)\">\n<source srcset=\"{{ extension.source_img }}\"\n        media=\"(min-width: 640px) and (max-width: 1023px)\">\n<source srcset=\"{{ extension.source_img }}\"\n        media=\"(min-width: 1024px)\">\n<img src=\"{{ extension.source_img }}\" alt=\"{{ extension.source_img_alt }}\">",
+        "css": "",
+        "apply_js": "var utils = optimizely.get('utils');\n\nutils.waitForElement(extension.selector)\n  .then(function(elem) {\n    elem.innerHTML = extension.$html;\n  });\n",
+        "undo_js": "var extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}\n"
+    }
+}
