@@ -1,0 +1,28 @@
+{
+    "plugin_type": "widget",
+    "name": "Element Clicker",
+    "edit_page_url": "www.optimizely.com",
+    "form_schema": [
+      {
+        "default_value": ".primary-nav__utilities-item--search > button.primary-nav__utilities-link",
+        "field_type": "selector",
+        "name": "click_element",
+        "label": "Element to Click",
+        "options": null
+      },
+      {
+        "default_value": 250,
+        "field_type": "number",
+        "name": "delay",
+        "label": "Delay (ms)",
+        "options": null
+      }
+    ],
+    "description": "Clicks the selected element after a set delay (optional).",
+    "options": {
+      "html": "",
+      "css": "",
+      "apply_js": "  const utils = optimizely.get('utils');\n\n  utils.waitForElement(extension.click_element)\n  .then(function(elem) {\n    setTimeout(() => elem.click(), extension.delay);\n  });\n",
+      "undo_js": ""
+    }
+  }
