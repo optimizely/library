@@ -1,0 +1,126 @@
+{
+    "plugin_type": "widget",
+    "name": "Multilingual Text Replace",
+    "edit_page_url": "https://www.optimizely.com",
+    "form_schema": [
+      {
+        "default_value": ".homepage-hero-block__headline",
+        "field_type": "selector",
+        "name": "text_element",
+        "label": "Text Element",
+        "options": null
+      },
+      {
+        "default_value": "English",
+        "field_type": "text",
+        "name": "text_en",
+        "label": "English",
+        "options": null
+      },
+      {
+        "default_value": "French",
+        "field_type": "text",
+        "name": "text_fr",
+        "label": "French",
+        "options": null
+      },
+      {
+        "default_value": "Spanish",
+        "field_type": "text",
+        "name": "text_es",
+        "label": "Spanish",
+        "options": null
+      },
+      {
+        "default_value": "Italian",
+        "field_type": "text",
+        "name": "text_it",
+        "label": "Italian",
+        "options": null
+      },
+      {
+        "default_value": "Portuguese",
+        "field_type": "text",
+        "name": "text_pt",
+        "label": "Portuguese",
+        "options": null
+      },
+      {
+        "default_value": "Chinese",
+        "field_type": "text",
+        "name": "text_zh",
+        "label": "Chinese",
+        "options": null
+      },
+      {
+        "default_value": "Hindustani",
+        "field_type": "text",
+        "name": "text_hi",
+        "label": "Hindustani",
+        "options": null
+      },
+      {
+        "default_value": "Arabic",
+        "field_type": "text",
+        "name": "text_ar",
+        "label": "Arabic",
+        "options": null
+      },
+      {
+        "default_value": "Malay",
+        "field_type": "text",
+        "name": "text_ms",
+        "label": "Malay",
+        "options": null
+      },
+      {
+        "default_value": "Russian",
+        "field_type": "text",
+        "name": "text_ru",
+        "label": "Russian",
+        "options": null
+      },
+      {
+        "default_value": "Bengali",
+        "field_type": "text",
+        "name": "text_bn",
+        "label": "Bengali",
+        "options": null
+      },
+      {
+        "default_value": "Swedish",
+        "field_type": "text",
+        "name": "text_sv",
+        "label": "Swedish",
+        "options": null
+      },
+      {
+        "default_value": "German",
+        "field_type": "text",
+        "name": "text_de",
+        "label": "German",
+        "options": null
+      },
+      {
+        "default_value": "Danish",
+        "field_type": "text",
+        "name": "text_da",
+        "label": "Danish",
+        "options": null
+      },
+      {
+        "default_value": "Norwegian",
+        "field_type": "text",
+        "name": "text_no",
+        "label": "Norwegian",
+        "options": null
+      }
+    ],
+    "description": "Swaps the inner HTML of a given element with text based on the document language (lang attribute on the HTML element).",
+    "options": {
+      "apply_js": "  const utils = optimizely.get('utils');\n\t\n\tvar ext_text = null;\n\twindow.original_text_element = extension.text_element;\n\t\n  utils.waitForElement(extension.text_element)\n  .then(function(elem) {\n    var lang = document.documentElement.lang;\n    if(!elem.dataset.original)\n\t    elem.dataset.original = encodeURI(elem.innerHTML);\n    ext_text = extension['text_' + lang] || extension.text_en; // english fallback\n    elem.innerText = ext_text;\n    window.original_text_element = extension.text_element;\n  });\n",
+      "html": "",
+      "css": "",
+      "undo_js": "  const utils = optimizely.get('utils'); \n\n  utils.waitForElement(window.original_text_element)\n  .then(function(elem) {\n    console.log(elem.dataset.original);\n    elem.innerHTML = decodeURI(elem.dataset.original);\n  });"
+    }
+  }
