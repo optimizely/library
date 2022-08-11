@@ -1,9 +1,60 @@
 {
   "plugin_type": "analytics_integration",
-  "name": "List Var Custom Adobe Analytics",
-  "form_schema": [],
+  "name": "Custom Adobe Analytics [List Var]",
+  "form_schema": [
+    {
+      "default_value": "list1",
+      "field_type": "dropdown",
+      "name": "list",
+      "label": "List Var",
+      "options": {
+        "choices": [
+          {
+            "value": "list1",
+            "label": "list1"
+          },
+          {
+            "value": "list2",
+            "label": "list2"
+          },
+          {
+            "value": "list3",
+            "label": "list3"
+          },
+          {
+            "value": "list4",
+            "label": "list4"
+          },
+          {
+            "value": "list5",
+            "label": "list5"
+          },
+          {
+            "value": "list6",
+            "label": "list6"
+          },
+          {
+            "value": "list7",
+            "label": "list7"
+          },
+          {
+            "value": "list8",
+            "label": "list8"
+          },
+          {
+            "value": "list9",
+            "label": "list9"
+          },
+          {
+            "value": "list10",
+            "label": "list10"
+          }
+        ]
+      }
+    }
+  ],
   "description": "Track this campaign in Adobe Analytics using a list variable.",
   "options": {
-    "track_layer_decision": "// This extension integrates Optimizely w/ Adobe via a pre-defined list variable. Set the list variable on line 3 below.\nvar decisionString = window.optimizely.get('state').getDecisionString({campaignId: campaignId, shouldCleanString: true});\nvar redirectInfo = window.optimizely.get('state').getRedirectInfo();\nvar list = \"list1\";\n\n// Public Methods\nvar adobeIntegrator = {\n\t// Array of objects for active campaigns/experiments\n\tcampaignArray: [],\n\t// Accepts \"s\" variable as a param and assigns campaigns/experiments to list.\n\tassignCampaigns: function(sVariable) {\n    sVariable[list] = sVariable[list] || [];\n    if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;\n\t\tfor (var i = this.campaignArray.length-1; i >= 0; i--) {\n      sVariable[list].push(this.campaignArray[i]);\n\t\t\tthis.campaignArray.splice(i, 1);\n\t\t}\n\t},\n\t// Accepts \"s\" variable as a param and assigns eVars to object, then dispatches custom link tracking.\n\ttrackDelayedCampaigns: function(sVariable) {\n    sVariable[list] = sVariable[list] || [];\n    sVariable.linkTrackVars += \",list1\";\n\t\tfor (var i = this.campaignArray.length-1; i >= 0; i--) {\n\t\t\tsVariable[list].push(this.campaignArray[i]);\n\t\t\tthis.campaignArray.splice(i, 1);\n\t\t}\n    sVariable.tl(true, \"o\", \"OptimizelyLayerDecision\");\n\t}\n};\n\n// Scopes `campaignArray` to Optimizely object.\nif (!window.optimizely.get(\"custom/adobeIntegrator\")) {\n\twindow.optimizely.push({\n\t\ttype: \"registerModule\",\n\t\tmoduleName: \"adobeIntegrator\",\n\t\tmodule: adobeIntegrator\n\t});\n}\n\n// Failing Audiences returns `null`, failing Traffic Allocation returns `undefined` for decisionString.\nif (!!decisionString) window.optimizely.get(\"custom/adobeIntegrator\").campaignArray.push(decisionString);"
+    "track_layer_decision": "var decisionString = window.optimizely.get('state').getDecisionString({\n  campaignId: campaignId,\n  shouldCleanString: true\n});\nvar redirectInfo = window.optimizely.get('state').getRedirectInfo();\n\nvar csvToArray = function(csv) {\n  return csv.length ? (csv || '').split(/,\\s*/) : [];\n}\n\n// Public Methods\nvar adobeIntegrator = {\n  campaignDecisions: [],\n  appendToProperty: function(sVariable, listVar, decision) {\n    if (typeof sVariable[listVar] === 'undefined') sVariable[listVar] = ''; //default to string format\n    \n    if (sVariable[listVar].constructor === Array) { // this listVarVar was previously defined as a string\n      sVariable[listVar] = sVariable[listVar].concat(decision);\n    } \n    else { // this listVarVar was previously defined as a string\n      sVariable[listVar] = csvToArray(sVariable[listVar]);\n      sVariable[listVar].push(decision);\n      sVariable[listVar] = sVariable[listVar].join(',');\n    }\n  },\n  populateTrackerClearDecisions: function(sVariable) {\n    var _this = this;\n    this.campaignDecisions.forEach(function(i) {\n      _this.appendToProperty(sVariable, i.listVar, i.decision);\n    });\n    this.campaignDecisions = [];\n  },\n  // Accepts \"s\" variable as a param and assigns eVars to object.  \n  assignCampaigns: function(sVariable) {\n    if (!!redirectInfo) sVariable.referrer = redirectInfo.referrer;\n    this.populateTrackerClearDecisions(sVariable);\n  },\n  // Accepts \"s\" variable as a param and assigns eVars to object, then dispatches custom link tracking.\n  trackDelayedCampaigns: function(sVariable) {\n    var _this = this;\n    this.campaignDecisions.forEach(function(i) {\n      _this.appendToProperty(sVariable, 'linkTrackVars', i.listVar);\n    });    \n    this.populateTrackerClearDecisions(sVariable);\n    sVariable.tl(true, \"o\", \"OptimizelyLayerDecision\");\n  }\n};\n\n// Scopes `campaignArray` to Optimizely object.\nif (!window.optimizely.get(\"custom/adobeIntegrator\")) {\n  window.optimizely.push({\n    type: \"registerModule\",\n    moduleName: \"adobeIntegrator\",\n    module: adobeIntegrator\n  });\n}\n\n// Failing Audiences returns `null`, failing Traffic Allocation returns `undefined` for decisionString.\nif (!!decisionString) window.optimizely.get(\"custom/adobeIntegrator\").campaignDecisions.push({\n  'listVar': extension.list,\n  'decision': decisionString\n});"
   }
 }
