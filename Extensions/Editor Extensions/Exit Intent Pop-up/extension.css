@@ -5,6 +5,15 @@
   width: 100%;
   text-align: center;
 	height: 100% !important;
+  pointer-events: none;
+}
+
+.exit-intent-modal.fade-in {
+  pointer-events: all;
+}
+
+.exit-intent-modal.fade-in.fade-out {
+  pointer-events: none;
 }
 
 body {
