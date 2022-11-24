@@ -1,0 +1,82 @@
+{
+  "plugin_type": "widget",
+  "name": "Add Marketo Form",
+  "edit_page_url": "https://www.atticandbutton.us/",
+  "form_schema": [
+    {
+      "default_value": "https://app-123.marketo.com/js/forms2/js/forms2.min.js",
+      "field_type": "text",
+      "name": "external_script",
+      "label": "external script",
+      "options": null
+    },
+    {
+      "default_value": "mktoForm_1234",
+      "field_type": "text",
+      "name": "form_id",
+      "label": "form ID",
+      "options": null
+    },
+    {
+      "default_value": "//app-123.marketo.com",
+      "field_type": "text",
+      "name": "load_form_1",
+      "label": "First parameter of Marketo loadForm Function",
+      "options": null
+    },
+    {
+      "default_value": "ABC-123-456",
+      "field_type": "text",
+      "name": "load_form_2",
+      "label": "Second parameter of Marketo loadForm Function",
+      "options": null
+    },
+    {
+      "default_value": 1234,
+      "field_type": "number",
+      "name": "load_form_3",
+      "label": "Third parameter of Marketo loadForm Function",
+      "options": null
+    },
+    {
+      "default_value": "body",
+      "field_type": "selector",
+      "name": "element",
+      "label": "Add form relative to this element",
+      "options": null
+    },
+    {
+      "default_value": "beforebegin",
+      "field_type": "dropdown",
+      "name": "position",
+      "label": "Relative position to element",
+      "options": {
+        "choices": [
+          {
+            "value": "beforebegin",
+            "label": "Before the element itself"
+          },
+          {
+            "value": "afterbegin",
+            "label": "Just inside the element, before its first child."
+          },
+          {
+            "value": "beforeend",
+            "label": "Just inside the element, after its last child."
+          },
+          {
+            "value": "afterend",
+            "label": "After the element itself."
+          }
+        ]
+      }
+    }
+  ],
+  "description": "",
+  "options": {
+    "apply_js": "var utils = optimizely.get('utils');\n\n/**\nStep 1: Inject Marketo Script\nStep 2: Insert form HTML\nStep 3: Load the form using Marketo's functions.\n**/\n\n//Step 1\nvar tag = document.createElement(\"script\");\ntag.setAttribute('type','text/javascript');\ntag.setAttribute('src',extension.external_script);\ndocument.head.appendChild(tag);\n\n//Step 2\nutils.waitForElement(extension.element)\n  .then(function(elem) {\n    // Prepend the extension html to the element\n  elem.insertAdjacentHTML(extension.position, extension.$html);\n  \n  }).then(function(){\n//Step 3\n  utils.waitUntil(function(){\n          return typeof MktoForms2 == 'object';\n        }).then(function(elem) {\n          window.MktoForms2.loadForm(extension.load_form_1, extension.load_form_2, extension.load_form_3);\n        });\n});\n\n",
+    "html": "<div id=\"opty-extension-container\">\n  <div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"test-extension-\">\n  \t<form id=\"{{ extension.form_id }}\"></form>\n\t</div>\n</div>",
+    "css": "#opty-extension-container{\n\tpadding-bottom: 150px;\n}",
+    "undo_js": "var extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\nif (extensionElement) {\n  extensionElement.parentElement.removeChild(extensionElement);\n}\n"
+  }
+}
