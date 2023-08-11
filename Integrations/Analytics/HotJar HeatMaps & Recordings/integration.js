@@ -2,26 +2,24 @@
 window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
 
 // We get the decision in a string
-var decisionString = window.optimizely.get("state").getDecisionString({
+const decisionString = window.optimizely.get('state').getDecisionString({
   campaignId: campaignId,
   shouldCleanString:true,
   maxLength:50
- });
+});
 
-if(extension.heatmaps === "true") {
+if (extension.heatmaps === 'true') {
   // If the visitor is in the holdback
-  if(isHoldback === true) {
+  if (isHoldback === true) {
     // We trigger the heatmap
-    hj('trigger', extension.javascript_trigger+'_holdback');
+    hj('trigger', `${extension.javascript_trigger}_holdback`);
   } else {
     // We trigger the heatmap
-    hj('trigger', extension.javascript_trigger+'_'+variationId);
+    hj('trigger', `${extension.javascript_trigger}_${variationId}`);
   }
 }
 
-if(extension.recordings === "true") {
+if (extension.recordings === 'true') {
   // We tag recordings with experiment info
   hj('tagRecording', [decisionString]);
 }
-
-
