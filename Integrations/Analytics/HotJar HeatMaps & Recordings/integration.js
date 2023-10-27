@@ -2,26 +2,31 @@
 window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
 
 // We get the decision in a string
-var decisionString = window.optimizely.get("state").getDecisionString({
+let decisionString = window.optimizely.get('state').getDecisionString({
   campaignId: campaignId,
   shouldCleanString:true,
   maxLength:50
- });
+});
 
-if(extension.heatmaps === "true") {
+if (extension.mask_long_numbers === 'true') {
+  // Mask any sequences of 9 or more digits to avoid PII filter from Hotjar
+  const maskIdRegex = /(\d{3})\d{3,}(\d{3})/g;
+  variationId = variationId.replaceAll(maskIdRegex, '$1...$2');
+  decisionString = decisionString.replaceAll(maskIdRegex, '$1...$2');
+}
+
+if (extension.heatmaps === 'true') {
   // If the visitor is in the holdback
-  if(isHoldback === true) {
+  if (isHoldback === true) {
     // We trigger the heatmap
-    hj('trigger', extension.javascript_trigger+'_holdback');
+    hj('trigger', `${extension.javascript_trigger}_holdback`);
   } else {
     // We trigger the heatmap
-    hj('trigger', extension.javascript_trigger+'_'+variationId);
+    hj('trigger', `${extension.javascript_trigger}_${variationId}`);
   }
 }
 
-if(extension.recordings === "true") {
+if (extension.recordings === 'true') {
   // We tag recordings with experiment info
   hj('tagRecording', [decisionString]);
 }
-
-
