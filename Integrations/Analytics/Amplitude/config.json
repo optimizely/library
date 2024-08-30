@@ -3,17 +3,17 @@
   "name": "Amplitude Analytics Integration",
   "form_schema": [
     {
+      "label": "User Property Prefix: A user property for your experiment will be sent in an identify call. The user property will be prefixed with this prefix.",
       "default_value": "[Optimizely Experiment]",
       "field_type": "text",
       "name": "property_prefix",
-      "label": "User Property Prefix: A user property for your experiment will be sent in an identify call. The user property will be prefixed with this prefix.",
       "options": null
     },
     {
+      "label": "Send Event: Optionally send an event with campaign, experiment, and variation info",
       "default_value": "n",
       "field_type": "dropdown",
       "name": "send_event",
-      "label": "Send Event: Optionally send an event with campaign, experiment, and variation info",
       "options": {
         "choices": [
           {
@@ -28,22 +28,15 @@
       }
     },
     {
+      "label": "Event Name (optional)",
       "default_value": "User in Experiment",
       "field_type": "text",
       "name": "event_name",
-      "label": "Event Name (optional)",
-      "options": null
-    },
-    {
-      "default_value": "",
-      "field_type": "text",
-      "name": "instance_name",
-      "label": "Instance Name (optional): The instance name you are using in your amplitude instrumentation eg: amplitude.getInstance('my instance name'). Usually this is blank.",
       "options": null
     }
   ],
   "description": "Send an identify call to amplitude identifying the experiment variation the user is seeing. Also, optionally send an event to amplitude that the user is in an experiment.\n\nSettings:",
   "options": {
-    "track_layer_decision": "// VERSION 0.1.0\n// Last Updated: July 9th 2019\n\nvar dataSent = false;\nvar MAX_ATTEMPTS = 9;\nvar RETRY_DELAY_MS = 1000;\n\nfunction getCampaignInfo() {\n return window.optimizely\n .get(\"state\")\n .getDecisionObject({ campaignId: campaignId });\n}\n\nfunction logEvent() {\n var campaignInfo = getCampaignInfo();\n\n if (campaignInfo) {\n var eventProperties = {\n \"[Optimizely Campaign]\": campaignInfo.campaign,\n \"[Optimizely Experiment]\": campaignInfo.experiment,\n \"[Optimizely Variation]\": campaignInfo.variation,\n \"[Optimizely Holdback]\": campaignInfo.holdback\n };\n amplitude.getInstance(extension.instance_name).logEvent(extension.event_name, eventProperties);\n }\n}\n\nfunction identifyCall() {\n var campaignInfo = getCampaignInfo();\n\n if (campaignInfo) {\n var identify = new amplitude.Identify().set(\n extension.property_prefix + \" \" + campaignInfo.experiment,\n campaignInfo.variation\n );\n amplitude.getInstance(extension.instance_name).identify(identify);\n }\n}\n\nfunction sendData() {\n if (!dataSent) {\n identifyCall();\n if (extension.send_event === \"y\") {\n logEvent();\n }\n }\n dataSent = true;\n}\n\nfunction sendToAmplitude(call) {\n if (call >= MAX_ATTEMPTS) {\n return;\n }\n \n var instanceKey = extension.instance_name || \"$default_instance\";\n\n if (window.amplitude && window.amplitude.getInstance) {\n var instance = window.amplitude.getInstance(extension.instance_name);\n \n if (instance._isInitialized) {\n return sendData();\n } else if (instance.onInit) {\n instance.onInit(function() {\n sendData();\n });\n return;\n }\n }\n \n return setTimeout(function() {\n sendToAmplitude(call + 1);\n }, RETRY_DELAY_MS);\n}\nsendToAmplitude(0);"
+    "track_layer_decision": "// VERSION 0.2.0\n// Last Updated: August 30th 2024\n\nconst MAX_ATTEMPTS = 9;\nconst RETRY_DELAY_MS = 1000;\n\nconst logEvent = ({campaign, experiment, variation, holdback}) => {\n\tconst eventProperties = {\n\t\t'[Optimizely Campaign]': campaign,\n\t\t'[Optimizely Experiment]': experiment,\n\t\t'[Optimizely Variation]': variation,\n\t\t'[Optimizely Holdback]': holdback\n\t};\n\n\twindow.amplitude.logEvent(extension.event_name, eventProperties);\n};\n\nconst identifyCall = ({experiment, variation, holdback}) => {\n\tif (!holdback) {\n\t\tconst identifyEvent = new window.amplitude.Identify();\n\t\tidentifyEvent.set(`${extension.property_prefix} ${experiment}`, variation);\n\n\t\twindow.amplitude.identify(identifyEvent);\n\t}\n};\n\nconst sendData = () => {\n\tconst campaignInfo = window.optimizely\n\t\t.get('state')\n\t\t.getDecisionObject({ campaignId });\n\n\tif (campaignInfo) {\n\t\t// Always send identify event\n\t\tidentifyCall(campaignInfo);\n\t\tif (extension.send_event === 'y') {\n\t\t\t// Only log event if so configured\n\t\t\tlogEvent(campaignInfo);\n\t\t}\n\t}\n};\n\nconst sendToAmplitude = (numberOfAttempts) => {\n\tif (window.amplitude) {\n\t\t// Send data to Amplitude\n\t\tsendData();\n\t} else {\n\t\t// Retry until Amplitude is initialized\n\t\tif (numberOfAttempts < MAX_ATTEMPTS) {\n\t\t\tsetTimeout(() => {\n\t\t\t\tsendToAmplitude(numberOfAttempts + 1);\n\t\t\t}, RETRY_DELAY_MS);\n\t\t}\n\t}\n};\n\nsendToAmplitude(0);"
   }
 }
