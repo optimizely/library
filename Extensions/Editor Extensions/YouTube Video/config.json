@@ -1,0 +1,68 @@
+{
+    "plugin_type": "widget",
+    "name": "YouTube Video",
+    "edit_page_url": "https://web.optimizely.demo.training/",
+    "form_schema": [
+      {
+        "name": "selector",
+        "options": null,
+        "label": "Video Placement - Selector",
+        "default_value": "body",
+        "field_type": "selector"
+      },
+      {
+        "name": "position",
+        "options": {
+          "choices": [
+            {
+              "value": "beforebegin",
+              "label": "Before"
+            },
+            {
+              "value": "afterend",
+              "label": "After"
+            },
+            {
+              "value": "afterbegin",
+              "label": "At the beginning of"
+            },
+            {
+              "value": "beforeend",
+              "label": "At the end of"
+            }
+          ]
+        },
+        "label": "Video Placement - Position",
+        "default_value": "afterbegin",
+        "field_type": "dropdown"
+      },
+      {
+        "name": "videoId",
+        "options": null,
+        "label": "Video ID",
+        "default_value": "hHXEjcJkcbc",
+        "field_type": "text"
+      },
+      {
+        "name": "width",
+        "options": null,
+        "label": "Width",
+        "default_value": 560,
+        "field_type": "number"
+      },
+      {
+        "name": "height",
+        "options": null,
+        "label": "Height",
+        "default_value": 315,
+        "field_type": "number"
+      }
+    ],
+    "description": "Adds a YouTube video to the website and tracks custom events for ready, play, pause, and end.",
+    "options": {
+      "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\"></div>",
+      "css": "",
+      "apply_js": "// Local helper function to send Optimizely custom event with event properties\nconst sendEvent = (eventName, youTubeEvent) => {\n  window.optimizely.push({\n    type: 'event',\n    eventName,\n    properties: {\n      SKU: extension.videoId,\n      Text: youTubeEvent.target.videoTitle\n    }\n  });\n};\n\n// Local helper function to initialize YouTube player\nconst initializePlayer = () => {\n  const player = new window.YT.Player(`optimizely-extension-${extension.$instance}`, {\n    height: extension.height,\n    width: extension.width,\n    videoId: extension.videoId,\n    playerVars: {\n      playsinline: 1\n    },\n    events: {\n      onReady: (event) => {\n        // YouTube player has succesfully loaded\n        sendEvent('youtube_ready', event);\n      },\n      onStateChange: (event) => {\n        switch(event.data) {\n          case YT.PlayerState.PLAYING:\n            // Pressed play\n            sendEvent('youtube_play', event);\n            break;\n          case YT.PlayerState.PAUSED:\n            // Pressed pause\n            sendEvent('youtube_pause', event);\n            break;\n          case YT.PlayerState.ENDED:\n            // Video ended\n            sendEvent('youtube_end', event);\n            break;\n          default:\n            // No-op\n        }\n      }\n    }\n  });\n};\n\n// Get Optimizely Utilities library\nconst utils = window.optimizely.get('utils');\n\n// Wait for the selected video placement to appear in the DOM\nutils.waitForElement(extension.selector).then((elem) => {\n  \n  // Insert HTML template\n\telem.insertAdjacentHTML(extension.position, extension.$html);\n  \n  // Check whether the YouTube IFrame API has already loaded\n  if (window.YT) {\n    // Initialize YouTube player - Immediately\n    initializePlayer();\n  } else {\n    // Define global callback function for YouTube IFrame API\n    window.onYouTubeIframeAPIReady = () => {\n      // Initialize YouTube player - When ready\n      initializePlayer();\n    };\n    \n    // Insert YouTube IFrame API script\n  \tconst scriptTag = document.createElement('script');\n    scriptTag.src = \"https://www.youtube.com/iframe_api\";\n  \tdocument.getElementsByTagName('head')[0].append(scriptTag);\n  }\n});\n",
+      "undo_js": "// Find and remove HTML template\nconst elem = document.getElementById(`optimizely-extension-${extension.$instance}`);\nif (elem) {\n\telem.parentElement.removeChild(elem);\n}\n"
+    }
+  }
