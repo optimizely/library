@@ -14,8 +14,8 @@ If you can't find what you are looking or have any feedback, [open an issue](htt
 
 - [Optimizely Web Experimentation](#web-experimentation)
 - [Optimizely Performance Edge](#performance-edge)
-- [Optimizely Full Stack (Deprecated)](#fullstack-and-feature-experimentation)
-- [Optimizely Feature Experimentation](#fullstack-and-feature-experimentation)
+- [Optimizely Full Stack (Deprecated)](#full-stack-and-feature-experimentation)
+- [Optimizely Feature Experimentation](#full-stack-and-feature-experimentation)
 - [Optimizely Platform](#platform)
 - [Demos](#demos)
 - [Community](#community)
