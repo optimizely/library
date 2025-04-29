@@ -76,9 +76,9 @@ Project Javascript is an advanced configuration setting that provides a code fie
 
 ## Full Stack and Feature Experimentation
 
-Optimizely FullStack is a deprecated A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation]([https://docs.developers.optimizely.com/full-stack/docs](https://docs.developers.optimizely.com/full-stack-experimentation/docs/welcome)).
+Optimizely FullStack is a deprecated A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack-experimentation/docs/welcome).
 
-Optimizely Feature Experimentation is feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation]([https://docs.developers.optimizely.com/rollouts/docs](https://docs.developers.optimizely.com/feature-experimentation/docs/introduction)).
+Optimizely Feature Experimentation is feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation](https://docs.developers.optimizely.com/feature-experimentation/docs/introduction).
 
 ### JavaScript SDK
 - [Demo App: Algorithm Testing](https://github.com/optimizely/javascript-sdk-demo-app)
