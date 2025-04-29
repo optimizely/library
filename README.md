@@ -12,16 +12,17 @@ If you can't find what you are looking or have any feedback, [open an issue](htt
 
 ## Contents
 
-- [Optimizely Web](#web)
-- [Optimizely Edge](#edge)
-- [Optimizely FullStack and Rollouts](#fullstack-and-rollouts)
+- [Optimizely Web Experimentation](#web-experimentation)
+- [Optimizely Performance Edge](#performance-edge)
+- [Optimizely Full Stack (Deprecated)](#full-stack-and-feature-experimentation)
+- [Optimizely Feature Experimentation](#full-stack-and-feature-experimentation)
 - [Optimizely Platform](#platform)
 - [Demos](#demos)
 - [Community](#community)
 - [Blog Posts](#blog-posts)
 - [Videos](#videos)
 
-## Web
+## Web Experimentation
 
 ### Extensions
 
@@ -69,17 +70,17 @@ Project Javascript is an advanced configuration setting that provides a code fie
 
  - [Clear Local Storage](Project-JS/clear-localstorage/) - Clear any local storage related to Optimizely
 
-## Edge
+## Performance Edge
 - [Adobe Analytics List Variable Integration](Edge/Integrations/Analytics/Adobe/ListVar) - track your Optimizely Performance Edge campaigns and experiments in Adobe Analytics
 - [Google Analytics Integration](Edge/Integrations/Analytics/Google) - track your Optimizely Performance Edge campaigns and experiments in Google Analytics
 
-## FullStack and Rollouts
+## Full Stack and Feature Experimentation
 
-Optimizely FullStack is A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack/docs).
+Optimizely FullStack is a deprecated A/B testing and feature flag management for product development teams. Experiment in any application. Make every feature on your roadmap an opportunity to learn. Learn more at https://www.optimizely.com/platform/full-stack/, or see the [documentation](https://docs.developers.optimizely.com/full-stack-experimentation/docs/welcome).
 
-Optimizely Rollouts is free feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation](https://docs.developers.optimizely.com/rollouts/docs).
+Optimizely Feature Experimentation is feature flags for development teams. Easily roll out and roll back features in any application without code deploys. Mitigate risk for every feature on your roadmap. Learn more at https://www.optimizely.com/rollouts/, or see the [documentation](https://docs.developers.optimizely.com/feature-experimentation/docs/introduction).
 
-### JavaScript
+### JavaScript SDK
 - [Demo App: Algorithm Testing](https://github.com/optimizely/javascript-sdk-demo-app)
 - [Demo App: Isomorphic React Web App](https://github.com/optimizely/isomorphic-react-demo-app)
 - [Event Dispatcher: Experimental Solution for Tracking Redirect Clicks](https://github.com/optimizely/javascript-sdk-plugin-pending-events)
@@ -88,36 +89,36 @@ Optimizely Rollouts is free feature flags for development teams. Easily roll out
 - [Demo App: Amazon Alexa + FullStack](https://github.com/optimizely/alexa-demo)
 - [Demo App: CLI + FullStack](https://github.com/pcolombo/optimizely-fullstack-sandbox)
 
-### React
+### React SDK
 - [React SDK](https://github.com/optimizely/react-sdk)
 - [Guide: Feature Flag Rollouts](https://blog.optimizely.com/2019/06/05/react-feature-flags/) - Rollout customer-by-customer with React Feature Flags
 
-### Node
+### Node SDK
 - [Express Middleware](https://github.com/optimizely/express-middleware) - convenient wrapper to make installation in an ExpressJS application easy
 - [Guide: Feature Flag Rollouts](https://blog.optimizely.com/2019/06/17/feature-flags-node-express/) - Rollout customer-by-customer with Feature Flags in Express
 - [RunKit: Simple Node Feature Flag](https://runkit.com/asaschachar/optimizely-node-sdk-example)
 - [RunKit: Secure Webhook Implementation](https://runkit.com/asaschachar/secure-webhook-example-node)
 
-### PHP
+### PHP SDK
 - [Demo App: Algorithm Testing](https://github.com/optimizely/php-sdk-demo-app)
 
-### Python
+### Python SDK
 - [Demo App: Algorithm Testing](https://github.com/optimizely/python-sdk-demo-app)
 - [Demo App: SMS with Twilio](https://github.com/optimizely/fullstack-outbound-marketing)
 - [SDK Wrapper: Async Event Dispatcher](https://gist.github.com/cooperreid-optimizely/4d57682b39deb3557d437ae79c991eb3)
 - [SDK Wrapper: Bulk Event Dispatcher with AWS SQS](https://github.com/mauerbac/opti_fullstack_event_dispatcher)
 
-### Ruby
+### Ruby SDK
 - [Demo App: Algorithm Testing](https://github.com/optimizely/ruby_full_stack_demo)
 - [SDK Wrapper: Cached Datafile](https://github.com/ankit8898/optimizely_server_side)
 
-### Android
+### Android SDK
 - [Demo App](https://github.com/optimizely/android-sdk/tree/master/test-app)
 
-### Java & Kotlin
+### Java & Kotlin SDKs
 - [poetimizely](https://github.com/patxibocos/poetimizely/) - generate type safe accessors for Optimizely experiments and features.
 
-### iOS
+### iOS SDK
 - [Demo App](https://github.com/optimizely/objective-c-sdk/tree/master/OptimizelyDemoApp)
 
 ### FullStack Edge
